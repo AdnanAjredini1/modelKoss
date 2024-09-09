@@ -1,0 +1,20 @@
+.mobileNav{
+    display: none;
+    @media (max-width:1024px) {
+        display: block;
+    }
+
+    .mobileTitle{
+        display: flex;
+        gap:10px;
+        margin-left: 5px;
+        font-size: 26px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        color: #1d1d1d;
+    }
+    .mobileTitleNav{
+        padding-right: 8px;
+    }
+}
