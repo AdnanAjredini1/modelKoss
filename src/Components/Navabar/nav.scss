@@ -1,0 +1,35 @@
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11110;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.6vw 2% 10px;
+    background-color: #ffffff;
+
+    @media (max-width:1024px) {
+        display: none;
+    }
+    
+    .navLeftPart{
+        display: flex;
+
+        .navBrandTitle {
+            font-family: "Brown Sugar";
+            font-size: 26px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+    
+        }
+        
+    }
+
+   
+
+
+}

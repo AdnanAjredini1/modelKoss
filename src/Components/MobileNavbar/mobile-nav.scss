@@ -1,20 +1,125 @@
-.mobileNav{
-    display: none;
-    @media (max-width:1024px) {
-        display: block;
+@import "/node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+.navHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 15px;
+
+    .headerLeftPart {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        margin-top: 6px;
+        gap: 4px;
+
+        .headerTitle {
+            cursor: pointer;
+            font-family: "Brown Sugar";
+            font-size: 26px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+        }
+    }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    @media (min-width:1024px) {
+        display: none;
+    }
+}
+
+.sideNav {
+    visibility: hidden;
+    background-color: #fff;
+    width: clamp(320px, 75vw, 400px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    padding: 10px 4px;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-100%);
+    padding-top: 15px;
+
+
+
+    .sidenavFirstRow {
+        display: flex;
+        justify-content: space-between;
     }
 
-    .mobileTitle{
+    .mobileNavHeader {
         display: flex;
-        gap:10px;
+        padding: 8px 15px;
+        gap: 10px;
         margin-left: 5px;
-        font-size: 26px;
+        font-size: 20px;
         font-weight: normal;
         font-style: normal;
         text-align: left;
         color: #1d1d1d;
+
+        .mobileNavHeader .brand {
+            text-align: center;
+            font-size: 26px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+        }
+
+
     }
-    .mobileTitleNav{
-        padding-right: 8px;
+
+    .cancelButton {
+        margin-top: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover line {
+            stroke: #a09494;
+
+        }
+
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 25px;
+
+        .mobileNavLink {
+            padding-inline: 2px 4px;
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+
+            &:hover {
+                color: #a09494;
+            }
+        }
+    }
+
+
+}
+
+.isMobileClass {
+    visibility: visible;
+    transform: translateX(0);
+
+    @media (min-width:1024px) {
+        display: none;
     }
 }
