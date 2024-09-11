@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import "./nav.scss";
 function Nav() {
   return (
     <nav id="nav">
       <div className="navLeftPart">
+        
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="34.033"
@@ -16,7 +18,22 @@ function Nav() {
             data-name="Subtraction 1"
           />
         </svg>
-        <p className="navBrandTitle">MODELKOS</p>
+        <Link to="/" className="linkTitle">
+          <p className="navBrandTitle">MODELKOS</p>
+        </Link>
+      </div>
+      <div className="navMiddlePart">
+         <Link className="navlinkk" to="/">Home</Link>
+         <Link className="navlinkk" to="/">Our Work</Link>
+         <Link className="navlinkk" to="/">About</Link>
+         <Link className="navlinkk" to="/">Models</Link>
+         <Link className="navlinkk" to="/">Academy</Link>
+         <Link className="navlinkk" to="/">Blog</Link>
+
+      </div>
+      <div className="navRightPart">
+        <p className="applyNowText">Apply now</p>
+        <button className="contanctUsButton">Contact Us</button>
       </div>
     </nav>
   );

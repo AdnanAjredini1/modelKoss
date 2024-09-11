@@ -7,8 +7,17 @@ import { GoTriangleDown } from "react-icons/go";
 
 function MobileNav() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isDropdown, setIsDropdown] = useState({
+    ourWork: false,
+    about: false,
+    models: false,
+    academy: false,
+  });
   console.log(isMobile);
 
+  function onClickDropDown(name, value) {
+    setIsDropdown((prev) => ({ ...prev, [name]: value }));
+  }
   return (
     <>
       <header className="navHeader">
@@ -77,27 +86,79 @@ function MobileNav() {
             <line x1="55.94" y1="8.06" x2="8.59" y2="55.94" />
           </svg>
         </div>
-        <ul>
-          <Link className="mobileNavLink" to="/home">
+        <ul className="sideLinksUl">
+          <Link className="mobileNavLink" to="/">
             Home
           </Link>
-          <Link className="mobileNavLink dropdownLink" to="/home">
-            Our Work
-            <GoTriangleDown />
-          </Link>
-          <Link className="mobileNavLink dropdownLink" to="/home">
-            About
-            <GoTriangleDown />
-          </Link>
-          <Link className="mobileNavLink dropdownLink" to="/home">
-            Models
-            <GoTriangleDown />
-          </Link>
-          <Link className="mobileNavLink dropdownLink" to="/home">
-            Academy
-            <GoTriangleDown />
-          </Link>
-          <Link className="mobileNavLink" to="/home">
+          <div
+            className="mobileNavLink "
+            onClick={() => onClickDropDown("ourWork",!isDropdown.ourWork)}
+          >
+            <div className="dropdownLink">
+              <p className="dropDownTitle">Our Work</p>
+              <GoTriangleDown />
+            </div>
+
+            <ul
+              className={`dropDownElementsUl ${
+                isDropdown.ourWork && "isDropDown"
+              }`}
+            >
+              <li>item1</li>
+              <li>item2</li>
+              <li>item3</li>
+              <li>item4</li>
+            </ul>
+          </div>
+          <div
+            className="mobileNavLink "
+            onClick={() => onClickDropDown("about",!isDropdown.about)}
+          >
+            <div className="dropdownLink">
+              <p className="dropDownTitle">About</p>
+              <GoTriangleDown />
+            </div>
+
+            <ul className={`dropDownElementsUl ${isDropdown.about && "isDropDown"}`}>
+              <li>item1</li>
+              <li>item2</li>
+              <li>item3</li>
+              <li>item4</li>
+            </ul>
+          </div>
+          <div
+            className="mobileNavLink "
+            onClick={() => onClickDropDown("models",!isDropdown.models)}
+          >
+            <div className="dropdownLink">
+              <p className="dropDownTitle">Models</p>
+              <GoTriangleDown />
+            </div>
+
+            <ul className={`dropDownElementsUl ${isDropdown.models && "isDropDown"}`}>
+              <li>item1</li>
+              <li>item2</li>
+              <li>item3</li>
+              <li>item4</li>
+            </ul>
+          </div>
+          <div
+            className="mobileNavLink "
+            onClick={() => onClickDropDown("academy",!isDropdown.academy)}
+          >
+            <div className="dropdownLink">
+              <p className="dropDownTitle">Academy</p>
+              <GoTriangleDown />
+            </div>
+
+            <ul className={`dropDownElementsUl ${isDropdown.academy && "isDropDown"}`}>
+              <li>item1</li>
+              <li>item2</li>
+              <li>item3</li>
+              <li>item4</li>
+            </ul>
+          </div>
+          <Link className="mobileNavLink" to="/">
             Blog
           </Link>
         </ul>

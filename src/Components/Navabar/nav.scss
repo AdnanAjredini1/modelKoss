@@ -6,16 +6,19 @@
     z-index: 11110;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1.6vw 2% 10px;
     background-color: #ffffff;
 
     @media (max-width:1024px) {
         display: none;
     }
-    
-    .navLeftPart{
+
+    .navLeftPart {
         display: flex;
+
+
+
 
         .navBrandTitle {
             font-family: "Brown Sugar";
@@ -24,12 +27,67 @@
             font-style: normal;
             text-align: left;
             color: #1d1d1d;
-    
+            margin-bottom: 0;
+
         }
-        
+
+        .linkTitle {
+            text-decoration: none;
+        }
+
     }
 
-   
+    .navMiddlePart {
+        display: flex;
+        align-items: center;
+        gap: clamp(20px, 4vw, 80px);
+
+        .navlinkk {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: center;
+            color: #1d1d1d;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                color: #423f3f;
+            }
+        }
+    }
+
+    .navRightPart {
+        display: flex;
+        align-items: center;
+        gap: clamp(15px, 3.5vw, 80px);
+        @media (max-width:1118px) {
+            gap:15px;
+        }
+
+
+        .applyNowText {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: center !important;
+            color: #1d1d1d;
+            margin-bottom: 0;
+        }
+
+        .contanctUsButton {
+            width: 138px;
+            height: 49px;
+            border-radius: 25px;
+            background: #1d1d1d;
+            font-size: 15px;
+            font-weight: 500;
+            font-style: normal;
+            text-align: center;
+            color: #ffffff;
+        }
+    }
+
 
 
 }

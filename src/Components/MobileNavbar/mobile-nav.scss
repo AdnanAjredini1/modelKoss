@@ -42,7 +42,7 @@
 .sideNav {
     visibility: hidden;
     background-color: #fff;
-    width: clamp(320px, 75vw, 400px);
+    width: clamp(272px, 75vw, 400px);
     height: 100%;
     position: absolute;
     top: 0;
@@ -51,6 +51,9 @@
     transition: all 0.5s ease-in-out;
     transform: translateX(-100%);
     padding-top: 15px;
+    @media (max-width:272px) {
+        width: clamp(220px, 75vw, 400px);
+    }
 
 
 
@@ -89,12 +92,11 @@
 
         &:hover line {
             stroke: #a09494;
-
         }
 
     }
 
-    ul {
+    .sideLinksUl{
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -106,12 +108,58 @@
             color: #000;
             font-size: 18px;
 
-            &:hover {
-                color: #a09494;
-            }
+           
         }
-    }
+        li {
+            list-style-type: none; 
+            cursor: pointer;
+            margin: 0; 
+            padding: 0; 
+          }
+          
 
+        .dropdownLink{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 15px;
+            cursor: pointer;
+            
+           
+            
+
+            .dropDownTitle{
+                text-align: center;
+                margin-bottom: 0;
+                &:hover {
+                    color: #464040;
+                    cursor: pointer;
+                }
+            }
+
+           
+        }
+        .dropDownElementsUl{
+            max-height: 0; 
+            overflow: hidden; 
+
+            transition: max-height 0.4s ease-in-out; 
+
+            li {
+             
+                margin:7px 0;
+             
+            }
+         }
+
+         .isDropDown{
+            max-height: 700px;
+           
+         }
+
+
+    }
+    
 
 }
 
