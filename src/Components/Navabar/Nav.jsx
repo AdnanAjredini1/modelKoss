@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import "./nav.scss";
+import { GoTriangleDown } from "react-icons/go";
+import OurWorkMegamenu from "./OurWorkMEGAMENU/OurWorkMegamenu";
+
 function Nav() {
   return (
     <nav id="nav">
       <div className="navLeftPart">
-        
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="34.033"
@@ -23,13 +25,39 @@ function Nav() {
         </Link>
       </div>
       <div className="navMiddlePart">
-         <Link className="navlinkk" to="/">Home</Link>
-         <Link className="navlinkk" to="/">Our Work</Link>
-         <Link className="navlinkk" to="/">About</Link>
-         <Link className="navlinkk" to="/">Models</Link>
-         <Link className="navlinkk" to="/">Academy</Link>
-         <Link className="navlinkk" to="/">Blog</Link>
+        <Link className="navlinkk" to="/">
+          Home
+        </Link>
+        <Link className="navlinkk ourWorkLink" to="/">
 
+          <div className="insideNavlink">
+            <p> Our Work</p>
+            <GoTriangleDown />
+          </div>
+          <div className="block"></div>
+         <OurWorkMegamenu />
+        </Link>
+        <Link className="navlinkk" to="/">
+          <div className="insideNavlink">
+            <p> About</p>
+            <GoTriangleDown />
+          </div>
+        </Link>
+        <Link className="navlinkk" to="/">
+          <div className="insideNavlink">
+            <p> Models</p>
+            <GoTriangleDown />
+          </div>
+        </Link>
+        <Link className="navlinkk" to="/">
+          <div className="insideNavlink">
+            <p> Academy</p>
+            <GoTriangleDown />
+          </div>
+        </Link>
+        <Link className="navlinkk" to="/">
+          Blog
+        </Link>
       </div>
       <div className="navRightPart">
         <p className="applyNowText">Apply now</p>

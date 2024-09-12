@@ -9,8 +9,9 @@
     justify-content: space-between;
     padding: 1.6vw 2% 10px;
     background-color: #ffffff;
+   
 
-    @media (max-width:1024px) {
+    @media (max-width:1200px) {
         display: none;
     }
 
@@ -54,6 +55,32 @@
             &:hover {
                 color: #423f3f;
             }
+
+            .insideNavlink{
+                display: flex;
+                align-items: center;
+                gap: clamp(5px,1vw,18px);
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .ourWorkLink{
+        
+            .block{
+                position: absolute;
+                width: 95px;
+                height: 100px;
+                background-color:transparent;
+
+            }
+
+           &:hover {
+           .ourWorkWrapper{
+            visibility: visible;
+           }
+        }
         }
     }
 
@@ -61,7 +88,7 @@
         display: flex;
         align-items: center;
         gap: clamp(15px, 3.5vw, 80px);
-        @media (max-width:1118px) {
+        @media (max-width:1208px) {
             gap:15px;
         }
 

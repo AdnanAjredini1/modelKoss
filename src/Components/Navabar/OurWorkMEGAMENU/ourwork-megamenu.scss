@@ -1,0 +1,108 @@
+.ourWorkWrapper {
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    top: 100%;
+    z-index: 2;
+    width: 100%;
+    height: 463px;
+    border: 0.5px solid #aaaaaa;
+    background: #ffffff;
+    padding-inline: 2%;
+
+    .ourWorkLeftPart {
+
+        display: flex;
+        justify-content: space-between;
+        width: 53%;
+        cursor: default;
+
+        .ourWorkList {
+            display: flex;
+            flex-direction: column;
+            margin-top: 63px;
+
+            .ourWorkListTitle {
+                font-size: 20px;
+                font-weight: normal;
+                font-style: normal;
+                color: #1d1d1d;
+
+            }
+
+        }
+
+        .ourWorkLink {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+
+
+            .link {
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: normal;
+                font-style: normal;
+                color: #1d1d1d;
+            }
+        }
+    }
+
+    .ourWorkRightPart {
+        cursor: default;
+
+        .cardWrapperClass {
+            padding: 10px;
+            margin-top: 22px;
+            width: 267px;
+            height: 322px;
+            border-color: #c1c1c1;
+            border-width: 0.5px;
+            border-style: solid;
+            background: #ffffff;
+            cursor: default;
+
+        }
+
+        .imgClass {
+            width: 247px;
+            height: 202px;
+            border-color: #000000;
+            border-width: 1px;
+
+        }
+
+        .descriptionWrapperClass {
+            display: flex;
+            justify-content: space-between;
+            padding-inline: 32px;
+            // margin-bottom: 14px;
+        }
+
+        .nameClass {
+            margin-top: 15px;
+            margin-bottom: 3px;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: center;
+            color: #1d1d1d;
+        }
+
+        .descriptionClass {
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 35px;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+            margin-bottom: 0;
+        }
+    }
+
+
+
+}
