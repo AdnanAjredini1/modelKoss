@@ -1,8 +1,9 @@
 function Home() {
     return (
-        <div>
+        <div style={{marginTop:'100px'}}>
             Home
-        </div>
+          
+            </div>
     );
 }
 
