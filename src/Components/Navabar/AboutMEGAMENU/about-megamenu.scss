@@ -1,0 +1,130 @@
+.aboutMegemenuWrapper {
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    left: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100%;
+    z-index: 2;
+    width: 960px;
+    height: 463px;
+    border: 0.5px solid #aaaaaa;
+    background: #ffffff;
+    padding-inline: 2.5%;
+    cursor: default;
+    @media (max-width:1508px) {
+        left: 20vw;
+    }
+    @media (max-width:1308px) {
+        left: 15vw;
+    }
+
+    .aboutMRightPart {
+        position: relative;
+        padding-top: 50px;
+        width: 50%;
+
+
+        .imageWrapper {
+            position: relative;
+            opacity: 15;
+            background: #1d1d1d;
+            width: 187.5px;
+            left: 65px;
+
+
+            .img1Class {
+                opacity: 0.60;
+
+            }
+
+
+            .imgText {
+                position: absolute;
+                width: 115px;
+                height: 49px;
+                font-size: 20px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: left;
+                color: #ffffff;
+                top: 5px;
+                left: 10px
+            }
+
+        }
+
+        .img2Class {
+            position: absolute;
+            top: 66px;
+            right: 5px;
+
+
+        }
+
+        .aboutUsButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 134px;
+            height: 48px;
+            border-radius: 5px;
+            background: #1d1d1d;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            text-align: center;
+            color: #ffffff;
+            bottom: 50px;
+            left:140px;
+        }
+
+
+
+    }
+
+    .aboutMLeftPart {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        padding-right: 6%;
+        padding-top: 50px;
+
+        .linksWrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .categoryName {
+                font-size: 20px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: left;
+                color: #1d1d1d;
+            }
+
+            .linkList {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .aboutlink {
+                    font-size: 15px;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: left;
+                    color: #1d1d1d;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #867d7d;
+                    }
+                }
+            }
+        }
+    }
+
+}

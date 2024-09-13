@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./nav.scss";
 import { GoTriangleDown } from "react-icons/go";
 import OurWorkMegamenu from "./OurWorkMEGAMENU/OurWorkMegamenu";
+import AboutMegamenu from "./AboutMEGAMENU/AboutMegamenu"
 
 function Nav() {
   return (
@@ -28,27 +29,33 @@ function Nav() {
         <Link className="navlinkk" to="/">
           Home
         </Link>
-        <Link className="navlinkk ourWorkLink" to="/">
-
+        <Link className="navlinkk" to="/">
           <div className="insideNavlink">
             <p> Our Work</p>
             <GoTriangleDown />
           </div>
+        </Link>
+        <div className="navlinkk aboutLink">
+          <Link to="/" className="navlinkk">
+            <div className="insideNavlink">
+              <p> About</p>
+              <GoTriangleDown />
+            </div>
+          </Link>
+          <div className="blockk"></div>
+          <AboutMegamenu />
+        </div>
+        <div className="navlinkk ourWorkLink">
+          <Link to="/" className="navlinkk">
+            <div className="insideNavlink">
+              <p> Models</p>
+              <GoTriangleDown />
+            </div>
+          </Link>
           <div className="block"></div>
-         <OurWorkMegamenu />
-        </Link>
-        <Link className="navlinkk" to="/">
-          <div className="insideNavlink">
-            <p> About</p>
-            <GoTriangleDown />
-          </div>
-        </Link>
-        <Link className="navlinkk" to="/">
-          <div className="insideNavlink">
-            <p> Models</p>
-            <GoTriangleDown />
-          </div>
-        </Link>
+          <OurWorkMegamenu />
+        </div>
+        
         <Link className="navlinkk" to="/">
           <div className="insideNavlink">
             <p> Academy</p>

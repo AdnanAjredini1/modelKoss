@@ -69,16 +69,42 @@
         .ourWorkLink{
         
             .block{
+                display: none;
                 position: absolute;
+                
                 width: 95px;
-                height: 100px;
+                height: 40px;
                 background-color:transparent;
+                z-index: 20;
 
             }
 
            &:hover {
            .ourWorkWrapper{
             visibility: visible;
+           }
+           .block{
+            display: block;
+           }
+        }
+        }
+
+        .aboutLink{
+            .blockk{
+                display: none;
+                position: absolute;
+                width: 95px;
+                height: 40px;
+                background-color:transparent;
+
+            }
+
+           &:hover {
+           .aboutMegemenuWrapper{
+            visibility: visible;
+           }
+           .blockk{
+            display: block;
            }
         }
         }
@@ -116,5 +142,5 @@
     }
 
 
-
+   
 }

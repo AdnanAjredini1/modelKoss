@@ -11,7 +11,7 @@ function OurWorkMegamenu() {
     <div className="ourWorkWrapper">
       <div className="ourWorkLeftPart">
         {ourWorkData.map((item) => (
-          <div className="ourWorkList">
+          <div className="ourWorkList" key={item.category}>
             <p className="ourWorkListTitle">{item.category}</p>
             <div className="ourWorkLink">
               {item.links.map((link) => (
@@ -24,21 +24,10 @@ function OurWorkMegamenu() {
         ))}
       </div>
       <div className="ourWorkRightPart">
-      {/* <Carousel /> */}
-        {cardData.map((item) => (
-          <Card
-            key={item.img}
-            cardWrapperClass="cardWrapperClass"
-            imgClass="imgClass"
-            descriptionWrapperClass="descriptionWrapperClass"
-            descriptionClass='descriptionClass'
-            nameClass="nameClass"
-            name={item.name}
-            descriptions={item.descriptions}
-            date={item.date}
-            img={item.img}
-          />
-        ))}
+      <p className="text">Models &nbsp;&nbsp;  <span className="textSpan"> View all &gt; </span></p>
+      <Carousel />
+   
+
       </div>
     </div>
   );
