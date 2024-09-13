@@ -48,6 +48,7 @@ function Carousel() {
                 nameClass="nameClass"
                 name={card.name}
                 descriptions={card.descriptions}
+                dateClass="dateClass"
                 date={card.date}
                 img={card.img}
               />

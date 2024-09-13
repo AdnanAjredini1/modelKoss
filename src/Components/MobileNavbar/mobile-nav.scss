@@ -18,7 +18,7 @@
         .headerTitle {
             cursor: pointer;
             font-family: "Brown Sugar";
-            font-size: 26px;
+            font-size: 28px;
             font-weight: normal;
             font-style: normal;
             text-align: left;
@@ -66,23 +66,27 @@
     }
 
     .mobileNavHeader {
+        font-family: "Brown Sugar";
         display: flex;
-        padding: 8px 15px;
+        padding: 7px 15px;
         gap: 10px;
         margin-left: 5px;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: normal;
         font-style: normal;
-        text-align: left;
+        text-align: center;
         color: #1d1d1d;
+        margin-top: 10px;
 
-        .mobileNavHeader .brand {
+         .brand {
+            font-family: "Brown Sugar";
             text-align: center;
-            font-size: 26px;
+            font-size: 22px;
             font-weight: normal;
             font-style: normal;
             text-align: left;
             color: #1d1d1d;
+           margin-top: 3px;
         }
 
 

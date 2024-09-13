@@ -60,15 +60,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;        /* Customize arrow size */
-  color: #000;            /* Arrow color */
+  font-size: 18px;        
+  color: #000;    
+    -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;       
+     
 }
 .custom-next {
-  right: 10px;            /* Positioning for the next arrow */
+  right: 10px;          
 }
 
 .custom-prev {
-  right:40px;             /* Positioning for the previous arrow */
+  right:40px;             
 }
 
 .swiper-button-next,

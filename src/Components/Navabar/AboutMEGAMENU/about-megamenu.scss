@@ -43,6 +43,7 @@
 
             .imgText {
                 position: absolute;
+                font-family: "Brown Sugar";
                 width: 115px;
                 height: 49px;
                 font-size: 20px;
@@ -51,7 +52,8 @@
                 text-align: left;
                 color: #ffffff;
                 top: 5px;
-                left: 10px
+                left: 10px;
+                opacity: 1;
             }
 
         }
@@ -60,8 +62,6 @@
             position: absolute;
             top: 66px;
             right: 5px;
-
-
         }
 
         .aboutUsButton {
@@ -99,6 +99,7 @@
             gap: 8px;
 
             .categoryName {
+                font-family: "Brown Sugar";
                 font-size: 20px;
                 font-weight: normal;
                 font-style: normal;
