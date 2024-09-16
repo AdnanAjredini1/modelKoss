@@ -6,7 +6,7 @@ const aboutMData = [
         { link: "our models", to: "/" },
         { link: "our partners", to: "/" },
         { link: "our team", to: "/" },
-        { link: "our partners", to: "/" },
+        { link: "our partnerss", to: "/" },
         { link: "clients", to: "/" },
        
       ],

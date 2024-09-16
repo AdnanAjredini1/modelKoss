@@ -9,8 +9,8 @@ function AboutMegamenu() {
     <div className="aboutMegemenuWrapper">
       <div className="aboutMLeftPart">
         {aboutMData.map((category) => (
-          <div className="linksWrapper">
-            <p key={category.category} className="categoryName">
+          <div className="linksWrapper" key={category.category}>
+            <p  className="categoryName">
               {category.category}
             </p>
             <div className="linkList">

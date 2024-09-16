@@ -36,7 +36,7 @@ function Carousel() {
         className="mySwiper"
       >
         {cardData.map((group, groupIndex) => (
-          <SwiperSlide>
+          <SwiperSlide key={groupIndex}>
           <div key={groupIndex} className="cardsWrapper">
             {group.map((card) => (
               <Card

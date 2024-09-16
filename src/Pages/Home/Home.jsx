@@ -1,10 +1,10 @@
+import Hero from "./HomeComponents/Hero";
+import "./home.scss"
+
 function Home() {
-    return (
-        <div style={{marginTop:'100px'}}>
-            Home
-          
-            </div>
-    );
+  return <div className="homeWrapper" >
+    <Hero />
+  </div>;
 }
 
 export default Home;

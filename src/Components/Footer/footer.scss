@@ -1,7 +1,313 @@
-.footerWrapper{
-    display: flex;
-    flex-direction: column;
-    height: 888px;
+.footerWrapper {
+    height: fit-content;
+
     background: #1d1d1d;
+    margin-bottom: 0;
+
+    @media (max-width:1226px) {
+        height: fit-content;
+    }
+
+    .lastRow {
+        margin-top: 100px;
+
+        padding-inline: 4%;
+
+        .linee {
+
+            width: 100%;
+            height: 1px;
+            background-color: #817676;
+            margin-bottom: 40px;
+        }
+
+        .end {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 25px;
+            @media (max-width:500px) {
+                gap:5px;
+               }
+
+            .iconsAndLanguages{
+                display: flex;
+                flex-direction: row;
+               justify-content: space-between;
+              
+               flex-wrap: wrap;
+               gap: 50px;
+               @media (max-width:1478px) {
+                
+                width: 100%;
+               
+               }
+               @media (max-width:500px) {
+                gap:10px;
+                width: 100%;
+                align-items: center;
+               }
+           
+
+                .number {
+                    font-family: "Montserrat";
+                    font-size: 15px;
+                    font-weight: normal;
+                    line-height: 35px;
+                    font-style: normal;
+                    text-align: center;
+                    color: #f1f1f1;
+                    
+                }
+    
+                .iconsWrapper {
+                    display: flex;
+                    padding-bottom: 15px;
+                    gap: 27px;
+                }
+
+            }
+
+          
+
+            .terms {
+                display: flex;
+                flex-wrap: wrap;
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-weight: normal;
+                line-height: 40px;
+                font-style: normal;
+                text-align: center;
+                color: #f1f1f1;
+            }
+
+            .brandWrapper {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .brand {
+                    font-family: "Brown Sugar";
+                    font-size: 26px;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: left;
+                    color: #ffffff;
+                    // padding-left: 15px;
+                    
+
+                    @media (max-width:414px) {
+                        font-size: 25px;
+                        padding-left: 5px;
+                    }
+
+                }
+
+                .rights {
+                    font-family: "Montserrat";
+                    font-size: 15px;
+                    font-weight: normal;
+                    line-height: 40px;
+                    font-style: normal;
+                    text-align: left;
+                    color: #f1f1f1;
+                    padding-left: 40px;
+
+                    @media (max-width:414px) {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .secondRow {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        padding-inline: 4%;
+        justify-content: space-between;
+
+        .rightPart {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-left: -30px;
+
+            @media (max-width:662px) {
+                margin-left: 0;
+            }
+
+            .title {
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 25px;
+                font-style: normal;
+                text-align: left;
+                color: #f1f1f1;
+                padding-bottom: 30px;
+            }
+
+            .text {
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-weight: normal;
+                line-height: 15px;
+                font-style: normal;
+                text-align: left;
+                color: #f1f1f1;
+
+            }
+        }
+
+        .line {
+            height: 310px;
+            width: 1px;
+            background-color: #9b9393;
+
+            @media (max-width:1418px) {
+                display: none;
+            }
+        }
+
+        .middlePart {
+            display: flex;
+            flex-direction: column;
+            margin-left: -70px;
+
+            @media (max-width:662px) {
+                margin-left: 0;
+            }
+
+            .jobs {
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 55px;
+                font-style: normal;
+                text-align: left;
+                color: #f1f1f1;
+                margin-top: 48px;
+            }
+
+            .jobsEmail {
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-weight: normal;
+                line-height: 35px;
+                font-style: normal;
+                text-align: left;
+                color: #f1f1f1;
+            }
+
+            .title {
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 500;
+                // line-height: 55px;
+                font-style: normal;
+                text-align: left;
+                color: #f1f1f1;
+                margin-top: 0;
+            }
+
+            .addressWrapper {
+                display: flex;
+                flex-direction: column;
+                margin-top: 29px;
+
+
+                .address {
+                    font-family: "Montserrat";
+                    font-size: 15px;
+                    font-weight: normal;
+                    line-height: 15px;
+                    font-style: normal;
+                    text-align: left;
+                    color: #f1f1f1;
+                }
+            }
+        }
+
+        .leftPart {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 140px;
+
+            @media (max-width:662px) {
+                gap: 80px;
+            }
+
+
+            .linksWrapper {
+                display: flex;
+                flex-direction: column;
+
+                .categoryText {
+                    font-family: "Brown Sugar";
+                    font-size: 22px;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: left;
+                    color: #ffffff;
+
+                }
+
+                .list {
+                    display: flex;
+                    flex-direction: column;
+
+                    .link {
+                        font-family: "Montserrat";
+                        font-size: 15px;
+                        font-weight: normal;
+                        line-height: 55px;
+                        font-style: normal;
+                        text-align: left;
+                        color: #f1f1f1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .firstRow {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        padding-top: 90px;
+
+        @media (max-width:924px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // .arrowRight{
+        //     display: flex;
+        // }
+
+        .text {
+            font-family: "Brown Sugar";
+            font-size: clamp(100px, 9vw, 150px);
+            font-weight: normal;
+            font-style: normal;
+            text-align: left;
+            color: #ffffff;
+            opacity: 0.15;
+
+            @media (max-width:1310px) {
+                font-size: clamp(50px, 7vw, 100px);
+                text-align: center;
+            }
+
+        }
+    }
 
 }
