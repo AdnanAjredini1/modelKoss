@@ -37,7 +37,7 @@ function Hero() {
           wrapperClass="wrapperClass"
           width="185"
           height="185.1"
-          fill="#1d1d1d"
+          fill="#fff"
           stroke="#fff"
           widthArrow="42.46"
           heightArrow="18"
