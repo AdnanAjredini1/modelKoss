@@ -2,10 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./mobile-nav.scss";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoTriangleDown } from "react-icons/go";
 
 function MobileNav() {
+  const [navbarBackground, setNavbarBackground] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isDropdown, setIsDropdown] = useState({
     ourWork: false,
@@ -18,9 +19,27 @@ function MobileNav() {
   function onClickDropDown(name, value) {
     setIsDropdown((prev) => ({ ...prev, [name]: value }));
   }
+
+  
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    if (scrollTop > 50) {
+      setNavbarBackground(true);
+    } else {
+      setNavbarBackground(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <header className="navHeader">
+      <header className={`navHeader   ${navbarBackground ? "nav-scrolled" : ""}`}>
         <div className="headerLeftPart">
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,11 +1,23 @@
 @import "/node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
 .navHeader {
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
-    padding: 17px 15px;
+    padding: 15px 15px;
+   
+    background-color: #fff;
     @media (min-width:1202px) {
         display: none;
+    }
+    @media (max-width:300px) {
+        padding: 15px 5px;
+        
     }
 
     .headerLeftPart {
@@ -23,6 +35,10 @@
             font-style: normal;
             text-align: left;
             color: #1d1d1d;
+            @media (max-width:300px) {
+                padding: 5px;
+                font-size: 23px;
+            }
         }
     }
 }
@@ -33,8 +49,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 101;
     transition: opacity 0.3s ease-in-out;
 
     @media (min-width:1202px) {
@@ -43,19 +59,21 @@
 }
 
 .sideNav {
+    position: fixed;
     visibility: hidden;
     background-color: #fff;
-    width: clamp(272px, 75vw, 400px);
+    width: clamp(272px, 95vw, 420px);
     height: 100%;
-    position: absolute;
+    // position: absolute;
     top: 0;
-    z-index: 2;
+    left: 0;
+    z-index: 104;
     padding: 10px 4px;
     transition: all 0.5s ease-in-out;
     transform: translateX(-100%);
     padding-top: 15px;
-    @media (max-width:272px) {
-        width: clamp(220px, 75vw, 400px);
+    @media (max-width:400px) {
+        width: 100%;
     }
 
 

@@ -1,7 +1,8 @@
 import "./hero.scss";
 import Icon from "./Icon";
-import img1 from "./hero-assets/285559266_1739637450.png";
-import img2 from "./hero-assets/286480874_9724163867.png";
+import img1 from "./hero-assets/285559266_1739637450.webp";
+import img2 from "./hero-assets/286480874_9724163867.webp";
+import img22 from "./hero-assets/b0773d25037325e76585e7cad6dd4f86.webp"
 import icon from "./hero-assets/Path 20.svg";
 import arrow from './hero-assets/Path 4.svg';
 import mapIcon from "./hero-assets/2216335_location_map_map pin_marker_pin_icon.svg"
@@ -46,6 +47,7 @@ function Hero() {
 
         <img className="img1" src={img1} />
         <img className="img2" src={img2} />
+        <img className="img22" src={img22} />
       </div>
     </div>
   );

@@ -3,10 +3,30 @@ import "./nav.scss";
 import { GoTriangleDown } from "react-icons/go";
 import OurWorkMegamenu from "./OurWorkMEGAMENU/OurWorkMegamenu";
 import AboutMegamenu from "./AboutMEGAMENU/AboutMegamenu"
+import { useEffect, useState } from "react";
+
+
 
 function Nav() {
+  const [navbarBackground, setNavbarBackground] = useState(false);
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    if (scrollTop > 50) {
+      setNavbarBackground(true);
+    } else {
+      setNavbarBackground(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav id="nav">
+    <nav id="nav" className={navbarBackground ? "nav-scrolled" : ""}>
       <div className="navLeftPart">
         <svg
           xmlns="http://www.w3.org/2000/svg"
