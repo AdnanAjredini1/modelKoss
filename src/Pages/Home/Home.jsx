@@ -1,5 +1,6 @@
 import AboutUs from "./HomeComponents/AboutUS/AboutUs";
 import Hero from "./HomeComponents/Hero/Hero";
+import TheDayOf from "./HomeComponents/TheDayOF/TheDayOf";
 import "./home.scss";
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <div className="homeWrapper">
       <Hero />
       <AboutUs />
+      <TheDayOf />
     </div>
   );
 }
