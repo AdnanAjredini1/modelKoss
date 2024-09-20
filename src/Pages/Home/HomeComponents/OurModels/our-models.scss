@@ -1,0 +1,43 @@
+.ourModelsWrapper {
+    margin-bottom: 100px;
+    .title {
+        font-family: "Brown Sugar";
+        font-size: clamp(40px,8vw,100px);
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #1d1d1d;
+        margin-top: 150px;
+    }
+
+    .linksWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(10px,7vw,75px);
+        @media (max-width:338px) {
+            gap: 10px;
+        }
+
+        .link {
+            text-decoration: none;
+            font-family: "Montserrat";
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 35px;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+            border-bottom: 2px solid transparent;
+            &:hover{
+               border-bottom: 2px solid #a79d9d;
+            }
+        }
+
+        .active{
+            border-bottom: 2px solid #1d1d1d;
+        }
+
+
+    }
+}
