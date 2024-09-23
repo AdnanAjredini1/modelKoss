@@ -1,0 +1,84 @@
+.beingClassyWrapper {
+    position: relative;
+    height: 635px;
+    background: linear-gradient(rgba(29, 29, 29, 0.7),
+            rgba(29, 29, 29, 0.7)),
+        url('./being-classy-assets/levi-state-eVgKrpyUH-1.webp');
+    background-size: cover;
+
+
+    .iconImg {
+        position: absolute;
+        top: 96px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 68px;
+        height: 68px;
+    }
+
+    .text1 {
+        position: absolute;
+        top: 217px;
+        left: 140px;
+        font-family: "Brown Sugar";
+        font-size: 70px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        color: #ffffff;
+        @media (max-width:1208px) {
+           text-align: center;
+           right: 0;
+           left: 0;
+           margin: 0 auto;
+         }
+         @media (max-width:1106px) {
+           font-size: clamp(30px,6vw,70px);
+          }
+          @media (max-width:280px) {
+            font-size: clamp(20px,6vw,70px);
+           }
+    }
+
+    .text2 {
+        position: absolute;
+        top: 329px;
+        right: 70px;
+        font-family: "Brown Sugar";
+        font-size: 70px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        color: #ffffff;
+        @media (max-width:1208px) {
+          text-align: center;
+          right: 0;
+          left: 0;
+          margin: 0 auto;
+         
+        }
+        @media (max-width:1106px) {
+            font-size: clamp(30px,6vw,70px);
+           }
+           @media (max-width:280px) {
+            font-size: clamp(20px,6vw,70px);
+           }
+    }
+
+    .bigIcon {
+        position: absolute;
+        width: 165.4px;
+        height: 165.3px;
+        left: 140px;
+        bottom: 96px;
+        @media (max-width:1448px) {
+            bottom: 40px;
+            left:0;
+            right: 0;
+            margin:0 auto;
+        }
+    }
+
+
+}

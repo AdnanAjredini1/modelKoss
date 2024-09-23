@@ -83,10 +83,10 @@ function Footer() {
              <p className="terms"><span>Privacy Statement</span> &nbsp;&nbsp;|&nbsp;&nbsp;<span>Terms of Service</span>  &nbsp;&nbsp;|&nbsp;&nbsp; <span>Help / FAQ</span></p>
              <div className="iconsAndLanguages">
               <div className="iconsWrapper">
-               <img src={imgFB} />
-               <img src={imgInsta} />
-               <img src={imgTikTok} />
-               <img src={imgTwitter} />
+               <img width={8.2} height={17.7} src={imgFB} />
+               <img  width={19} height={19} src={imgInsta} />
+               <img  width={16} height={19} src={imgTikTok} />
+               <img   width={21.9} height={19} src={imgTwitter} />
               </div>
               <p className="number">
               +383 (44) 100 200

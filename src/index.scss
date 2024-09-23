@@ -19,4 +19,16 @@ html {
   flex-direction: column;
 }
 
+@media (max-width:1000px) {
+
+  html{
+    -ms-overflow-style: none;
+   scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 

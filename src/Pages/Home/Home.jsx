@@ -1,5 +1,7 @@
 import AboutUs from "./HomeComponents/AboutUS/AboutUs";
+import BeingClassy from "./HomeComponents/BeingClassy/BeingClassy";
 import Hero from "./HomeComponents/Hero/Hero";
+import ModelMarketing from "./HomeComponents/ModelMarketing/ModelMarketing";
 import OurModels from "./HomeComponents/OurModels/OurModels";
 import TheDayOf from "./HomeComponents/TheDayOF/TheDayOf";
 import "./home.scss";
@@ -11,6 +13,8 @@ function Home() {
       <AboutUs />
       <TheDayOf />
       <OurModels />
+      <BeingClassy />
+      <ModelMarketing />
     </div>
   );
 }

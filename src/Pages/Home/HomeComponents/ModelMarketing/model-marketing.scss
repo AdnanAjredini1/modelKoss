@@ -1,0 +1,240 @@
+.modelMarketingWrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    padding-top: 221px;
+    padding-inline: 6%;
+    padding-bottom: 150px;
+
+    @media (max-width:1140px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .rightPart {
+        position: relative;
+
+        .iconsWrapper {
+
+            position: absolute;
+
+            bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: clamp(300px, 35vw, 647px);
+            height: 101px;
+            border-color: #bbbbbb;
+            border-width: 0.5px;
+            border-style: solid;
+            border-radius: 51px;
+            background: #ffffff;
+            z-index: 3;
+
+            @media (max-width:1376px) {
+                left: 3vw;
+            }
+
+            @media (max-width:1140px) {
+                width: 647px;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+            }
+
+            @media (max-width:676px) {
+               
+              width: 95vw;
+                
+            }
+            @media (max-width:394px) {
+               
+              bottom: -100px;
+              width: 96vw;
+                  
+              }
+
+            .iconWrapper {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                .text {
+                    font-family: "Montserrat";
+                    font-size: 15px;
+                    font-weight: normal;
+                    line-height: 40px;
+                    font-style: normal;
+                    text-align: left;
+                    color: #1d1d1d;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    @media (max-width:446px) {
+               
+                       font-size: 13px;
+                       line-height: 30px;
+                          
+                      }
+
+                }
+            }
+        }
+
+        .img1 {
+            position: relative;
+            width: clamp(200px, 19vw, 356px);
+            height: clamp(250px, 26vw, 420px);
+            margin-left: 101px;
+            margin-top: 50px;
+            z-index: 1;
+
+            @media (max-width:1140px) {
+                width: 356px;
+                height: 420px;
+                margin-left: -24vw;
+            }
+
+            @media (max-width:676px) {
+               
+                width: 52vw;
+                height: 62vw;
+                
+            }
+        }
+
+        .img2 {
+            position: absolute;
+            width: clamp(250px, 26vw, 500.1px);
+            height: clamp(300px, 29vw, 531.1px);
+            top: 90px;
+            left: clamp(200px, 16.5vw, 300px);
+            z-index: 2;
+
+            @media (max-width:1140px) {
+                display: none;
+            }
+        }
+        .img22 {
+            position: absolute;
+            display: none;
+            width: 300px;
+            height: 500px;
+            z-index: 2;
+
+            @media (max-width:1140px) {
+                top: 70px;
+                display:flex;
+                width: 356px;
+                height: 420px;
+                left:8vw;
+            }
+
+            @media (max-width:676px) {
+               
+                width: 52vw;
+                height: 62vw;
+                
+            }
+        }
+
+        .icon {
+            position: absolute;
+            top: -23px;
+            left: 3vw;
+            z-index: 2;
+
+            @media (max-width:1140px) {
+                left: -28.5vw;
+            }
+        }
+    }
+
+    .leftPart {
+        .title {
+            border-color: #000000;
+            font-family: "Brown Sugar";
+            font-size: clamp(50px, 5.2vw, 100px);
+            font-weight: normal;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+
+            @media (max-width:1140px) {
+                text-align: center;
+            }
+
+        }
+
+        .description {
+            max-width: 840px;
+            height: 179px;
+            font-family: "Montserrat";
+            font-size: 15px;
+            font-weight: normal;
+            line-height: clamp(20px, 2.8vw, 40px);
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+
+            @media (max-width:1140px) {
+                text-align: center;
+            }
+        }
+
+        .lastLine {
+            display: flex;
+            gap: 94px;
+            margin-top: 86px;
+
+            @media (max-width:1140px) {
+                justify-content: center;
+            }
+            @media (max-width:590px) {
+                gap: 10vw;
+            }
+            @media (max-width:375px) {
+                margin-top: 150px;
+                gap:5vw;
+            }
+            @media (max-width:300px) {
+                margin-top: 200px;
+                
+            }
+
+            .num {
+                font-family: "Brown Sugar";
+                font-size: 35px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: left;
+                color: #808080;
+                @media (max-width:446px) {
+                    font-size: 25px;
+                }
+                @media (max-width:375px) {
+                  font-size: 22px;
+                }
+    
+
+            }
+
+            .name {
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-weight: normal;
+                line-height: 40px;
+                font-style: normal;
+                text-align: left;
+                color: #1d1d1d;
+                @media (max-width:446px) {
+                    font-size: 13px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
