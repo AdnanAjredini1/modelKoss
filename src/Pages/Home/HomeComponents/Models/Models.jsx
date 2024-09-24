@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -8,12 +8,23 @@ import CardM from "./models-components/CardM";
 import arrow from "./models-assets/arrow-left(2).svg";
 import arrowRight from "./models-assets/arrow-left(1).svg";
 import { modelsData } from "./modelsData";
-import { Pagination, Navigation,FreeMode } from "swiper/modules";
+import { Pagination, Navigation, FreeMode } from "swiper/modules";
 function Models() {
   const [active, setActive] = useState(1);
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
   const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      const swiper = swiperRef.current.swiper;
+      swiper.params.navigation.nextEl = nextButtonRef.current;
+      swiper.params.navigation.prevEl = prevButtonRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [active]); 
+
 
   return (
     <div className="modelssWarpper">
@@ -21,7 +32,6 @@ function Models() {
       <div className="tabsWrapper">
         <div className="dropDownTabs"></div>
         <div className="leftTabs">
-         
           {modelsData.map((item, index) => (
             <p
               className={`tab ${active === index && "active"}`}
@@ -41,7 +51,7 @@ function Models() {
         {active === 1 ? (
           <div className="carouselWrapper">
             <Swiper
-   ref={swiperRef}
+              ref={swiperRef}
               slidesPerView={1}
               spaceBetween={20}
               pagination={{
@@ -62,17 +72,17 @@ function Models() {
                   slidesPerView: 1,
                   spaceBetween: 10,
                 },
-               
+
                 768: {
                   slidesPerView: 2,
                   spaceBetween: 10,
                 },
-               
+
                 1024: {
                   slidesPerView: 3,
                   spaceBetween: 20,
                 },
-               
+
                 1400: {
                   slidesPerView: 3,
                   spaceBetween: 30,
@@ -82,7 +92,7 @@ function Models() {
                   spaceBetween: 30,
                 },
               }}
-              modules={[Pagination, Navigation,FreeMode]}
+              modules={[Pagination, Navigation, FreeMode]}
               className="mySwiper"
             >
               {modelsData[1].content.map((model) => (
@@ -115,8 +125,7 @@ function Models() {
           </div>
         ) : (
           <div className="otherContents">
-           <p>{modelsData[active].content} </p>
-           
+            <p>{modelsData[active].content} </p>
           </div>
         )}
       </div>
