@@ -150,6 +150,9 @@
             @media (max-width:1140px) {
                 left: -28.5vw;
             }
+            @media (max-width:350px) {
+                display: none;
+            }
         }
     }
 
