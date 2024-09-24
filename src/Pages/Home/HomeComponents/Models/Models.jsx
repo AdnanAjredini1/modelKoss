@@ -8,11 +8,12 @@ import CardM from "./models-components/CardM";
 import arrow from "./models-assets/arrow-left(2).svg";
 import arrowRight from "./models-assets/arrow-left(1).svg";
 import { modelsData } from "./modelsData";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation,FreeMode } from "swiper/modules";
 function Models() {
   const [active, setActive] = useState(1);
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
+  const swiperRef = useRef(null);
 
   return (
     <div className="modelssWarpper">
@@ -40,6 +41,7 @@ function Models() {
         {active === 1 ? (
           <div className="carouselWrapper">
             <Swiper
+   ref={swiperRef}
               slidesPerView={1}
               spaceBetween={20}
               pagination={{
@@ -80,7 +82,7 @@ function Models() {
                   spaceBetween: 30,
                 },
               }}
-              modules={[Pagination, Navigation]}
+              modules={[Pagination, Navigation,FreeMode]}
               className="mySwiper"
             >
               {modelsData[1].content.map((model) => (
