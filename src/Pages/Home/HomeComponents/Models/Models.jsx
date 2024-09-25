@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { GoTriangleDown } from "react-icons/go";
+import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.scss';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -11,6 +14,9 @@ import { modelsData } from "./modelsData";
 import { Pagination, Navigation, FreeMode } from "swiper/modules";
 function Models() {
   const [active, setActive] = useState(1);
+  const [isDropDown, setIsDropdown] = useState(false);
+  
+
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
   const swiperRef = useRef(null);
@@ -24,14 +30,33 @@ function Models() {
       swiper.navigation.update();
     }
   }, [active]); 
+  console.log(isDropDown);
+  
 
 
   return (
     <div className="modelssWarpper">
       <p className="title">Models</p>
       <div className="tabsWrapper">
-        <div className="dropDownTabs"></div>
+        <div className="dropDownTabs">
+            <p className="activeColumnTab"  onClick={(e) => {
+              e.stopPropagation(); // Prevent event propagation
+              setIsDropdown(!isDropDown);
+            }}>{modelsData[active].label} <span className="iconSpan"><GoTriangleDown /></span></p>
+            <div className={`columnTabs ${ isDropDown && 'isDrop'}`}>
+            {modelsData.map((item, index) => (
+            <p
+              className={`columnTab ${isDropDown ? 'isDrop' : ''}`}
+              key={item.label}
+              onClick={() => setActive(index)}
+            >
+              {item.label}
+            </p>
+          ))}
+            </div>
+        </div>
         <div className="leftTabs">
+        
           {modelsData.map((item, index) => (
             <p
               className={`tab ${active === index && "active"}`}
