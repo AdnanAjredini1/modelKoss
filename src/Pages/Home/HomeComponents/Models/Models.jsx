@@ -48,7 +48,8 @@ function Models() {
             <p
               className={`columnTab ${isDropDown ? 'isDrop' : ''}`}
               key={item.label}
-              onClick={() => setActive(index)}
+              onClick={() => {setActive(index)
+              setIsDropdown(!isDropDown);}}
             >
               {item.label}
             </p>
