@@ -5,6 +5,7 @@ import ModelMarketing from "./HomeComponents/ModelMarketing/ModelMarketing";
 import Models from "./HomeComponents/Models/Models";
 import OurModels from "./HomeComponents/OurModels/OurModels";
 import TheDayOf from "./HomeComponents/TheDayOF/TheDayOf";
+import WhatWeOffer from "./HomeComponents/WhatWeOffer/WhatWeOffer";
 import "./home.scss";
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
       <BeingClassy />
       <ModelMarketing />
       <Models />
+      {/* <WhatWeOffer /> */}
     </div>
   );
 }

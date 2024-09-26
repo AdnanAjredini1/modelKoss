@@ -1,0 +1,68 @@
+.cardWwrapper {
+    position: relative;
+    width: 396px;
+    height: 438.8px;
+    border: 0.5px solid #c1c1c1;
+    background: #ffffff;
+
+    .icon {
+        position: absolute;
+        left: 25px;
+        bottom: 319px;
+    }
+
+    .title {
+        position: absolute;
+        left: 25px;
+        bottom: 237px;
+        font-family: "Brown Sugar";
+        font-size: 22px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        color: #1d1d1d;
+        // margin-bottom: 0;
+    }
+
+    .hoverTitle {
+        position: absolute;
+        top: 27px;
+        right: 54px;
+        font-family: "Brown Sugar";
+        font-size: 30px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        color: #000000;
+    }
+
+    .description {
+        position: absolute;
+        left: 25px;
+        bottom: 158px;
+        max-width: 344px;
+        font-family: "Montserrat";
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 35px;
+        font-style: normal;
+        text-align: left;
+        color: #1d1d1d;
+        margin-bottom: 0;
+    }
+
+    .learnMore {
+        position: absolute;
+        left: 34px;
+        bottom: 45px;
+        margin-bottom: 0;
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 50px;
+        left: 130px;
+    }
+
+
+}
