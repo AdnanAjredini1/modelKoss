@@ -16,6 +16,16 @@ function WhatWeOffer() {
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
   const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      const swiper = swiperRef.current.swiper;
+      swiper.params.navigation.nextEl = nextButtonRef.current;
+      swiper.params.navigation.prevEl = prevButtonRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [swiperRef, nextButtonRef, prevButtonRef]);
   return (
     <div className="whatWeOfferWrapper">
     <p className="bigTitle">What we offer</p>
