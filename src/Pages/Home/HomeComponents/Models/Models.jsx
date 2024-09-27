@@ -15,6 +15,7 @@ import { Pagination, Navigation, FreeMode } from "swiper/modules";
 function Models() {
   const [active, setActive] = useState(1);
   const [isDropDown, setIsDropdown] = useState(false);
+  const [tabIndex, setTabIndex] = useState(1);
 
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
@@ -39,11 +40,11 @@ function Models() {
           <p
             className="activeColumnTab"
             onClick={(e) => {
-              e.stopPropagation(); // Prevent event propagation
+              e.stopPropagation();
               setIsDropdown(!isDropDown);
             }}
           >
-            {modelsData[active].label}{" "}
+            {modelsData[tabIndex].label}{" "}
             <span className="iconSpan">
               <GoTriangleDown />
             </span>
@@ -54,7 +55,7 @@ function Models() {
                 className={`columnTab ${isDropDown ? "isDrop" : ""}`}
                 key={item.label}
                 onClick={() => {
-                  setActive(index);
+                  setTabIndex(index);
                   setIsDropdown(!isDropDown);
                 }}
               >
@@ -63,7 +64,7 @@ function Models() {
             ))}
           </div>
         </div>
-        <div className="leftTabs">
+        {/* <div className="leftTabs">
           {modelsData.map((item, index) => (
             <p
               className={`tab ${active === index && "active"}`}
@@ -73,13 +74,13 @@ function Models() {
               {item.label}
             </p>
           ))}
-        </div>
-        <div className="rightTab">
+        </div> */}
+        {/* <div className="rightTab">
           <p className="viewAll">View all</p>
           <img src={arrowRight} width={22} height={8} className="arrowImg" />
-        </div>
+        </div> */}
       </div>
-      <div className="contentlWrapper">
+      {/* <div className="contentlWrapper">
         {active === 1 ? (
           <div className="carouselWrapper">
             <Swiper
@@ -160,9 +161,9 @@ function Models() {
             <p>{modelsData[active].content} </p>
           </div>
         )}
-      </div>
+      </div> */}
       <div className="tabsWrapper">
-        <Tabs style={{ width: "100%" }} defaultIndex={1}>
+        <Tabs style={{ width: "100%" }} defaultIndex={1}  selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
           <TabList className="leftTabs">
             {modelsData.map((item, index) => (
               <Tab
@@ -175,8 +176,8 @@ function Models() {
             ))}
           </TabList>
 
-          <TabPanel>
-            <h2 style={{ color: "red" }}>Any content 1</h2>
+          <TabPanel style={{marginTop:'200px',marginBottom:'300px'}}>
+            <h2 >Any content 1</h2>
           </TabPanel>
           <TabPanel className="contentlWrapper">
             <div className="carouselWrapper">
@@ -254,25 +255,29 @@ function Models() {
               </div>
             </div>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="contentlWrapper" style={{marginTop:'200px',marginBottom:'300px'}}>
             <h2>Any content 3</h2>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="contentlWrapper" style={{marginTop:'200px',marginBottom:'300px'}}>
             <h2>Any content 4</h2>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="contentlWrapper" style={{marginTop:'200px',marginBottom:'300px'}}>
             <h2>Any content 5</h2>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="contentlWrapper" style={{marginTop:'200px',marginBottom:'300px'}}>
             <h2>Any content 6</h2>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="contentlWrapper" style={{marginTop:'200px',marginBottom:'300px'}}>
             <h2>Any content 7</h2>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="contentlWrapper" style={{marginTop:'200px',marginBottom:'300px'}}>
             <h2>Any content 8</h2>
           </TabPanel>
         </Tabs>
+        <div className="rightTab">
+          <p className="viewAll">View all</p>
+          <img src={arrowRight} width={22} height={8} className="arrowImg" />
+        </div>
       </div>
     </div>
   );

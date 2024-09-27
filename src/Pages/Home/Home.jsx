@@ -18,7 +18,7 @@ function Home() {
       <BeingClassy />
       <ModelMarketing />
       <Models />
-      {/* <WhatWeOffer /> */}
+      <WhatWeOffer />
     </div>
   );
 }

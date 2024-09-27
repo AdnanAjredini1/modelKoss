@@ -3,6 +3,7 @@ import Icon2 from "./whatweoffer-assets/camera.svg?react";
 import Icon3 from "./whatweoffer-assets/9040369_gender_ambiguous_icon.svg?react";
 import Icon4 from "./whatweoffer-assets/4747498_instagram_social media_icon.svg?react";
 
+
 export const whatWeOfferData = [
   {
     icon: Icon1 ,
@@ -25,6 +26,18 @@ export const whatWeOfferData = [
   {
     icon: Icon4 ,
     title: "Social media",
+    description:
+      "Other services include social media, influencer marketing, castings, and switching at top photographers and videographers.",
+  },
+  {
+    icon: Icon3 ,
+    title: "selectionn",
+    description:
+      "ModelKos is by your side during the selection and casting process. We plan efficient processes for you and your customers.",
+  },
+  {
+    icon: Icon4 ,
+    title: "Social mediaa",
     description:
       "Other services include social media, influencer marketing, castings, and switching at top photographers and videographers.",
   },

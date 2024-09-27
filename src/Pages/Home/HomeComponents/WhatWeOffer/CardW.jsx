@@ -1,5 +1,4 @@
 import "./card-w.scss";
-import arrow from "./whatweoffer-assets/arrow-left(3).svg";
 import Arrow from "./whatweoffer-assets/arrow-left(3).svg?react";
 
 function CardW({ icon:Icon, title, description }) {
@@ -11,6 +10,9 @@ function CardW({ icon:Icon, title, description }) {
       <p className="description">{description}</p>
       <p className="learnMore">Learn more</p>
       <Arrow className="arrow" />
+      <div className="backdrop">
+        
+      </div>
     </div>
   );
 }

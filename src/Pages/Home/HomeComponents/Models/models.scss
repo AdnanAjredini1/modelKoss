@@ -1,7 +1,8 @@
 .modelssWarpper {
     margin-top: 30px;
     margin-inline: 6%;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
+    height: fit-content;
 
     ul {
         list-style: none; 
@@ -86,7 +87,7 @@
     }
 
     .contentlWrapper {
-        
+      
 
         .otherContents {
             height: 600px;
@@ -110,6 +111,7 @@
         .carouselWrapper {
             margin-top: -20px;
             width: 100%;
+           
 
             .swiper {
                 width: 100%;
@@ -316,6 +318,7 @@
 
 
     .tabsWrapper {
+      
         display: flex;
         justify-content: space-between;
 
@@ -325,6 +328,10 @@
             display: flex;
             gap: 10px;
             justify-content: center;
+            margin-left: -200px;
+            @media (max-width:779px) {
+                margin-top: -37px !important;
+            }
           
 
 
@@ -337,11 +344,12 @@
                 font-style: normal;
                 text-align: left;
                 color: #1d1d1d;
+                width: 60px;
                
             }
 
             .arrowImg {
-                margin-top: 15px;
+                margin-top: 17px;
 
             }
         }
@@ -350,6 +358,8 @@
         .leftTabs {
             display: flex;
             gap: clamp(10px, 4.2vw, 75px);
+            width: fit-content;
+            padding-left: 0;
 
             @media (max-width:1068px) {
                 gap: clamp(10px, 3vw, 75px);
@@ -389,7 +399,6 @@
     }
 
     .title {
-
         font-family: "Brown Sugar";
         font-size: 100px;
         font-weight: normal;
@@ -399,6 +408,9 @@
 
         @media (max-width:826px) {
             font-size: 15vw;
+        }
+        @media (max-width:780px) {
+           text-align: center;
         }
 
     }

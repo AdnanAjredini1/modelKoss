@@ -4,11 +4,47 @@
     height: 438.8px;
     border: 0.5px solid #c1c1c1;
     background: #ffffff;
+    // margin-bottom: 20px;
+    &:hover{
+        cursor: pointer;
+        .backdrop{
+            display: block;
+        }
+        .title {
+            color: #ffffff;
+        }
+        .description {
+            color: #ffffff;
+        }
+        .learnMore {
+            color: #ffffff;
+        }
+        .arrow line{
+         stroke: #ffffff;
+        }
+        .icon path{
+          stroke:#ffffff;
+        }
+    }
+
+    .backdrop{
+        display: none;
+        position:absolute ;
+        background: linear-gradient(rgba(29, 29, 29, 0.7),
+        rgba(29, 29, 29, 0.7)),url('./whatweoffer-assets/vahid-kanani-qiMCJHg2vTI-unsplash.png');
+        background-size: cover;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+    }
 
     .icon {
         position: absolute;
         left: 25px;
         bottom: 319px;
+        z-index: 2;
     }
 
     .title {
@@ -21,25 +57,28 @@
         font-style: normal;
         text-align: left;
         color: #1d1d1d;
+        z-index: 2;
         // margin-bottom: 0;
     }
 
     .hoverTitle {
         position: absolute;
-        top: 27px;
+        top: 47px;
         right: 54px;
         font-family: "Brown Sugar";
-        font-size: 30px;
+        font-size: 34px;
         font-weight: normal;
         font-style: normal;
         text-align: left;
-        color: #000000;
+        color: #ffffff;
+        opacity: 0.7;
+        z-index: 2;
     }
 
     .description {
         position: absolute;
         left: 25px;
-        bottom: 158px;
+        top: 227px;
         max-width: 344px;
         font-family: "Montserrat";
         font-size: 15px;
@@ -49,6 +88,7 @@
         text-align: left;
         color: #1d1d1d;
         margin-bottom: 0;
+        z-index: 2;
     }
 
     .learnMore {
@@ -56,12 +96,14 @@
         left: 34px;
         bottom: 45px;
         margin-bottom: 0;
+        z-index: 2;
     }
 
     .arrow {
         position: absolute;
-        bottom: 50px;
-        left: 130px;
+        bottom: 53px;
+        left: 136px;
+        z-index: 2;
     }
 
 

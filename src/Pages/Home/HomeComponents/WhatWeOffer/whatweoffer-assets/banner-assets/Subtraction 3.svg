@@ -1,0 +1,13 @@
+<svg width="68.999634" height="69.000000" viewBox="0 0 68.9996 69" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<g style="mix-blend-mode:normal">
+		<mask id="mask_1_8875" fill="white">
+			<path id="Subtraction 3" d="M68.9996 34.5L34.4999 0L0 34.5L34.4999 69L68.9996 34.5ZM34.7926 40.8672C35.4879 32.4512 37.8297 21.583 45.5875 21.583L45.5875 47.417L42.8064 47.417L42.8064 22.4609C35.4879 25.5352 34.9023 40.7578 34.9023 47.417L34.5365 47.417L24.6564 24.6572L23.6317 22.2412L23.6317 47.417L23.4122 47.417L23.4122 21.583L26.4493 21.583L34.7926 40.8672Z" clip-rule="evenodd" fill="" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</mask>
+		<path id="Subtraction 3" d="M68.9996 34.5L34.4999 0L0 34.5L34.4999 69L68.9996 34.5ZM34.7926 40.8672C35.4879 32.4512 37.8297 21.583 45.5875 21.583L45.5875 47.417L42.8064 47.417L42.8064 22.4609C35.4879 25.5352 34.9023 40.7578 34.9023 47.417L34.5365 47.417L24.6564 24.6572L23.6317 22.2412L23.6317 47.417L23.4122 47.417L23.4122 21.583L26.4493 21.583L34.7926 40.8672Z" clip-rule="evenodd" fill="#1D1D1D" fill-opacity="1.000000" fill-rule="evenodd" mask="url(#mask_1_8875)"/>
+		<path id="Subtraction 3" d="" fill="#707070" fill-opacity="0.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
