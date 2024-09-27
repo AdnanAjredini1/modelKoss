@@ -1,5 +1,5 @@
 import CardW from "./CardW";
-import {  useRef} from "react";
+import {  useEffect, useRef} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import arrowPig from './whatweoffer-assets/arrow-left(4).svg'
 import "swiper/css";
@@ -15,11 +15,13 @@ import Mlogo from './whatweoffer-assets/banner-assets/Subtraction 3.svg?react';
 function WhatWeOffer() {
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
+  const swiperRef = useRef(null);
   return (
     <div className="whatWeOfferWrapper">
     <p className="bigTitle">What we offer</p>
       <div className="carouselWrapper">
         <Swiper
+          ref={swiperRef}
           slidesPerView={1}
           spaceBetween={20}
           pagination={{
