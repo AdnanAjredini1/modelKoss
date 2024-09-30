@@ -1,7 +1,7 @@
 import ClentCard from "./ClentCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-import {  useRef } from "react";
+import {  useEffect, useRef } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -16,6 +16,16 @@ function WhatPeopleSay() {
     const nextButtonRef = useRef(null);
     const prevButtonRef = useRef(null);
     const swiperRef = useRef(null);
+
+    useEffect(() => {
+      if (swiperRef.current) {
+        const swiper = swiperRef.current.swiper;
+        swiper.params.navigation.nextEl = nextButtonRef.current;
+        swiper.params.navigation.prevEl = prevButtonRef.current;
+        swiper.navigation.init();
+        swiper.navigation.update();
+      }
+    }, []);
 
   
   return (
