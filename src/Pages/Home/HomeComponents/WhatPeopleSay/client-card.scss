@@ -1,0 +1,245 @@
+.clientCardWrapper {
+    position: relative;
+    // top: 9%;
+    // left: 0;
+    // right: 0;
+    // margin: 0 auto;
+    width: 740px;
+    height: 780px;
+    background: #ffffff;
+    @media (max-width:1574px) {
+        width: 45vw;
+    }
+    @media (max-width:1080px) {
+        width: 77vw;
+    }
+   
+
+
+    .personalInfoWrapper {
+        position: absolute;
+        left: 61px;
+        bottom: 60px;
+        width: 574px;
+        height: 193px;
+        background: #f1f1f1;
+        @media (max-width:1552px) {
+            width: 38vw;
+        }
+        @media (max-width:1080px) {
+            width: 574px;
+        }
+        @media (max-width:914px) {
+       
+            width: 61vw;
+        }
+        @media (max-width:670px) {
+       
+            left: 21px;
+        }
+        @media (max-width:400px) {
+       
+            width: 66vw;
+        }
+
+        .clientphoto{
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 137px;
+            height: 158px;
+            @media (max-width:588px) {
+              display: none;
+            }
+        }
+
+        .ratingWrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: absolute;
+            left: 35px;
+            bottom: 34px;
+            @media (max-width:670px) {
+       
+                left: 20px;
+            }
+            @media (max-width:588px) {
+                left:0;
+                right: 0;
+                margin:0 auto;
+                width: fit-content;
+              }
+
+            .ratingNum {
+                margin-bottom: 0;
+                font-family: "Montserrat";
+                font-size: 13px;
+                font-weight: normal;
+                line-height: 35px;
+                font-style: normal;
+                text-align: left;
+                color: #1d1d1d;
+
+            }
+
+            .ratingText {
+                font-family: "Montserrat";
+                font-size: 13px;
+                font-weight: normal;
+                line-height: 35px;
+                font-style: normal;
+                text-align: left;
+                color: #1d1d1d;
+                margin-bottom: 0;
+
+            }
+
+            .poointsWrapper {
+                .blackpoint {
+                    margin-right: 3px;
+                }
+
+                .gPoint path {
+                    fill: #c1c1c1;
+                }
+            }
+
+        }
+
+        .name {
+            position: absolute;
+            top: 36px;
+            left: 36px;
+            font-family: "Brown Sugar";
+            font-size: 25px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+            @media (max-width:670px) {
+       
+                left: 22px;
+            }
+            @media (max-width:588px) {
+                left:0;
+                right: 0;
+                margin:0 auto;
+                width: fit-content;
+              }
+
+        }
+
+        .position {
+            position: absolute;
+            left: 35px;
+            top: 89px;
+            font-family: "Montserrat";
+            font-size: 15px;
+            font-weight: normal;
+            line-height: 35px;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+            margin-bottom: 0;
+            @media (max-width:670px) {
+                left: 20px;
+            }
+            @media (max-width:588px) {
+                left:0;
+                right: 0;
+                margin:0 auto;
+                width: fit-content;
+              }
+       
+
+        }
+    }
+
+    .bgPoints {
+        position: absolute;
+        left: 111px;
+        bottom: 70px;
+        @media (max-width:1552px) {
+            width: 36vw;
+        }
+        @media (max-width:1186px) {
+            width: 34.7vw;
+        }
+        @media (max-width:1080px) {
+            width: 574px;
+        }
+        @media (max-width:914px) {
+       
+            width: 61vw;
+        }
+        @media (max-width:670px) {
+       
+            left: 71px;
+        }
+        @media (max-width:584px) {
+       
+            bottom: 105px;
+        }
+        @media (max-width:400px) {
+       
+            display: none;
+        }
+
+    }
+
+    .titleReview {
+        position: absolute;
+        top: 72px;
+        left: 75px;
+        font-family: "Brown Sugar";
+        font-size: 45px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #808080;
+        margin-bottom: 0;
+        @media (max-width:1080px) {
+            font-size: clamp(25px,6.8vw,45px);
+            font-weight: 15px;
+        }
+        @media (max-width:670px) {
+       
+            left: 32px;
+        }
+        @media (max-width:400px) {
+       
+            font-size: 20px;
+        }
+    }
+
+    .description {
+        position: absolute;
+        top: 171px;
+        left: 60px;
+       
+        font-family: "Montserrat";
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 40px;
+        font-style: normal;
+        text-align: left;
+        color: #1d1d1d;
+        padding-right: 20px;
+        @media (max-width:1574px) {
+            padding-right: 20px;
+        }
+        @media (max-width:670px) {
+            line-height: 25px;
+            left: 20px;
+        }
+        @media (max-width:518px) {
+            top:140px;
+        }
+        @media (max-width:400px) {
+       
+            line-height: 17px;
+        }
+      
+    }
+}

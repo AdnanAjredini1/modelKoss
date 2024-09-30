@@ -11,6 +11,7 @@ import { Pagination, Navigation, FreeMode } from "swiper/modules";
 import Lines from './whatweoffer-assets/banner-assets/s_0067-lines.svg?react';
 import BecomeModelLogo from './whatweoffer-assets/banner-assets/Become a model at modelkos now -.svg?react';
 import Mlogo from './whatweoffer-assets/banner-assets/Subtraction 3.svg?react';
+import BecomeModel from './whatweoffer-assets/banner-assets/Become a model at modelkos now -(3).svg?react';
 
 function WhatWeOffer() {
   const nextButtonRef = useRef(null);
@@ -100,6 +101,7 @@ function WhatWeOffer() {
       <Lines className="lines"/>
       <BecomeModelLogo className="becomemodelLogo"/>
       <Mlogo className="mlogo"/>
+      <BecomeModel className="becomeModelMainLogo"/>
     </div>
   );
 }

@@ -1,0 +1,265 @@
+.whatPSayWrapper {
+
+    .title {
+        font-family: "Brown Sugar";
+        font-size: 100px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #1d1d1d;
+        @media (max-width:1080px) {
+            font-size: clamp(50px,12vw,100px);
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: linear-gradient(rgba(29, 29, 29, 0.6),
+                rgba(29, 29, 29, 0.6)), url('./whatpeoplesay-assets/pexels-cottonbro-377.webp');
+        height: 962px;
+
+        @media (max-width:1080px) {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            height: fit-content;
+            background-size: cover;
+            ;
+        }
+
+        .rightPart {
+            position: relative;
+            // text-align: center;
+
+            .swiperWrap {
+                position: relative;
+                top: 9%;
+                left: 5%;
+                width: fit-content;
+
+                @media (max-width:1080px) {
+                    right: 0;
+                    left: 0;
+                    margin-inline:0 ;
+                }
+
+
+                .swiper {
+                    width: 740px;
+                    height: 100%;
+
+                    @media (max-width:1574px) {
+                        width: 45vw;
+                    }
+
+                    @media (max-width:1080px) {
+                        width: clamp(270px,79vw,740px);
+                    }
+                    @media (max-width:670px) {
+       
+                        margin-right: -7px;
+                    }
+                }
+
+                .swiper-pagination-bullets.swiper-pagination-horizontal {
+                    position: absolute;
+                    top: 90px;
+                    right: 0;
+                    left: auto;
+                    width: auto;
+                    z-index: 10;
+                }
+
+
+                .swiper-pagination {
+                    position: absolute;
+                    right: 25px !important;
+
+                    top: 100px;
+                    width: fit-content;
+
+                }
+
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .custom-next,
+                .custom-prev {
+                    position: absolute;
+                    top: -4%;
+                    right: 20px;
+
+                    width: 48px;
+                    height: 48px;
+
+                    background: transparent;
+                    z-index: 50;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18px;
+                    color: #000;
+
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+
+
+                }
+
+                .custom-next {
+                    transform: rotate(-180deg);
+                    border: none;
+                    margin-left: 40px;
+
+                }
+
+                .custom-prev {
+                    border: none;
+                    margin-right:80px ;
+                }
+
+
+            }
+
+
+
+
+
+
+            // .swiperWrap{
+            //     position: relative;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     .swiper {
+            //         width: 100%;
+            //         height: 100%;
+
+            //     }
+
+            //     .swiper-slide {
+            //         text-align: center;
+            //         font-size: 18px;
+            //         background: #fff;
+            //         display: flex;
+            //         justify-content: center;
+            //         align-items: center;
+            //     }
+
+            //     .swiper-slide img {
+            //         display: block;
+            //         width: 100%;
+            //         height: 100%;
+            //         object-fit: cover;
+            //     }
+
+            //     .swiper-pagination {
+            //         margin-top: 40px;
+            //     }
+
+            //     .custom-next,
+            //     .custom-prev {
+            //         position: absolute;
+            //         top: 40%;
+
+            //         width: 48px;
+            //         height: 48px;
+
+            //         background: transparent;
+            //         z-index: 50;
+            //         cursor: pointer;
+            //         display: flex;
+            //         justify-content: center;
+            //         align-items: center;
+            //         font-size: 18px;
+            //         color: #000;
+            //         -webkit-user-select: none;
+            //         -moz-user-select: none;
+            //         -ms-user-select: none;
+            //         user-select: none;
+
+            //         @media (max-width:1024px) {
+            //             display: none;
+            //         }
+
+
+            //         .arrow {
+            //             width: 32px;
+            //             height: 14px;
+            //         }
+            //     }
+
+            //     .custom-next {
+            //         right: -70px;
+            //         border: none;
+
+            //     }
+
+            //     .custom-prev {
+            //         left: -70px;
+            //         transform: rotate(-180deg);
+            //         border: none;
+            //     }
+            // }
+
+
+        }
+
+        .leftPart {
+            padding-left: 16%;
+            padding-top: 104px;
+
+            @media (max-width:1574px) {
+                padding-left: 14%;
+
+            }
+
+            @media (max-width:1080px) {
+                padding-left: 0;
+
+            }
+
+            .bigText {
+                width: 684px;
+                // height: 703px;
+                font-family: "Brown Sugar";
+                font-size: 190px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.4);
+
+                @media (max-width:1574px) {
+                    font-size: clamp(40px, 11vw, 190px);
+                    
+
+
+                }
+
+                @media (max-width:1470px) {
+                    width: 30vw;
+
+
+                }
+
+                @media (max-width:1080px) {
+                    width: 500px;
+                    width: fit-content;
+
+
+                }
+            }
+        }
+    }
+}

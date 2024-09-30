@@ -1,0 +1,96 @@
+.modelacademyWrapper{
+ 
+    .swiper {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background-color: red;
+
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+
+    }
+    .swiper-pagination {
+        position: absolute;
+        bottom: 110px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+
+        background: #d6c9c9;
+        opacity: 2;
+        
+    }
+
+
+
+    .swiper-pagination-bullet-active {
+        width: 14px;
+        height: 14px;
+        background: #ffffff;
+    }
+
+    .thedayofWrapper>div:nth-child(1) {
+        display: none;
+    }
+
+    .custom-next,
+    .custom-prev {
+        position: absolute;
+        top: 50%;
+        width: 48px;
+        height: 48px;
+        border-color: #c5c5c5;
+        border-width: 0.5px;
+        border-style: solid;
+        border-radius: 50%;
+        background: #ffffff;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #000;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        @media (max-width:842px) {
+            display: none;
+        }
+
+    }
+
+    .custom-next {
+        right: 40px;
+        
+    }
+
+    .custom-prev {
+        left: 40px;
+        transform: rotate(-180deg);
+    }
+
+}

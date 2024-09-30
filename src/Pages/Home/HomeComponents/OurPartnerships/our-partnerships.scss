@@ -1,0 +1,183 @@
+@import url('https://fonts.cdnfonts.com/css/galano-classic-alt');
+
+.ourPartnershipsWrapper {
+    margin-top: 134px;
+    margin-bottom: 200px;
+
+    .title {
+        font-family: "Brown Sugar";
+        font-size: 100px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #1d1d1d;
+
+        @media (max-width:918px) {
+            font-size: clamp(50px, 11vw, 100px);
+        }
+
+        @media (max-width:310px) {
+            font-size: 40px;
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 131px;
+        padding-inline: 9%;
+
+        @media (max-width:1080px) {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .rightPart {
+            display: flex;
+            justify-content: end;
+
+            @media (max-width:1080px) {
+                justify-content: center;
+            }
+
+            .rightImg {
+                width: 716px;
+
+                @media (max-width:1748px) {
+                    width: clamp(300px, 42vw, 716px);
+                }
+
+                @media (max-width:1080px) {
+                    width: clamp(250px, 55vw, 716px);
+                    height: clamp(350px, 68vw, 800px);
+                }
+
+            }
+        }
+
+        .leftPart {
+            margin-top: 141px;
+
+            @media (max-width:1080px) {
+                position: relative;
+            }
+
+            .btnWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 158px;
+                height: 49px;
+                border-radius: 5px;
+                background: #1d1d1d;
+                margin-top: 56px;
+                cursor: pointer;
+
+                @media (max-width:1080px) {
+                    left: 0;
+                    right: 0;
+                    margin-inline: auto;
+                }
+
+                .learnmore {
+                    font-family: "Montserrat";
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-style: normal;
+                    text-align: left;
+                    color: #ffffff;
+                    margin-bottom: 0;
+
+                }
+            }
+
+            .description {
+                max-width: 675px;
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-weight: normal;
+                line-height: 40px;
+                font-style: normal;
+                text-align: left;
+                color: #1d1d1d;
+
+                @media (max-width:1588px) {
+                    padding-right: 30px;
+                }
+
+                @media (max-width:1080px) {
+                    left: 0;
+                    right: 0;
+                    margin-inline: auto;
+                    text-align: center;
+                    padding-right: 0;
+                }
+
+            }
+
+            .bitTitle {
+                max-width: 663px;
+                margin-top: 50px;
+                font-family: "Brown Sugar";
+                font-size: 100px;
+                font-weight: normal;
+                line-height: 150px;
+                font-style: normal;
+                text-align: left;
+                color: #1d1d1d;
+
+                @media (max-width:1748px) {
+                    font-size: clamp(50px, 5vw, 100px);
+                }
+
+                @media (max-width:1080px) {
+                    left: 0;
+                    right: 0;
+                    margin-inline: auto;
+                    text-align: center;
+                }
+
+                @media (max-width:458px) {
+                    line-height: 100px;
+                }
+
+                @media (max-width:344px) {
+                    line-height: 75px;
+                }
+            }
+
+            .logoWrapper {
+                display: flex;
+                align-items: center;
+                gap: 19px;
+
+                @media (max-width:1080px) {
+                    width: fit-content;
+                    margin-inline: auto;
+                }
+
+                @media (max-width:298px) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .logoText {
+                    font-family: "Galano Classic";
+                    font-size: 45px;
+                    font-weight: 600;
+                    line-height: 52px;
+                    font-style: normal;
+                    text-align: center;
+                    color: #1d1d1d;
+                    margin-bottom: 0;
+
+                    @media (max-width:458px) {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

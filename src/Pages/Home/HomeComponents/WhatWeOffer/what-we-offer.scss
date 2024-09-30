@@ -4,18 +4,28 @@
     margin-top: -250px;
     margin-bottom: 50px;
 
+    .becomeModelMainLogo{
+        position: absolute;
+        bottom: 8%;
+        left: 0;
+        right:0;
+        margin-inline: auto;
+        @media (max-width:984px){
+            bottom: 17%;
+        }
+    }
+
     .mlogo{
         position: absolute;
-      
         bottom: 15%;
         left: 0;
         right:0;
         margin-inline: auto;
         z-index: 4;
-        // left: 0;
-        // right: 0;
-        // margin-inline: 0;
-        // top: 30%;
+        @media (max-width:984px){
+            bottom: 24%;
+        }
+        
     }
 
     .becomemodelLogo{
@@ -23,6 +33,12 @@
         left: -5.2%;
         top: 60%;
         z-index: 0;
+        @media (max-width:1756px){
+            width: 24vw;
+        }
+        @media (max-width:612px){
+            display: none;
+        }
     }
 
     .bannerText {
@@ -38,6 +54,14 @@
         text-align: center;
         color: #1d1d1d;
         z-index: 1;
+        @media (max-width:1014px) {
+            margin-bottom: 150px;
+        }
+        @media (max-width:360px) {
+            margin-bottom: 100px;
+            margin-top: 505px;
+        }
+       
     }
 
     .lines{
@@ -144,7 +168,7 @@
             -ms-user-select: none;
             user-select: none;
 
-            @media (max-width:1024px) {
+            @media (max-width:1224px) {
                 display: none;
             }
 

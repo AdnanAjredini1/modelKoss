@@ -1,0 +1,112 @@
+.ourBlogWrapper {
+    margin-inline: 4%;
+    margin-bottom: 105px;
+
+    .bigTitle {
+        font-family: "Brown Sugar";
+        font-size: 100px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #1d1d1d;
+
+        @media (max-width:544px) {
+            font-size: 17.7vw;
+        }
+
+
+    }
+
+    .content {
+        position: relative;
+        width: 100%;
+
+        .btnWrapp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-inline: auto;
+            width: 169px;
+            height: 49px;
+            border-color: #000000;
+            border-width: 1px;
+            border-style: dashed;
+            border-radius: 5px;
+            background: #1d1d1d;
+
+            p {
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-weight: 500;
+                font-style: normal;
+                text-align: left;
+                color: #ffffff;
+                margin-bottom: 0;
+            }
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-pagination {
+            margin-top: 20px;
+        }
+
+        .custom-next,
+        .custom-prev {
+            position: absolute;
+            top: 40%;
+            width: 48px;
+            height: 48px;
+            border: 0.5px solid #b8aeae;
+            border-radius: 50%;
+            background: #fff;
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #000;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            @media (max-width:1124px) {
+                display: none;
+            }
+
+        }
+
+        .custom-next {
+            right: -40px;
+            transform: rotate(-180deg);
+
+        }
+
+        .custom-prev {
+            left: -40px;
+
+
+        }
+    }
+}

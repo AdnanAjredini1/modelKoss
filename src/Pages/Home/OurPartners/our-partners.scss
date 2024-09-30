@@ -1,0 +1,195 @@
+.ourPartnersWrapper {
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    .newsLetterWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 189px;
+
+        .inputBtnOut {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 60px;
+            border-radius: 10px;
+            background: #1d1d1d;
+            margin-top: 40px;
+            cursor: pointer;
+
+
+            @media (max-width:430px) {
+                display: flex;
+            }
+
+            p {
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-weight: normal;
+                font-style: normal;
+                text-align: left;
+                color: #ffffff;
+                margin-bottom: 0;
+            }
+        }
+
+
+        .inputWrapper {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            width: 899px;
+            height: 60px;
+            border: 0.5px solid #bbbbbb;
+            border-radius: 12px;
+            background: #ffffff;
+            margin-top: 54px;
+
+            @media (max-width:944px) {
+                width: clamp(270px, 95vw, 899px);
+            }
+
+            .inputBtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 60px;
+                border-radius: 10px;
+                background: #1d1d1d;
+                cursor: pointer;
+
+                @media (max-width:430px) {
+                    display: none;
+                }
+
+                p {
+                    font-family: "Montserrat";
+                    font-size: 15px;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: left;
+                    color: #ffffff;
+                    margin-bottom: 0;
+                }
+            }
+
+            .emailIcon {
+                position: absolute;
+                top: 22px;
+                left: 22px;
+                width: 21px;
+                height: 15px;
+            }
+
+            .inputNewsLetter {
+                margin-left: 60px;
+                border: none;
+                outline: none;
+            }
+        }
+
+        .newsLetterTitle {
+            font-family: "Brown Sugar";
+            font-size: 50px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: center;
+            color: #1d1d1d;
+            margin-bottom: 0;
+            @media (max-width:430px) {
+              font-size: clamp(30px,10vw,50px);
+            }
+
+        }
+
+        .newsLetterDescription {
+            font-family: "Montserrat";
+            font-size: 15px;
+            font-weight: normal;
+            line-height: 40px;
+            font-style: normal;
+            text-align: left;
+            color: #1d1d1d;
+            margin-bottom: 0;
+
+            @media (max-width:630px) {
+                text-align: center;
+                padding-inline: 10px;
+            }
+        }
+    }
+
+    .btnWrapWrapper {
+
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+
+        .btnWrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 188px;
+            height: 49px;
+            border-radius: 5px;
+            background: #1d1d1d;
+
+            p {
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-weight: 500;
+                font-style: normal;
+                text-align: left;
+                color: #ffffff;
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+
+
+    .iconsWrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-inline: 6%;
+        gap: 10px;
+
+        .bershkaIcon {
+            width: 196px;
+            height: 131px;
+
+        }
+
+        .calvinKleinIcon {
+            width: 63px;
+            height: 80px;
+        }
+
+        .bratyIcon {
+            width: 90px;
+            height: 38px;
+        }
+
+        .kosGirlsIcon {
+            height: 41px;
+            width: 201px;
+        }
+    }
+
+    .title {
+        color: rgb(29, 29, 29);
+        font-family: Montserrat;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+}
