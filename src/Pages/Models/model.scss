@@ -1,0 +1,150 @@
+.backdroSliderWrapper{
+    position: fixed;
+    
+    
+   
+    width: 100%;
+    height: 100vh;
+   
+    background-color: #0f0f0f;
+    opacity: 0.55;
+   
+    z-index: 1000000;
+}
+
+.modelProfileWrapper {
+    position: relative;
+    margin-top: 100px;
+
+   
+
+    .modelImagesWrapper{
+        display: flex;
+        justify-content: center;
+        padding-inline: 6%;
+        margin-top: 50px;
+        .imgDiv{
+            position: relative;
+            &:hover{
+                cursor: pointer;
+                .linearGradient{
+                    visibility: visible;
+                }
+                .zoomIconsWrapper{
+                    visibility: visible;
+                }
+            }
+            .image{
+                width: 100%;
+            }
+
+            .zoomIconsWrapper{
+                visibility: hidden;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 44px;
+                height: 44px;
+                background: #ffffff;
+                z-index: 4;
+                opacity: 1;
+
+                .downarrow{
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                }
+                .uparrow{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                }
+            }
+
+            .linearGradient{
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000000;
+                opacity: 0.5;
+              
+            }
+        }
+    }
+
+    .socialMediaIcons {
+        display: flex;
+        justify-content: center;
+        gap: 53px;
+        margin-top: 50px;
+
+        .fbIcon {
+            width: 8.2px;
+            height: 17.7px;
+            cursor: pointer;
+            &:hover path{
+              fill: #7e7a7a;
+            }
+        }
+
+        .instagramIcon {
+            width: 19px;
+            height: 19px;
+            cursor: pointer;
+            &:hover path{
+                fill: #7e7a7a;
+              }
+        }
+
+        .tiktokIcon {
+            width: 16.4px;
+            height: 18.7px;
+            cursor: pointer;
+            &:hover path{
+                fill: #7e7a7a;
+              }
+        }
+
+        .twitterIcon {
+            width: 21.9px;
+            height: 19px;
+            cursor: pointer;
+            &:hover path{
+                fill: #7e7a7a;
+              }
+        }
+    }
+
+    .descriptions {
+        display: flex;
+        justify-content: center;
+        gap: 33px;
+        margin-top: 17px;
+        flex-wrap: wrap;
+
+        .description {
+            font-family: "Montserrat";
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 35px;
+            font-style: normal;
+            text-align: center;
+            color: #1d1d1d;
+            margin-bottom: 0;
+        }
+    }
+
+    .name {
+        font-family: "Brown Sugar";
+        font-size: 100px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #1d1d1d;
+        margin-top: 200px;
+        margin-bottom: 0;
+    }
+}

@@ -1,6 +1,7 @@
 import "./our-partners.scss";
 import { brandIconsData } from "./ourPartnersData";
-import EmailIcon from "./our-partners-assets/8-Email.svg?react"
+import EmailIcon from "./our-partners-assets/8-Email.svg?react";
+import Line from "./our-partners-assets/Path 22.svg?react";
 
 function OurPartners() {
   return (
@@ -17,6 +18,7 @@ function OurPartners() {
         </div>
       </div>
       <div className="newsLetterWrapper">
+        <Line className="line" />
         <p className="newsLetterTitle">Subscribe to our newsletter</p>
         <p className="newsLetterDescription">
           Subscribe to pour newsletter t receive the latest news and updates
@@ -30,15 +32,13 @@ function OurPartners() {
             placeholder="Type mail here"
             required
           />
-           <div className="inputBtn">
+          <div className="inputBtn">
             <p>Subscribe</p>
           </div>
-         
         </div>
         <div className="inputBtnOut">
-            <p>Subscribe</p>
-          </div>
-       
+          <p>Subscribe</p>
+        </div>
       </div>
     </div>
   );

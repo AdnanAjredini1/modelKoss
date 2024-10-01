@@ -47,8 +47,8 @@ function TheDayOf() {
               heightArrow="18"
               arrowSvgClass="arrowSvgClass"
             />
-            <img className="img1" src={img1} alt="img1" />
-            <img className="img2" src={img2} alt="img2" />
+             <div className="img1"></div>
+            <div className="img2"></div>
             <p className="bigText1">THE DAY OF</p>
             <p className="bigText2">modeling</p>
             <p className="bigText3">THE DAY OF</p>
@@ -58,8 +58,8 @@ function TheDayOf() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="elementWrapper">
-            <img className="img1" src={img1} alt="img1" />
-            <img className="img2" src={img2} alt="img2" />
+            <div className="img1"></div>
+            <div className="img2"></div>
             <p className="bigText1">THE DAY OF</p>
             <p className="bigText2">modeling</p>
             <p className="bigText3">THE DAY OF</p>
@@ -69,8 +69,8 @@ function TheDayOf() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="elementWrapper">
-            <img className="img1" src={img1} alt="img1" />
-            <img className="img2" src={img2} alt="img2" />
+            <div className="img1"></div>
+            <div className="img2"></div>
             <p className="bigText1">THE DAY OF</p>
             <p className="bigText2">modeling</p>
             <p className="bigText3">THE DAY OF</p>

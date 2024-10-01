@@ -15,6 +15,7 @@ const cardData = [
       descriptions: ["Model", "Photography", "Artist"],
       date: "2024-09-12",
       class: "",
+      to: "/",
     },
     {
       img: img2,
@@ -22,6 +23,7 @@ const cardData = [
       descriptions: ["Model", "Photography", "Artist"],
       date: "2024-08-25",
       class: "blackCard",
+      to: "/",
     },
   ],
   [
@@ -31,6 +33,7 @@ const cardData = [
       descriptions: ["Model", "Photography", "Artist"],
       date: "2024-07-30",
       class: "",
+      to: "/models/andalleshi",
     },
     {
       img: img4,
@@ -38,6 +41,7 @@ const cardData = [
       descriptions: ["Model", "Photography", "Artist"],
       date: "2024-06-15",
       class: "blackCard",
+      to: "/",
     },
   ],
   [
@@ -47,6 +51,7 @@ const cardData = [
       descriptions: ["Model", "Photography", "Artist"],
       date: "2024-05-22",
       class: "",
+      to: "/",
     },
     {
       img: img6,
@@ -54,6 +59,7 @@ const cardData = [
       descriptions: ["Model", "Photography", "Artist"],
       date: "2024-04-10",
       class: "blackCard",
+      to: "/",
     },
   ],
   [
@@ -63,6 +69,7 @@ const cardData = [
       descriptions: ["Model", "Photography", "Artist"],
       date: "2024-03-08",
       class: "",
+      to: "/",
     },
     {
       img: img8,
@@ -70,6 +77,7 @@ const cardData = [
       descriptions: ["Model", "Photography", "Artist"],
       date: "2024-02-14",
       class: "blackCard",
+      to: "/",
     },
   ],
 ];

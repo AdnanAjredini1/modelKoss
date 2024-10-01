@@ -15,17 +15,22 @@ const ourModelsData = [
   {
     label: "Any",
     content: [
-      { img: img1, type: "img", name: "Anda Lleshi" },
-      { img: img2, type: "img", name: "Driada Lakna" },
-      { img: img3, type: "img", name: "Klea Gashi" },
-      { img: img4, type: "img", name: "Arta Kalludra" },
-      { img: img8, type: "img", name: "Klesta Trifoni" },
-      { img: img5, type: "img", name: "Anila Xhaferi" },
-      { img: img7, type: "img", name: "Drenusha Qaza" },
-      { img: img6, type: "img", name: "Albina Myrtezaj" },
-      { img: img11, type: "img", name: "Melinda Ademi" },
-      { img: img9, type: "img", name: "Iliada Sadriu" },
-      { img: img10, type: "img", name: "Blerta Salihu" },
+      {
+        img: img1,
+        type: "img",
+        name: "Anda Lleshi",
+        to: "/models/andalleshi",
+      },
+      { img: img2, type: "img", name: "Driada Lakna", to: "/" },
+      { img: img3, type: "img", name: "Klea Gashi", to: "/" },
+      { img: img4, type: "img", name: "Arta Kalludra", to: "/" },
+      { img: img8, type: "img", name: "Klesta Trifoni", to: "/" },
+      { img: img5, type: "img", name: "Anila Xhaferi", to: "/" },
+      { img: img7, type: "img", name: "Drenusha Qaza", to: "/" },
+      { img: img6, type: "img", name: "Albina Myrtezaj", to: "/" },
+      { img: img11, type: "img", name: "Melinda Ademi", to: "/" },
+      { img: img9, type: "img", name: "Iliada Sadriu", to: "/" },
+      { img: img10, type: "img", name: "Blerta Salihu", to: "/" },
       {
         type: "component",
         component: (
@@ -36,7 +41,7 @@ const ourModelsData = [
             iconClass="iconClass"
           />
         ),
-        class:"onHoverdisplayNone"
+        class: "onHoverdisplayNone",
       },
     ],
   },

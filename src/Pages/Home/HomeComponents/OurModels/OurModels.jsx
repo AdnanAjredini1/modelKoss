@@ -27,6 +27,7 @@ function OurModels() {
           <div className="tabsContent">
             <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }} spacing={3}>
               {ourModelsData[0].content.map((item) => (
+                <Link to={item.to} key={item.img} style={{textDecoration:"none"}}>
                 <div className="imgDiv" key={item.img}>
                   {item.type === "img" ? (
                     <img src={item.img} className="imgModel" />
@@ -41,6 +42,8 @@ function OurModels() {
                     descriptionsWrapperClass="descriptionsWrapperClass"
                   />
                 </div>
+                </Link>
+             
               ))}
             </Masonry>
           </div>

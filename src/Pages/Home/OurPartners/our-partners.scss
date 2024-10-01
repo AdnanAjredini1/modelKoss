@@ -8,6 +8,13 @@
         align-items: center;
         margin-top: 189px;
 
+        .line{
+            position: absolute;
+            width: 100%;
+            margin-top: 20px;
+            z-index: -1;
+        }
+
         .inputBtnOut {
             display: none;
             justify-content: center;

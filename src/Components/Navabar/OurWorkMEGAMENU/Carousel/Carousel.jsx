@@ -4,10 +4,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./carousel.scss";
-import { FreeMode, Pagination ,Navigation} from "swiper/modules";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import cardData from "./Card/cardData";
 import Card from "./Card/Card";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 function Carousel() {
   console.log("error carousel");
@@ -37,27 +38,33 @@ function Carousel() {
       >
         {cardData.map((group, groupIndex) => (
           <SwiperSlide key={groupIndex}>
-          <div key={groupIndex} className="cardsWrapper">
-            {group.map((card) => (
-              <Card
-                key={card.img}
-                cardWrapperClass={`cardWrapperClass ${card.class}`}
-                imgClass="imgClass"
-                descriptionWrapperClass="descriptionWrapperClass"
-                descriptionClass="descriptionClass"
-                nameClass="nameClass"
-                name={card.name}
-                descriptions={card.descriptions}
-                dateClass="dateClass"
-                date={card.date}
-                img={card.img}
-              />
-            ))}
-          </div>
+            <div key={groupIndex} className="cardsWrapper">
+              {group.map((card) => (
+                <Link to={card.to} key={card.name} style={{textDecoration:'none'}}>
+                  <Card
+                    key={card.img}
+                    cardWrapperClass={`cardWrapperClass ${card.class}`}
+                    imgClass="imgClass"
+                    descriptionWrapperClass="descriptionWrapperClass"
+                    descriptionClass="descriptionClass"
+                    nameClass="nameClass"
+                    name={card.name}
+                    descriptions={card.descriptions}
+                    dateClass="dateClass"
+                    date={card.date}
+                    img={card.img}
+                  />
+                </Link>
+              ))}
+            </div>
           </SwiperSlide>
         ))}
-        <div ref={nextButtonRef} className="custom-next">&gt;</div>
-        <div ref={prevButtonRef} className="custom-prev">&lt;</div>
+        <div ref={nextButtonRef} className="custom-next">
+          &gt;
+        </div>
+        <div ref={prevButtonRef} className="custom-prev">
+          &lt;
+        </div>
       </Swiper>
     </div>
   );
