@@ -21,7 +21,7 @@ import DownArrow from "./models-assets/arrow-left(9).svg?react";
 import Masonry from "@mui/lab/Masonry";
 import OurPartners from "../Home/OurPartners/OurPartners";
 import { createPortal } from "react-dom";
-import { useEffect } from "react";
+import {  useLayoutEffect } from "react";
 
 
 const modelData = {
@@ -67,8 +67,14 @@ function Model() {
   
 
   
-  useEffect(() => {
-    window.scrollTo(0, 0);
+ 
+  useLayoutEffect(() => {
+    const isHomePage = location.pathname === "/";
+    const isModelPage = location.pathname.startsWith("/models/");
+    
+    if (isHomePage || isModelPage) {
+      window.scrollTo(0, 0);
+    }
   }, [location]);
   
  
