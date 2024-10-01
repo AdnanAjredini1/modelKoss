@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import "./model.scss";
 import Fb from "./models-assets/facebook(3).svg?react";
 import Insta from "./models-assets/instagram(5).svg?react";
@@ -21,6 +21,7 @@ import DownArrow from "./models-assets/arrow-left(9).svg?react";
 import Masonry from "@mui/lab/Masonry";
 import OurPartners from "../Home/OurPartners/OurPartners";
 import { createPortal } from "react-dom";
+import { useEffect } from "react";
 
 
 const modelData = {
@@ -54,13 +55,21 @@ const modelData = {
   unknownModel: {},
 };
 
+
 function Model() {
+    const location = useLocation();
   const { model } = useParams();
   const modelInfo = modelData[model] || {
     name: "Unknown",
     description: "No information available.",
     images: [],
   };
+  
+
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   
  
   return (
