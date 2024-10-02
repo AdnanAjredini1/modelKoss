@@ -54,7 +54,10 @@ function MobileNav() {
               data-name="Subtraction 1"
             />
           </svg>
+          <Link to={"/"} style={{textDecoration:'none'}}>
           <p className="headerTitle">MODELKOS</p>
+          </Link>
+       
         </div>
         <button
           className={`hamburger hamburger--collapse  ${

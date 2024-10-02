@@ -35,7 +35,7 @@ const ourModelsData = [
         type: "component",
         component: (
           <NotImg
-            wrapperClass="wrapperClass"
+            wrapperClass="wrapperClasss"
             titleClass="titleClass"
             descriptionClass="descriptionClass"
             iconClass="iconClass"

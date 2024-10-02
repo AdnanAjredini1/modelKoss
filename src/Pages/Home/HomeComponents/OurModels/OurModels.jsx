@@ -1,4 +1,4 @@
-import NotImg from "./NotImg";
+
 import "./our-models.scss";
 import { Link } from "react-router-dom";
 import ourModelsData from "./ourModelData";

@@ -1,5 +1,10 @@
+import { Swiper, SwiperSlide } from "swiper/react";
 import { useLocation, useParams } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./model.scss";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import Fb from "./models-assets/facebook(3).svg?react";
 import Insta from "./models-assets/instagram(5).svg?react";
 import Tiktok from "./models-assets/tiktok(2).svg?react";
@@ -21,8 +26,8 @@ import DownArrow from "./models-assets/arrow-left(9).svg?react";
 import Masonry from "@mui/lab/Masonry";
 import OurPartners from "../Home/OurPartners/OurPartners";
 import { createPortal } from "react-dom";
-import {  useLayoutEffect } from "react";
-
+import { useLayoutEffect, useRef, useState } from "react";
+import arrowSlider from "./models-assets/_.svg";
 
 const modelData = {
   andalleshi: {
@@ -55,32 +60,109 @@ const modelData = {
   unknownModel: {},
 };
 
-
 function Model() {
-    const location = useLocation();
+  const location = useLocation();
   const { model } = useParams();
   const modelInfo = modelData[model] || {
     name: "Unknown",
-    description: "No information available.",
+    descriptions: ["No information available."],
     images: [],
   };
-  
+  const [imageClicked, setImageClicked] = useState(false);
+  const [activeImage, setActiveImage] = useState(0);
 
-  
- 
+  const nextButtonRef = useRef(null);
+  const prevButtonRef = useRef(null);
+  const swiperRef = useRef(null);
+
+  useLayoutEffect(() => {
+    if (imageClicked) {
+      // Disable scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Re-enable scrolling
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [imageClicked]);
+
   useLayoutEffect(() => {
     const isHomePage = location.pathname === "/";
     const isModelPage = location.pathname.startsWith("/models/");
-    
+
     if (isHomePage || isModelPage) {
       window.scrollTo(0, 0);
     }
   }, [location]);
-  
- 
+
+  useLayoutEffect(() => {
+    if (swiperRef.current && imageClicked) {
+      swiperRef.current.slideTo(activeImage);
+    }
+  }, [activeImage, imageClicked]);
+
   return (
     <div className="modelProfileWrapper">
-    {/* {createPortal(<div className="backdroSliderWrapper">fdnfknfakdf</div>,document.getElementById("backdropSlider"))} */}
+      {createPortal(
+        <div
+          className={` ${
+            imageClicked ? "backdroSliderWrapper" : "dispalyBackdrop"
+          }`}
+        >
+          <div className="carouselWrapper">
+            <button
+              onClick={() => setImageClicked(!imageClicked)}
+              className="btnClose"
+            >
+              X
+            </button>
+            <Swiper
+              ref={swiperRef}
+              slidesPerView={1}
+              initialSlide={activeImage}
+              spaceBetween={0}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={{
+                nextEl: nextButtonRef.current,
+                prevEl: prevButtonRef.current,
+              }}
+              onInit={(swiper) => {
+                swiperRef.current = swiper; // Store the Swiper instance
+                swiper.params.navigation.nextEl = nextButtonRef.current;
+                swiper.params.navigation.prevEl = prevButtonRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }}
+              modules={[Pagination, FreeMode, Navigation]}
+              className="mySwiper"
+            >
+              {modelInfo.images.map((image) => (
+                <SwiperSlide key={image}>
+                  <div
+                    className="imageCArousel"
+                    key={image}
+                    style={{ content: `url(${image})` }}
+                  ></div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div ref={nextButtonRef} className="custom-next">
+              <img src={arrowSlider} alt="next" />
+            </div>
+            <div ref={prevButtonRef} className="custom-prev">
+              <img src={arrowSlider} alt="prev" />
+            </div>
+          </div>
+          <div className="backdropp"></div>
+        </div>,
+        document.getElementById("backdropSlider")
+      )}
       <p className="name">{modelInfo.name}</p>
       <div className="descriptions">
         {modelInfo.descriptions.map((item) => (
@@ -97,14 +179,21 @@ function Model() {
       </div>
       <div className="modelImagesWrapper">
         <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 3 }} spacing={3}>
-          {modelInfo.images.map((image) => (
-            <div className="imgDiv" key={image}>
+          {modelInfo.images.map((image, index) => (
+            <div
+              className="imgDiv"
+              key={image}
+              onClick={() => {
+                setImageClicked(!imageClicked);
+                setActiveImage(index);
+              }}
+            >
               <div className="image" style={{ content: `url(${image})` }}></div>
 
               <div className="linearGradient"></div>
               <div className="zoomIconsWrapper">
                 <UpArrow className="uparrow" />
-                <DownArrow  className="downarrow"/>
+                <DownArrow className="downarrow" />
               </div>
             </div>
           ))}
