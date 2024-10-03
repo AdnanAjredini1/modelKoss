@@ -2,12 +2,13 @@ import img1 from './models-assets/james-feaver-KMNEkM-.webp'
 import img2 from './models-assets/ahmad-ebadi-ot28ybNQ.webp'
 import img3 from './models-assets/malik-skydsgaard-d_Y.webp'
 import img4 from './models-assets/daniil-onischenko-GH.webp'
+import { FormattedMessage } from 'react-intl';
 
 
 
 export const modelsData = [
     {
-        label: "Any",
+        label: <FormattedMessage id='Any' defaultMessage="Any"/>,
         content: "This is the content for Tab 1",
       },
   {

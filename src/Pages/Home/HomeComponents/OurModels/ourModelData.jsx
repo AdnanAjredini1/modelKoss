@@ -10,10 +10,11 @@ import img9 from "./our-models-assetss/294023847_5407378610.webp";
 import img10 from "./our-models-assetss/293166254_3814594707.webp";
 import img11 from "./our-models-assetss/294230900_1039102653.webp";
 import NotImg from "./NotImg";
+import { FormattedMessage } from "react-intl";
 
 const ourModelsData = [
   {
-    label: "Any",
+    label: <FormattedMessage id="Any" defaultMessage="Any" />,
     content: [
       {
         img: img1,
@@ -46,19 +47,19 @@ const ourModelsData = [
     ],
   },
   {
-    label: "Kids",
+    label:<FormattedMessage id="Kids" defaultMessage="Kids" /> ,
     content: "This is the content for Tab 2",
   },
   {
-    label: "Female",
+    label: <FormattedMessage id="Female" defaultMessage="Female" />,
     content: "This is the content for Tab 3",
   },
   {
-    label: "Male",
+    label: <FormattedMessage id="Male" defaultMessage="Male" />,
     content: "This is the content for Tab 4",
   },
   {
-    label: "Mature",
+    label: <FormattedMessage id="Mature" defaultMessage="Mature" />,
     content: "This is the content for Tab 5",
   },
 ];

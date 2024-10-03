@@ -1,17 +1,18 @@
 import CardW from "./CardW";
-import {  useEffect, useRef} from "react";
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import arrowPig from './whatweoffer-assets/arrow-left(4).svg'
+import arrowPig from "./whatweoffer-assets/arrow-left(4).svg";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./what-we-offer.scss";
 import { whatWeOfferData } from "./whatweofferData";
 import { Pagination, Navigation, FreeMode } from "swiper/modules";
-import Lines from './whatweoffer-assets/banner-assets/s_0067-lines.svg?react';
-import BecomeModelLogo from './whatweoffer-assets/banner-assets/Become a model at modelkos now -.svg?react';
-import Mlogo from './whatweoffer-assets/banner-assets/Subtraction 3.svg?react';
-import BecomeModel from './whatweoffer-assets/banner-assets/Become a model at modelkos now -(3).svg?react';
+import Lines from "./whatweoffer-assets/banner-assets/s_0067-lines.svg?react";
+import BecomeModelLogo from "./whatweoffer-assets/banner-assets/Become a model at modelkos now -.svg?react";
+import Mlogo from "./whatweoffer-assets/banner-assets/Subtraction 3.svg?react";
+import BecomeModel from "./whatweoffer-assets/banner-assets/Become a model at modelkos now -(3).svg?react";
+import { FormattedMessage } from "react-intl";
 
 function WhatWeOffer() {
   const nextButtonRef = useRef(null);
@@ -29,7 +30,9 @@ function WhatWeOffer() {
   }, [swiperRef, nextButtonRef, prevButtonRef]);
   return (
     <div className="whatWeOfferWrapper">
-    <p className="bigTitle">What we offer</p>
+      <p className="bigTitle">
+        <FormattedMessage id="What we offer" defaultMessage="What we offer" />
+      </p>
       <div className="carouselWrapper">
         <Swiper
           ref={swiperRef}
@@ -76,8 +79,8 @@ function WhatWeOffer() {
           modules={[Pagination, Navigation, FreeMode]}
           className="mySwiper"
         >
-          {whatWeOfferData.map((item) => (
-            <SwiperSlide key={item.icon}>
+          {whatWeOfferData.map((item, index) => (
+            <SwiperSlide key={index}>
               <CardW
                 title={item.title}
                 icon={item.icon}
@@ -87,21 +90,26 @@ function WhatWeOffer() {
           ))}
         </Swiper>
         <div ref={nextButtonRef} className="custom-next">
-                <img src={arrowPig}  alt="next" />
-              </div>
-              <div ref={prevButtonRef} className="custom-prev">
-                <img src={arrowPig}   alt="prev" />
-              </div>
+          <img src={arrowPig} alt="next" />
+        </div>
+        <div ref={prevButtonRef} className="custom-prev">
+          <img src={arrowPig} alt="prev" />
+        </div>
       </div>
       <div className="buttonWrapper">
-        <p>See all</p>
+        <p><FormattedMessage id="See all" defaultMessage="See all" /></p>
       </div>
 
-      <p className="bannerText">ModelKos is one of the most influential fashion news sites and creative resources within the fashion industry, with an extensive database, feature interviews of the creative stars of the industry, and its influential top model rankings.</p>
-      <Lines className="lines"/>
-      <BecomeModelLogo className="becomemodelLogo"/>
-      <Mlogo className="mlogo"/>
-      <BecomeModel className="becomeModelMainLogo"/>
+      <p className="bannerText">
+        <FormattedMessage
+          id="ModelKos is one of the most influential fashion news sites and creative resources within the fashion industry, with an extensive database, feature interviews of the creative stars of the industry, and its influential top model rankings."
+          defaultMessage="ModelKos is one of the most influential fashion news sites and creative resources within the fashion industry, with an extensive database, feature interviews of the creative stars of the industry, and its influential top model rankings."
+        />
+      </p>
+      <Lines className="lines" />
+      <BecomeModelLogo className="becomemodelLogo" />
+      <Mlogo className="mlogo" />
+      <BecomeModel className="becomeModelMainLogo" />
     </div>
   );
 }

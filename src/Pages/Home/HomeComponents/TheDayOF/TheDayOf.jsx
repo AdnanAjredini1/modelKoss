@@ -6,9 +6,8 @@ import "swiper/css/navigation";
 import "./the-day-of.scss";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import arrowIcon from "./thedayof-assets/Group 13131.svg";
-import img1 from "./thedayof-assets/286633495_4102350776.webp";
-import img2 from "./thedayof-assets/286874736_7261172651.webp";
 import Icon from "../Hero/Icon";
+import { FormattedMessage } from "react-intl";
 
 function TheDayOf() {
   const nextButtonRef = useRef(null);
@@ -49,10 +48,10 @@ function TheDayOf() {
             />
              <div className="img1"></div>
             <div className="img2"></div>
-            <p className="bigText1">THE DAY OF</p>
-            <p className="bigText2">modeling</p>
-            <p className="bigText3">THE DAY OF</p>
-            <p className="bigText4">modeling</p>
+            <p className="bigText1"><FormattedMessage id="THE DAY OF" defaultMessage="THE DAY OF" /></p>
+            <p className="bigText2"><FormattedMessage id="MODELING" defaultMessage="MODELING"/></p>
+            <p className="bigText3"><FormattedMessage id="THE DAY OF" defaultMessage="THE DAY OF" /></p>
+            <p className="bigText4"><FormattedMessage id="MODELING" defaultMessage="MODELING"/></p>
             <p className="bigText5">modelkos</p>
           </div>
         </SwiperSlide>
@@ -60,10 +59,10 @@ function TheDayOf() {
           <div className="elementWrapper">
             <div className="img1"></div>
             <div className="img2"></div>
-            <p className="bigText1">THE DAY OF</p>
-            <p className="bigText2">modeling</p>
-            <p className="bigText3">THE DAY OF</p>
-            <p className="bigText4">modeling</p>
+            <p className="bigText1"><FormattedMessage id="THE DAY OF" defaultMessage="THE DAY OF" /></p>
+            <p className="bigText2"><FormattedMessage id="MODELING" defaultMessage="MODELING"/></p>
+            <p className="bigText3"><FormattedMessage id="THE DAY OF" defaultMessage="THE DAY OF" /></p>
+            <p className="bigText4"><FormattedMessage id="MODELING" defaultMessage="MODELING"/></p>
             <p className="bigText5">modelkos</p>
           </div>
         </SwiperSlide>
@@ -71,10 +70,10 @@ function TheDayOf() {
           <div className="elementWrapper">
             <div className="img1"></div>
             <div className="img2"></div>
-            <p className="bigText1">THE DAY OF</p>
-            <p className="bigText2">modeling</p>
-            <p className="bigText3">THE DAY OF</p>
-            <p className="bigText4">modeling</p>
+            <p className="bigText1"><FormattedMessage id="THE DAY OF" defaultMessage="THE DAY OF" /></p>
+            <p className="bigText2"><FormattedMessage id="MODELING" defaultMessage="MODELING"/></p>
+            <p className="bigText3"><FormattedMessage id="THE DAY OF" defaultMessage="THE DAY OF" /></p>
+            <p className="bigText4"><FormattedMessage id="MODELING" defaultMessage="MODELING"/></p>
             <p className="bigText5">modelkos</p>
           </div>
         </SwiperSlide>

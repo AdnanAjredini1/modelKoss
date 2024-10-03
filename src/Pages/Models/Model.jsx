@@ -28,6 +28,7 @@ import OurPartners from "../Home/OurPartners/OurPartners";
 import { createPortal } from "react-dom";
 import { useLayoutEffect, useRef, useState } from "react";
 import arrowSlider from "./models-assets/_.svg";
+import { motion } from "framer-motion";
 
 const modelData = {
   andalleshi: {
@@ -113,7 +114,12 @@ function Model() {
             imageClicked ? "backdroSliderWrapper" : "dispalyBackdrop"
           }`}
         >
-          <div className="carouselWrapper">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="carouselWrapper"
+          >
             <button
               onClick={() => setImageClicked(!imageClicked)}
               className="btnClose"
@@ -158,7 +164,7 @@ function Model() {
             <div ref={prevButtonRef} className="custom-prev">
               <img src={arrowSlider} alt="prev" />
             </div>
-          </div>
+          </motion.div>
           <div className="backdropp"></div>
         </div>,
         document.getElementById("backdropSlider")

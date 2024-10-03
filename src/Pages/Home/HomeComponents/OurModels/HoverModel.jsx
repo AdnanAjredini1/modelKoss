@@ -2,6 +2,7 @@ import fb from "./our-models-assetss/facebook(2).svg";
 import insta from "./our-models-assetss/instagram(3).svg";
 import twt from "./our-models-assetss/twitter(3).svg";
 import tTok from "./our-models-assetss/tiktok(1).svg";
+import { FormattedMessage } from "react-intl";
 function HoverModel({
   hoverWrapperClass,
   name,
@@ -13,14 +14,59 @@ function HoverModel({
     <div className={hoverWrapperClass}>
       <p className={nameClass}>{name}</p>
       <div className={descriptionsWrapperClass}>
-        <p className={description}>Height 5'10" </p>
-        <p className={description}>Bust 34" A </p>
-        <p className={description}>Waist 24" </p>
-        <p className={description}>Hips 34" </p>
-        <p className={description}>Dress 2 US</p>
-        <p className={description}>Shoe 8 US</p>
-        <p className={description}>Hair Dark Blonde</p>
-        <p className={description}>Eyes Brown</p>
+        <p className={description}>
+          <FormattedMessage
+            id="Height"
+            defaultMessage="Height {size}"
+            values={{ size: `5'10"` }}
+          />
+        </p>
+        <p className={description}>
+          <FormattedMessage
+            id="Bust"
+            defaultMessage="Bust {size}"
+            values={{ size: `34" A` }}
+          />
+        </p>
+        <p className={description}>
+          <FormattedMessage
+            id="Waist"
+            defaultMessage="Waist {size}"
+            values={{ size: `24"` }}
+          />
+        </p>
+        <p className={description}>
+          <FormattedMessage
+            id="Hips"
+            defaultMessage="Hips {size}"
+            values={{ size: `34"` }}
+          />
+        </p>
+        <p className={description}>
+          <FormattedMessage
+            id="Dress"
+            defaultMessage="Dress {size}"
+            values={{ size: `2 US` }}
+          />
+        </p>
+        <p className={description}>
+          <FormattedMessage
+            id="Shoe"
+            defaultMessage="Shoe {size}"
+            values={{ size: `8 US` }}
+          />
+        </p>
+        <p className={description}>
+          <FormattedMessage
+            id="Hair Dark Blonde"
+            defaultMessage="Hair Dark Blonde"
+          />
+        </p>
+        <p className={description}>
+        <FormattedMessage
+            id="Eyes Brown"
+            defaultMessage="Eyes Brown"
+          /></p>
       </div>
       <div
         style={{

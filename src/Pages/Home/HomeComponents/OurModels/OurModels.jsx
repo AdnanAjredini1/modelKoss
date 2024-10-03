@@ -1,16 +1,18 @@
-
 import "./our-models.scss";
 import { Link } from "react-router-dom";
 import ourModelsData from "./ourModelData";
 import { useState } from "react";
 import Masonry from "@mui/lab/Masonry";
 import HoverModel from "./HoverModel";
+import { FormattedMessage } from "react-intl";
 
 function OurModels() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div className="ourModelsWrapper">
-      <p className="title">OUR MODELS</p>
+      <p className="title">
+        <FormattedMessage id="OUR MODELS" defaultMessage="OUR MODELS" />
+      </p>
       <div className="linksWrapper">
         {ourModelsData.map((tab, index) => (
           <p
@@ -27,23 +29,26 @@ function OurModels() {
           <div className="tabsContent">
             <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }} spacing={3}>
               {ourModelsData[0].content.map((item) => (
-                <Link to={item.to} key={item.img} style={{textDecoration:"none"}}>
-                <div className="imgDiv" key={item.img}>
-                  {item.type === "img" ? (
-                    <img src={item.img} className="imgModel" />
-                  ) : (
-                    item.component
-                  )}
-                  <HoverModel
-                    hoverWrapperClass={`contentText ${item.class}`}
-                    name={item.name}
-                    nameClass="name"
-                    description="description"
-                    descriptionsWrapperClass="descriptionsWrapperClass"
-                  />
-                </div>
+                <Link
+                  to={item.to}
+                  key={item.img}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="imgDiv" key={item.img}>
+                    {item.type === "img" ? (
+                      <img src={item.img} className="imgModel" />
+                    ) : (
+                      item.component
+                    )}
+                    <HoverModel
+                      hoverWrapperClass={`contentText ${item.class}`}
+                      name={item.name}
+                      nameClass="name"
+                      description="description"
+                      descriptionsWrapperClass="descriptionsWrapperClass"
+                    />
+                  </div>
                 </Link>
-             
               ))}
             </Masonry>
           </div>
@@ -61,9 +66,13 @@ function OurModels() {
         )}
       </div>
       <div className="seeAllButtonW">
-      <div className="seeAllButton">See all models</div>
+        <div className="seeAllButton">
+          <FormattedMessage
+            id="See all models"
+            defaultMessage="See all models"
+          />
+        </div>
       </div>
-    
     </div>
   );
 }

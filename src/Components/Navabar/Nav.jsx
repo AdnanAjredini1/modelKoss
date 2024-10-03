@@ -4,6 +4,7 @@ import { GoTriangleDown } from "react-icons/go";
 import OurWorkMegamenu from "./OurWorkMEGAMENU/OurWorkMegamenu";
 import AboutMegamenu from "./AboutMEGAMENU/AboutMegamenu"
 import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 
 
 
@@ -47,18 +48,20 @@ function Nav() {
       </div>
       <div className="navMiddlePart">
         <Link className="navlinkk" to="/">
-          Home
+         <FormattedMessage id="Home" defaultMessage="Home" />
+          
         </Link>
         <Link className="navlinkk" to="/">
           <div className="insideNavlink">
-            <p> Our Work</p>
+
+            <p>  <FormattedMessage id="Our Work" defaultMessage="Our Work" /></p>
             <GoTriangleDown />
           </div>
         </Link>
         <div className="navlinkk aboutLink">
           <Link to="/" className="navlinkk">
             <div className="insideNavlink">
-              <p> About</p>
+              <p>   <FormattedMessage id="About" defaultMessage="About" /></p>
               <GoTriangleDown />
             </div>
           </Link>
@@ -68,7 +71,7 @@ function Nav() {
         <div className="navlinkk ourWorkLink">
           <Link to="/" className="navlinkk">
             <div className="insideNavlink">
-              <p> Models</p>
+              <p> <FormattedMessage id="Models" defaultMessage="Models" /> </p>
               <GoTriangleDown />
             </div>
           </Link>
@@ -78,17 +81,18 @@ function Nav() {
         
         <Link className="navlinkk" to="/">
           <div className="insideNavlink">
-            <p> Academy</p>
+            <p><FormattedMessage id="Academy" defaultMessage="Academy" /> </p>
             <GoTriangleDown />
           </div>
         </Link>
         <Link className="navlinkk" to="/">
-          Blog
+        <FormattedMessage id="Blog" defaultMessage="Blog" />
+         
         </Link>
       </div>
       <div className="navRightPart">
-        <p className="applyNowText">Apply now</p>
-        <button className="contanctUsButton">Contact Us</button>
+        <p className="applyNowText">  <FormattedMessage id="Apply now" defaultMessage="Apply now" /></p>
+        <button className="contanctUsButton"> <FormattedMessage id="Contact Us" defaultMessage="Contact Us" /></button>
       </div>
     </nav>
   );

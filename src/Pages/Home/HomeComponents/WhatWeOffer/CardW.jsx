@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import "./card-w.scss";
 import Arrow from "./whatweoffer-assets/arrow-left(3).svg?react";
 
@@ -8,7 +9,7 @@ function CardW({ icon:Icon, title, description }) {
       <p className="title">{title}</p>
       <p className="hoverTitle">{title}</p>
       <p className="description">{description}</p>
-      <p className="learnMore">Learn more</p>
+      <p className="learnMore"><FormattedMessage id="Learn more" defaultMessage="Learn more" /></p>
       <Arrow className="arrow" />
       <div className="backdrop">
         
