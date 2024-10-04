@@ -7,6 +7,7 @@ import imgInsta from "./instagram(2).svg"
 import imgTikTok from "./tiktok.svg"
 import imgTwitter from "./twitter(2).svg"
 import SelectLanguage from "./SelectLanguage/SelectLanguage";
+import { FormattedMessage } from "react-intl";
 
 
 
@@ -39,21 +40,21 @@ function Footer() {
           ))}
           <div className="line"></div>
           <div className="middlePart">
-          <p className="title">MODELS</p>
+          <p className="title"><FormattedMessage id="MODELS" defaultMessage="MODELS" /></p>
           <div className="addressWrapper">
-            <p className="address">Women - 0207 376 7764</p>
-            <p className="address">Men - 0207 376 7464 </p>
+            <p className="address"> <FormattedMessage id="Women" defaultMessage="Women" /> - 0207 376 7764</p>
+            <p className="address"><FormattedMessage id="Men" defaultMessage="Men" /> - 0207 376 7464 </p>
             <p className="address">bookamodel@modelkos.com</p>
           </div>
-          <p className="jobs">JOBS</p>
+          <p className="jobs"><FormattedMessage id="JOBS" defaultMessage="JOBS" /></p>
           <p className="jobsEmail">jobs@modelkos.com</p>
         </div>
         <div className="rightPart">
-            <p className="title" >MODELKOS MANAGEMENT</p>
+            <p className="title" ><FormattedMessage id="MODELKOS MANAGEMENT" defaultMessage="MODELKOS MANAGEMENT" /></p>
             <div>
-            <p className="text">1st Floor</p>
-            <p className="text">1st Floor 5 Jubilee Place Prishtina, Kosovo</p>
-            <p className="text">Prishtina, Kosovo</p>
+            <p className="text"> <FormattedMessage id="1st Floor" defaultMessage="1st Floor" /></p>
+            <p className="text"><FormattedMessage id="1st Floor" defaultMessage="1st Floor" /> 5 Jubilee Place Prishtina, Kosova</p>
+            <p className="text">Prishtina, Kosova</p>
             </div>
         </div>
         </div>
@@ -80,7 +81,7 @@ function Footer() {
             <p className="rights">© 2024 &nbsp;·&nbsp; MODELKOS</p>
             </div>
           
-             <p className="terms"><span>Privacy Statement</span> &nbsp;&nbsp;|&nbsp;&nbsp;<span>Terms of Service</span>  &nbsp;&nbsp;|&nbsp;&nbsp; <span>Help / FAQ</span></p>
+             <p className="terms"><span><FormattedMessage id="Privacy Statement" defaultMessage="Privacy Statement" /></span> &nbsp;&nbsp;|&nbsp;&nbsp;<span><FormattedMessage id="Terms of Service" defaultMessage="Terms of Service" /></span>  &nbsp;&nbsp;|&nbsp;&nbsp; <span>Help / FAQ</span></p>
              <div className="iconsAndLanguages">
               <div className="iconsWrapper">
                <img width={8.2} height={17.7} src={imgFB} />

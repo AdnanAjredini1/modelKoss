@@ -3,6 +3,7 @@ import "./about-megamenu.scss";
 import aboutMData from "./aboutMegemenuData";
 import img1 from "./aboutMegamenu-assets/286633495_4102350776.png";
 import img2 from "./aboutMegamenu-assets/imageedit_1_97659730.png";
+import { FormattedMessage } from "react-intl";
 
 function AboutMegamenu() {
   return (
@@ -31,7 +32,7 @@ function AboutMegamenu() {
 
         <img className="img2Class" src={img1} />
         <div className="aboutUsButton">
-            About us
+           <FormattedMessage id="About us" defaultMessage="About us" />
         </div>
       </div>
       .

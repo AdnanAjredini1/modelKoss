@@ -2,6 +2,7 @@ import "./free-education.scss";
 import { freeEducationData } from "./freeEducationData";
 import LeftArrow from "./free-education-assets/arrow-left(6).svg?react";
 import KosGirlsIcon from "./free-education-assets/Group 1.svg?react";
+import { FormattedMessage } from "react-intl";
 function FreeEducation() {
   return (
     <div className="freeEduactionWrapper">
@@ -20,15 +21,23 @@ function FreeEducation() {
           <KosGirlsIcon className="kosGirlsIcon" />
           <p className="logoText">KosovaGirls</p>
         </div>
-        <p className="bigText">Free education for EVERYONE</p>
+        <p className="bigText">
+          <FormattedMessage
+            id="Free education for EVERYONE"
+            defaultMessage="Free education for EVERYONE"
+          />
+        </p>
         <p className="description">
-          ModelKos, in collaboration with KosovaGirls, provides women with
-          support and free training in fashion, design, hair styling,
-          photography, video shooting, modeling, acting and other areas.
+          <FormattedMessage
+            id="ModelKos, in collaboration with KosovaGirls, provides women with support and free training in fashion, design, hair styling, photography, video shooting, modeling, acting and other areas."
+            defaultMessage="ModelKos, in collaboration with KosovaGirls, provides women with support and free training in fashion, design, hair styling, photography, video shooting, modeling, acting and other areas."
+          />
         </p>
         <div className="btnWrapper">
-            <p className="learnmore">Learn more</p>
-          </div>
+          <p className="learnmore">
+            <FormattedMessage id="Learn more" defaultMessage="Learn more" />
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -2,26 +2,23 @@ import img1 from "./free-education-assets/jernej-graj-IbrSR6gBaqI-unsplash_1_.we
 import img2 from "./free-education-assets/oladimeji-odunsi-n5aE6hOY6do-unsplash.webp";
 import img3 from "./free-education-assets/alif-ngoylung-jg-6ARMiaPM-unsplash.webp";
 import img4 from "./free-education-assets/miguel-angel-hernandez-4Kmvlc1M9rU-unsplash.webp";
-
-
-
-
+import { FormattedMessage } from "react-intl";
 
 export const freeEducationData = [
   {
-    name: "Fashion",
+    name: <FormattedMessage id="Fashion" defaultMessage="Fashion" />,
     img: img1,
   },
   {
-    name: "hair styling",
+    name: <FormattedMessage id="hair styling" defaultMessage="hair styling" />,
     img: img2,
   },
   {
-    name: "photography",
+    name: <FormattedMessage id="photography" defaultMessage="photography" />,
     img: img3,
   },
   {
-    name: "acting",
+    name: <FormattedMessage id="acting" defaultMessage="acting" />,
     img: img4,
   },
 ];

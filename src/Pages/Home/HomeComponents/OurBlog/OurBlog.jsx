@@ -8,6 +8,7 @@ import OurBlogCard from "./OurBlogCard";
 import { ourBlogData } from "./ourblogData";
 import arrow from "./ourblog-assets/arrow-left(7).svg";
 import { useEffect, useRef } from "react";
+import { FormattedMessage } from "react-intl";
 
 function OurBlog() {
   const nextButtonRef = useRef(null);
@@ -25,7 +26,9 @@ function OurBlog() {
 
   return (
     <div className="ourBlogWrapper">
-      <p className="bigTitle">OUR BLOG</p>
+      <p className="bigTitle">
+        <FormattedMessage id="OUR BLOG" defaultMessage="OUR BLOG" />
+      </p>
       <div className="content">
         <Swiper
           ref={swiperRef}
@@ -79,7 +82,6 @@ function OurBlog() {
               />
             </SwiperSlide>
           ))}
-        
         </Swiper>
         <div ref={nextButtonRef} className="custom-next">
           <img src={arrow} width={15.31} height={8.18} alt="next" />
@@ -88,7 +90,12 @@ function OurBlog() {
           <img src={arrow} alt="prev" width={15.31} height={8.18} />
         </div>
         <div className="btnWrapp">
-            <p>Read all blog</p>
+          <p>
+            <FormattedMessage
+              id="Read all blog"
+              defaultMessage="Read all blog"
+            />
+          </p>
         </div>
       </div>
     </div>

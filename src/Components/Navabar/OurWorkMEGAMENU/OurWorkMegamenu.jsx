@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import "./ourwork-megamenu.scss";
 import ourWorkData from "./ourworkData";
-import Card from "./Carousel/Card/Card";
-import img1 from "./ourWork-assets/imgCarousel1.png";
-import cardData from "./Carousel/Card/cardData";
 import Carousel from "./Carousel/Carousel";
+import { FormattedMessage } from "react-intl";
 
 function OurWorkMegamenu() {
   return (
@@ -24,10 +22,18 @@ function OurWorkMegamenu() {
         ))}
       </div>
       <div className="ourWorkRightPart">
-      <p className="text">Models &nbsp;&nbsp;  <span className="textSpan"> View all &gt; </span></p>
-      <Carousel />
-   
-
+        <p className="text">
+          <FormattedMessage id="Models" defaultMessage="Models" />
+          &nbsp;&nbsp;{" "}
+          <span className="textSpan">
+            {" "}
+            <FormattedMessage
+              id="View all"
+              defaultMessage="View all"
+            /> &gt;{" "}
+          </span>
+        </p>
+        <Carousel />
       </div>
     </div>
   );

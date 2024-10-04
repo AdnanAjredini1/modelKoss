@@ -1,6 +1,8 @@
+import { FormattedMessage } from "react-intl";
+
 const ourWorkData = [
   {
-    category: "City",
+    category: <FormattedMessage id="City" defaultMessage="City" />,
     links: [
       { link: "Prishtina", to: "/" },
       { link: "Peja", to: "/" },
@@ -12,36 +14,68 @@ const ourWorkData = [
     ],
   },
   {
-    category: "Female",
+    category: <FormattedMessage id="Female" defaultMessage="Female" />,
     links: [
-      { link: "main", to: "/" },
-      { link: "direct", to: "/" },
-      { link: "b plus", to: "/" },
+      { link: <FormattedMessage id="main" defaultMessage="main" />, to: "/" },
+      {
+        link: <FormattedMessage id="direct" defaultMessage="direct" />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id="b plus" defaultMessage="b plus" />,
+        to: "/",
+      },
     ],
   },
   {
-    category: "Male",
+    category: <FormattedMessage id="Male" defaultMessage="Male" />,
     links: [
-      { link: "main", to: "/" },
-      { link: "direct", to: "/" },
-      { link: "big & tall", to: "/" },
+      { link: <FormattedMessage id="main" defaultMessage="main" />, to: "/" },
+      {
+        link: <FormattedMessage id="direct" defaultMessage="direct" />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id="big & tall" defaultMessage="big & tall" />,
+        to: "/",
+      },
     ],
   },
   {
-    category: "Kids",
+    category: <FormattedMessage id="Kids" defaultMessage="Kids" />,
     links: [
-      { link: "babies", to: "/" },
-      { link: "todlers", to: "/" },
-      { link: "preschool", to: "/" },
-      { link: "gradeschooler", to: "/" },
-      { link: "Teen", to: "/" },
+      {
+        link: <FormattedMessage id="babies" defaultMessage="babies" />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id="todlers" defaultMessage="todlers" />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id="preschool" defaultMessage="preschool" />,
+        to: "/",
+      },
+      {
+        link: (
+          <FormattedMessage id="gradeschooler" defaultMessage="gradeschooler" />
+        ),
+        to: "/",
+      },
+      { link: <FormattedMessage id="Teen" defaultMessage="Teen" />, to: "/" },
     ],
   },
   {
-    category: "Elderly",
+    category: <FormattedMessage id="Elderly" defaultMessage="Elderly" />,
     links: [
-      { link: "old female", to: "/" },
-      { link: "old male", to: "/" },
+      {
+        link: <FormattedMessage id="old female" defaultMessage="old female" />,
+        to: "/",
+      },
+      {
+        link: <FormattedMessage id="old male" defaultMessage="old male" />,
+        to: "/",
+      },
     ],
   },
 ];

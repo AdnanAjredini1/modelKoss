@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./what-people-say.scss";
 import arro from "./whatpeoplesay-assets/arrow-left(5).svg"
+import { FormattedMessage } from "react-intl";
 
 
 
@@ -30,12 +31,13 @@ function WhatPeopleSay() {
   
   return (
     <div className="whatPSayWrapper">
-      <p className="title">what people say</p>
+      <p className="title"><FormattedMessage id="what people say" defaultMessage="what people say" /></p>
       <div className="content">
       
         <div className="leftPart">
             <p className="bigText">
-            what people say
+            <FormattedMessage id="what people say" defaultMessage="what people say" />
+          
             </p>
         </div>
         <div className="rightPart">
