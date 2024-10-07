@@ -34,6 +34,7 @@
         width: 710px;
         height: 91%;
         z-index: 10001;
+        // animation: slide-up 0.2s;
         @media (max-width:1092px) {
             width: 80%;
             height: 100vw;
@@ -44,6 +45,17 @@
         @media (max-width:562px) {
             width: 96%;
             height: 120vw;
+        }
+
+        @keyframes slide-up {
+            0% {
+             scale: 0.7;
+             opacity: 0;
+            }
+            100% {
+                scale: 1;
+                opacity: 1;
+            }
         }
 
         .imageCArousel{
@@ -334,5 +346,8 @@
         color: #1d1d1d;
         margin-top: 200px;
         margin-bottom: 0;
+        @media (max-width:543px) {
+            font-size: 20vw;
+        }
     }
 }

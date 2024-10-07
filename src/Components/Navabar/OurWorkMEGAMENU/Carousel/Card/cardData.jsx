@@ -6,13 +6,23 @@ import img5 from "/src/Components/Navabar/OurWorkMEGAMENU/ourWork-assets/ImageCa
 import img6 from "/src/Components/Navabar/OurWorkMEGAMENU/ourWork-assets/ImageCarousel6.png";
 import img7 from "/src/Components/Navabar/OurWorkMEGAMENU/ourWork-assets/ImageCarousel7.png";
 import img8 from "/src/Components/Navabar/OurWorkMEGAMENU/ourWork-assets/ImageCarousel8.png";
+import { FormattedMessage } from "react-intl";
 
 const cardData = [
   [
     {
       img: img1,
       name: "Bline Beka",
-      descriptions: ["Model", "Photography", "Artist"],
+      descriptions: [
+        <FormattedMessage id="Model" defaultMessage="Model" key={1} />,
+        <FormattedMessage
+          id="Photography"
+          defaultMessage="Photography"
+          key={2}
+        />,
+        "Artist",
+      ],
+
       date: "2024-09-12",
       class: "",
       to: "/",
@@ -20,7 +30,16 @@ const cardData = [
     {
       img: img2,
       name: "Alora Gojani",
-      descriptions: ["Model", "Photography", "Artist"],
+      descriptions: [
+        <FormattedMessage id="Model" defaultMessage="Model" key={1} />,
+        <FormattedMessage
+          id="Photography"
+          defaultMessage="Photography"
+          key={2}
+        />,
+        "Artist",
+      ],
+
       date: "2024-08-25",
       class: "blackCard",
       to: "/",
@@ -30,7 +49,16 @@ const cardData = [
     {
       img: img3,
       name: "Anda Lleshi",
-      descriptions: ["Model", "Photography", "Artist"],
+      descriptions: [
+        <FormattedMessage id="Model" defaultMessage="Model" key={1} />,
+        <FormattedMessage
+          id="Photography"
+          defaultMessage="Photography"
+          key={2}
+        />,
+        "Artist",
+      ],
+
       date: "2024-07-30",
       class: "",
       to: "/models/andalleshi",
@@ -38,7 +66,16 @@ const cardData = [
     {
       img: img4,
       name: "Driada Lakna",
-      descriptions: ["Model", "Photography", "Artist"],
+      descriptions: [
+        <FormattedMessage id="Model" defaultMessage="Model" key={1} />,
+        <FormattedMessage
+          id="Photography"
+          defaultMessage="Photography"
+          key={2}
+        />,
+        "Artist",
+      ],
+
       date: "2024-06-15",
       class: "blackCard",
       to: "/",
@@ -48,7 +85,16 @@ const cardData = [
     {
       img: img5,
       name: "Klea Gashi",
-      descriptions: ["Model", "Photography", "Artist"],
+      descriptions: [
+        <FormattedMessage id="Model" defaultMessage="Model" key={1} />,
+        <FormattedMessage
+          id="Photography"
+          defaultMessage="Photography"
+          key={2}
+        />,
+        "Artist",
+      ],
+
       date: "2024-05-22",
       class: "",
       to: "/",
@@ -56,7 +102,16 @@ const cardData = [
     {
       img: img6,
       name: "Arta Kalludra",
-      descriptions: ["Model", "Photography", "Artist"],
+      descriptions: [
+        <FormattedMessage id="Model" defaultMessage="Model" key={1} />,
+        <FormattedMessage
+          id="Photography"
+          defaultMessage="Photography"
+          key={2}
+        />,
+        "Artist",
+      ],
+
       date: "2024-04-10",
       class: "blackCard",
       to: "/",
@@ -66,7 +121,16 @@ const cardData = [
     {
       img: img7,
       name: "Anila Xhaferi",
-      descriptions: ["Model", "Photography", "Artist"],
+      descriptions: [
+        <FormattedMessage id="Model" defaultMessage="Model" key={1} />,
+        <FormattedMessage
+          id="Photography"
+          defaultMessage="Photography"
+          key={2}
+        />,
+        "Artist",
+      ],
+
       date: "2024-03-08",
       class: "",
       to: "/",
@@ -74,7 +138,16 @@ const cardData = [
     {
       img: img8,
       name: "Albina Myrtezaj",
-      descriptions: ["Model", "Photography", "Artist"],
+      descriptions: [
+        <FormattedMessage id="Model" defaultMessage="Model" key={1} />,
+        <FormattedMessage
+          id="Photography"
+          defaultMessage="Photography"
+          key={2}
+        />,
+        "Artist",
+      ],
+
       date: "2024-02-14",
       class: "blackCard",
       to: "/",

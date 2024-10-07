@@ -149,6 +149,7 @@ function Models() {
                       views="290"
                       viewsClass="viewsClass"
                       viewsIconClass="viewsIconClass"
+                      viewDetailsClass="viewDetailsClass"
                     />
                   </SwiperSlide>
                 ))}

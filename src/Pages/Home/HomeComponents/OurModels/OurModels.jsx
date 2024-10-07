@@ -5,14 +5,20 @@ import { useState } from "react";
 import Masonry from "@mui/lab/Masonry";
 import HoverModel from "./HoverModel";
 import { FormattedMessage } from "react-intl";
+import { motion } from "framer-motion";
+
 
 function OurModels() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div className="ourModelsWrapper">
-      <p className="title">
+      <motion.p
+       initial={{opacity:0}}
+       whileInView={{opacity:1}}
+       transition={{duration:1.1}}
+       className="title">
         <FormattedMessage id="OUR MODELS" defaultMessage="OUR MODELS" />
-      </p>
+      </motion.p>
       <div className="linksWrapper">
         {ourModelsData.map((tab, index) => (
           <p
@@ -36,7 +42,7 @@ function OurModels() {
                 >
                   <div className="imgDiv" key={item.img}>
                     {item.type === "img" ? (
-                      <img src={item.img} className="imgModel" />
+                      <div className="imgModel" style={{content:`url(${item.img})`}}></div>
                     ) : (
                       item.component
                     )}

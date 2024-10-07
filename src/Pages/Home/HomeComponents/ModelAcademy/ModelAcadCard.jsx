@@ -6,6 +6,7 @@ import { FormattedMessage } from "react-intl";
 function ModelAcadCard() {
   return (
     <div className="modelAcadCardWrapper">
+      
       <img src={banner} className="bannerImg" />
       <div className="linearGrad"></div>
       <div className="logoWrapper">

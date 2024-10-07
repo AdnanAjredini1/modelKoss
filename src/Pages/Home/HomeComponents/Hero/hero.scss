@@ -42,6 +42,7 @@
 
         .img1 {
             position: absolute;
+            content: url('./hero-assets/285559266_1739637450.webp');
             width: clamp(200px, 20vw, 356px);
             left: 3vw;
 
@@ -61,6 +62,7 @@
 
         .img2 {
             position: absolute;
+            content: url('./hero-assets//286480874_9724163867.webp');
             width: clamp(300px, 27vw, 500px);
             top: 160px;
             left: 12.5vw;
@@ -83,6 +85,7 @@
         .img22 {
             display: none;
             position: absolute;
+            content: url('./hero-assets/b0773d25037325e76585e7cad6dd4f86.webp');
             top: 160px;
             left: 12.5vw;
             z-index: 2;

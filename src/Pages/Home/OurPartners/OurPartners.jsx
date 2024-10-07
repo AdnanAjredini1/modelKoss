@@ -10,11 +10,22 @@ function OurPartners() {
       <p className="title">
         <FormattedMessage id="OUR PARTNERS" defaultMessage="OUR PARTNERS" />
       </p>
-      <div className="iconsWrapper">
+      <div className="slider">
+	<div className="slide-track">
+	
+        {brandIconsData.map((item) => (
+          <div className="slide" key={item.class}>
+          <img src={item.icon} key={item.class} className={item.class} />
+          </div >
+        ))}
+  
+	</div>
+</div>
+      {/* <div className="iconsWrapper">
         {brandIconsData.map((item) => (
           <img src={item.icon} key={item.class} className={item.class} />
         ))}
-      </div>
+      </div> */}
       <div className="btnWrapWrapper">
         <div className="btnWrapper">
           <p>
@@ -39,13 +50,11 @@ function OurPartners() {
           />
         </p>
         <div className="inputWrapper">
-          <EmailIcon className="emailIcon" />
-          <input
-            type="email"
-            className="inputNewsLetter"
-            placeholder="Type mail here"
-            required
-          />
+          <EmailIcon className="emailIcon"  />
+          <FormattedMessage id="Type mail here" defaultMessage="Type mail here">
+          {(msg) => (<input placeholder={msg}  type="email"  className="inputNewsLetter"   required />)}
+          </FormattedMessage>
+        
           <div className="inputBtn">
             <p>
               <FormattedMessage id="Subscribe" defaultMessage="Subscribe" />

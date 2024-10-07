@@ -1,6 +1,83 @@
 .ourPartnersWrapper {
     margin-top: 150px;
     margin-bottom: 150px;
+    $animationSpeed: 10s;
+
+  
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+
+// Styling
+.slider {
+	background: white;
+	// box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 150px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 80%;
+	
+	&::before,
+	&::after {
+		// @include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+       
+        align-items: center;
+        .bershkaIcon {
+            width: 196px;
+            height: 131px;
+
+        }
+
+        .calvinKleinIcon {
+            width: 63px;
+            height: 80px;
+        }
+
+        .bratyIcon {
+            width: 90px;
+            height: 38px;
+        }
+
+        .kosGirlsIcon {
+            height: 41px;
+            width: 201px;
+        }
+	}
+	
+	.slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		height: 150px;
+		width: 250px;
+	}
+}
 
     .newsLetterWrapper {
         display: flex;
@@ -166,7 +243,7 @@
         flex-wrap: wrap;
         align-items: center;
         margin-inline: 6%;
-        gap: 10px;
+        gap: 70px;
 
         .bershkaIcon {
             width: 196px;

@@ -5,89 +5,93 @@
     height: fit-content;
 
     ul {
-        list-style: none; 
-      }
+        list-style: none;
+    }
 
-      .react-tabs__tab--selected {
-        border: none; 
-        outline: none; 
-      }
+    .react-tabs__tab--selected {
+        border: none;
+        outline: none;
+    }
 
-    
+
 
     .dropDownTabs {
         display: none;
         position: relative;
         gap: -25px;
-       
-      
-       
-       
+
+
+
+
 
         @media (max-width:778px) {
             display: block;
         }
 
-        .activeColumnTab{
+        .activeColumnTab {
 
             width: 70px;
             height: 20px;
-            
+
             font-size: 18px;
             padding-left: 5px;
             position: relative;
-            &:hover{
+
+            &:hover {
                 cursor: pointer;
                 //  .iconSpan{
                 //    transform: rotate(-180deg);
                 //  }
             }
-            .iconSpan{
-              position: absolute;
-              right:-45px;
-              top: 4%;
-              
+
+            .iconSpan {
+                position: absolute;
+                right: -45px;
+                top: 4%;
+
             }
         }
 
-       
-        .columnTabs{
-            max-height: 0; 
-            overflow: hidden; 
-    
-            transition: max-height 0.4s ease-in-out; 
+
+        .columnTabs {
+            max-height: 0;
+            overflow: hidden;
+
+            transition: max-height 0.4s ease-in-out;
             position: absolute;
             display: flex;
             flex-direction: column;
-           z-index: 20;
-           background-color: #ffffff;
-           border: 1px solid #c1c1c1;
-           border-top: none;
-           border-radius: 10px;
-           border-top-right-radius: 0;
-           border-top-left-radius: 0;
-           margin-bottom: 0;
-
-           .columnTab{
-            padding: 6px 37px;
-            padding-left: 10px;
+            z-index: 20;
+            background-color: #ffffff;
+            border: 1px solid #c1c1c1;
+            border-top: none;
+            border-radius: 10px;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
             margin-bottom: 0;
-            &:hover{
-                background-color: #1b1919;
-                color: #ffffff;
-                cursor: pointer;
+
+            .columnTab {
+                padding: 6px 37px;
+                padding-left: 10px;
+                margin-bottom: 0;
+
+                &:hover {
+                    background-color: #1b1919;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
             }
-           }
 
         }
-        .isDrop{
+
+        .isDrop {
             max-height: 600px;
         }
 
     }
 
     .contentlWrapper {
-      
+
 
         .otherContents {
             height: 600px;
@@ -95,13 +99,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
             @media (max-width:900px) {
-               height: 400px;
-               margin-top: 50px;
+                height: 400px;
+                margin-top: 50px;
             }
 
             p {
                 font-size: 100px;
+
                 @media (max-width:900px) {
                     font-size: 40px;
                 }
@@ -111,7 +117,7 @@
         .carouselWrapper {
             margin-top: -20px;
             width: 100%;
-           
+
 
             .swiper {
                 width: 100%;
@@ -196,23 +202,32 @@
                     border-style: solid;
                     background: #1d1d1d;
                     cursor: pointer;
+
                     .modelText {
                         color: #808080;
                         color: #ffffff;
 
                     }
+
                     .nameClass {
                         color: #ffffff;
                     }
-                    .priceClass { 
+
+                    .priceClass {
                         color: #ffffff;
                     }
-                    .viewsClass{
+
+                    .viewsClass {
                         color: #ffffff;
                     }
-                    .placeClass{
+
+                    .placeClass {
                         color: #ffffff;
-                    } 
+                    }
+
+                    .viewDetailsClass {
+                        display: flex;
+                    }
 
 
                 }
@@ -221,7 +236,30 @@
                     width: 100%;
                     max-height: 415px;
                     object-fit: cover
-                    
+                }
+
+                .viewDetailsClass {
+                    position: absolute;
+                    top: 344px;
+                    left: 24px;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    width: 162px;
+                    height: 49px;
+                    border-radius: 5px;
+                    background: #1d1d1d;
+
+                    p {
+                        font-family: "Montserrat";
+                        font-size: 15px;
+                        font-weight: 500;
+                        font-style: normal;
+                        text-align: center;
+                        color: #ffffff;
+                        margin-bottom: 0;
+                    }
+
                 }
 
                 .modelText {
@@ -318,7 +356,7 @@
 
 
     .tabsWrapper {
-      
+
         display: flex;
         justify-content: space-between;
 
@@ -329,10 +367,11 @@
             gap: 10px;
             justify-content: center;
             margin-left: -200px;
+
             @media (max-width:779px) {
                 margin-top: -37px !important;
             }
-          
+
 
 
 
@@ -345,7 +384,7 @@
                 text-align: left;
                 color: #1d1d1d;
                 width: 60px;
-               
+
             }
 
             .arrowImg {
@@ -409,8 +448,9 @@
         @media (max-width:826px) {
             font-size: 15vw;
         }
+
         @media (max-width:780px) {
-           text-align: center;
+            text-align: center;
         }
 
     }

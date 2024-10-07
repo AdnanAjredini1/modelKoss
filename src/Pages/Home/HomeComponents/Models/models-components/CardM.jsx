@@ -16,15 +16,18 @@ function CardM({
   viewsIconClass,
   views,
   viewsClass,
+  viewDetailsClass,
 }) {
   return (
     <div className={cardMWrapper}>
       <img src={img} className={imgClass} />
+      <div className={viewDetailsClass}>
+        <p>View details</p>
+      </div>
       <p className={modelText}>Model</p>
-    
-        <p className={nameClass}>{name}</p>
-        <p className={priceClass}>{price}</p>
-      
+
+      <p className={nameClass}>{name}</p>
+      <p className={priceClass}>{price}</p>
 
       <img src={locationIcon} className={locationIconClass} />
       <p className={placeClass}>{place}</p>

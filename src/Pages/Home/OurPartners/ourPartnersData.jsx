@@ -35,4 +35,32 @@ export const brandIconsData = [
     icon: icon7,
     class: "bratyIcon",
   },
+  {
+    icon: icon1,
+    class: "chanelIcon",
+  },
+  {
+    icon: icon2,
+    class: "boohooIcon",
+  },
+  {
+    icon: icon3,
+    class: "mangoIcon",
+  },
+  {
+    icon: icon4,
+    class: "bershkaIcon",
+  },
+  {
+    icon: icon5,
+    class: "calvinKleinIcon",
+  },
+  {
+    icon: icon6,
+    class: "kosGirlsIcon",
+  },
+  {
+    icon: icon7,
+    class: "bratyIcon",
+  },
 ];

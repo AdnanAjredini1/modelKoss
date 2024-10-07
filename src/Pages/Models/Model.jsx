@@ -28,20 +28,54 @@ import OurPartners from "../Home/OurPartners/OurPartners";
 import { createPortal } from "react-dom";
 import { useLayoutEffect, useRef, useState } from "react";
 import arrowSlider from "./models-assets/_.svg";
-import { motion } from "framer-motion";
-
+import { AnimatePresence, motion } from "framer-motion";
+import { FormattedMessage } from "react-intl";
 const modelData = {
   andalleshi: {
     name: "Anda Lleshi",
     descriptions: [
-      `Height  5'10"`,
-      `Bust  34" A `,
-      `Waist  24" `,
-      `Hips  34" `,
-      `Dress  2 US`,
-      "Shoe  8 US",
-      "Hair  Dark Blonde",
-      "Eyes  Brown",
+      <FormattedMessage
+        id="Height"
+        defaultMessage="Height {size}"
+        values={{ size: `5'10"` }}
+        key="1"
+      />,
+      <FormattedMessage
+        id="Bust"
+        defaultMessage="Bust {size}"
+        values={{ size: `34" A` }}
+        key="2"
+      />,
+      <FormattedMessage
+        id="Waist"
+        defaultMessage="Waist {size}"
+        values={{ size: `24"` }}
+        key="3"
+      />,
+      <FormattedMessage
+        id="Hips"
+        defaultMessage="Hips {size}"
+        values={{ size: `34"` }}
+        key="4"
+      />,
+      <FormattedMessage
+        id="Dress"
+        defaultMessage="Dress {size}"
+        values={{ size: `2 US` }}
+        key="5"
+      />,
+      <FormattedMessage
+        id="Shoe"
+        defaultMessage="Shoe {size}"
+        values={{ size: `8 US` }}
+        key="6"
+      />,
+      <FormattedMessage
+        id="Hair Dark Blonde"
+        defaultMessage="Hair Dark Blonde"
+        key="7"
+      />,
+      <FormattedMessage id="Eyes Brown" defaultMessage="Eyes Brown" key="8" />,
     ],
     images: [
       image1,
@@ -78,14 +112,11 @@ function Model() {
 
   useLayoutEffect(() => {
     if (imageClicked) {
-      // Disable scrolling
       document.body.style.overflow = "hidden";
     } else {
-      // Re-enable scrolling
       document.body.style.overflow = "auto";
     }
 
-    // Cleanup on unmount
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -108,7 +139,9 @@ function Model() {
 
   return (
     <div className="modelProfileWrapper">
+
       {createPortal(
+        /* <AnimatePresence>
         <div
           className={` ${
             imageClicked ? "backdroSliderWrapper" : "dispalyBackdrop"
@@ -117,7 +150,7 @@ function Model() {
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+         
             className="carouselWrapper"
           >
             <button
@@ -166,7 +199,69 @@ function Model() {
             </div>
           </motion.div>
           <div className="backdropp"></div>
-        </div>,
+        </div>
+        </AnimatePresence>, */
+        <AnimatePresence>
+    {imageClicked && (
+      <div className={` ${imageClicked ? "backdroSliderWrapper" : "dispalyBackdrop"}`}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1, }}
+          exit={{ opacity: 0, scale: 0.1 , dration:0.001}}
+          transition={{
+        type: "spring",
+        stiffness: 300, 
+        damping: 30,  
+        
+    }}
+          className="carouselWrapper"
+        >
+          <button
+            onClick={() => setImageClicked(!imageClicked)}
+            className="btnClose"
+          >
+            X
+          </button>
+          <Swiper
+            ref={swiperRef}
+            slidesPerView={1}
+            initialSlide={activeImage}
+            spaceBetween={0}
+            pagination={{ clickable: true }}
+            navigation={{
+              nextEl: nextButtonRef.current,
+              prevEl: prevButtonRef.current,
+            }}
+            onInit={(swiper) => {
+              swiperRef.current = swiper;
+              swiper.params.navigation.nextEl = nextButtonRef.current;
+              swiper.params.navigation.prevEl = prevButtonRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+            modules={[Pagination, FreeMode, Navigation]}
+            className="mySwiper"
+          >
+            {modelInfo.images.map((image) => (
+              <SwiperSlide key={image}>
+                <div
+                  className="imageCArousel"
+                  style={{ content: `url(${image})` }}
+                ></div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div ref={nextButtonRef} className="custom-next">
+            <img src={arrowSlider} alt="next" />
+          </div>
+          <div ref={prevButtonRef} className="custom-prev">
+            <img src={arrowSlider} alt="prev" />
+          </div>
+        </motion.div>
+        <div className="backdropp"></div>
+      </div>
+    )}
+  </AnimatePresence>,
         document.getElementById("backdropSlider")
       )}
       <p className="name">{modelInfo.name}</p>

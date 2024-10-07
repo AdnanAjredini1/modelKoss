@@ -81,7 +81,7 @@ function Footer() {
             <p className="rights">© 2024 &nbsp;·&nbsp; MODELKOS</p>
             </div>
           
-             <p className="terms"><span><FormattedMessage id="Privacy Statement" defaultMessage="Privacy Statement" /></span> &nbsp;&nbsp;|&nbsp;&nbsp;<span><FormattedMessage id="Terms of Service" defaultMessage="Terms of Service" /></span>  &nbsp;&nbsp;|&nbsp;&nbsp; <span>Help / FAQ</span></p>
+             <p className="terms"><span><FormattedMessage id="Privacy Statement" defaultMessage="Privacy Statement" /></span> &nbsp;&nbsp;|&nbsp;&nbsp;<span><FormattedMessage id="Terms of Service" defaultMessage="Terms of Service" /></span>  &nbsp;&nbsp;|&nbsp;&nbsp; <span><FormattedMessage id="Help"  defaultMessage="Help" />  / FAQ</span></p>
              <div className="iconsAndLanguages">
               <div className="iconsWrapper">
                <img width={8.2} height={17.7} src={imgFB} />
