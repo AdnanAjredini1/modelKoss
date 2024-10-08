@@ -10,7 +10,7 @@ function FreeEducation() {
         {freeEducationData.map((item) => (
           <div key={item.name} className="cardWrapper">
             <p className="title">{item.name}</p>
-            <img src={item.img} className="imgBg" />
+            <div style={{content:`url(${item.img})`}}  className="imgBg" />
             <div className="linearGrad"></div>
             <LeftArrow className="leftArrow" />
           </div>

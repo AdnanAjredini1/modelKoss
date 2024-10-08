@@ -1,0 +1,66 @@
+.blogPageWrapper {
+    .firstRow {
+        position: relative;
+        height: 402px;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./blog-assets/uyen-nguyen-QjZGJ4Ko.webp');
+        background-position: center;
+
+        .inputWrapper {
+            position: absolute;
+            margin-inline: auto;
+            left: 0;
+            right: 0;
+            top: 269px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 10px;
+            width: 751px;
+            height: 53px;
+            border-color: #bebebe;
+            border-width: 0.5px;
+            border-style: solid;
+            background: rgba(255, 255, 255, 0.14);
+            padding-left: 18px;
+            @media (max-width:824px) {
+                width: 90%;
+            }
+
+            .searchIcon{
+                width: 13px;
+                height: 13px;
+               
+            }
+
+            .inputSearch {
+                border:none;
+                outline: none;
+                background: transparent;
+                color: #ffffff;
+                width: 80%;
+                
+            }
+        }
+
+        .title {
+            position: absolute;
+            margin-inline: auto;
+            left: 0;
+            right: 0;
+            top: 104px;
+            font-family: "Brown Sugar";
+            font-size: 100px;
+            font-weight: normal;
+            font-style: normal;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 0;
+            @media (max-width:746px) {
+                font-size: clamp(50px,16vw,100px);
+            }
+        }
+
+
+    }
+}

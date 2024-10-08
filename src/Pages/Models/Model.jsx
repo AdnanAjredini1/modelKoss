@@ -207,7 +207,7 @@ function Model() {
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1, }}
-          exit={{ opacity: 0, scale: 0.1 , dration:0.001}}
+          // exit={{ opacity: 0, scale: 0.1 , dration:0.001}}
           transition={{
         type: "spring",
         stiffness: 300, 

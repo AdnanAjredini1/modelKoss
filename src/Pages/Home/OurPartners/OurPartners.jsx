@@ -21,11 +21,7 @@ function OurPartners() {
   
 	</div>
 </div>
-      {/* <div className="iconsWrapper">
-        {brandIconsData.map((item) => (
-          <img src={item.icon} key={item.class} className={item.class} />
-        ))}
-      </div> */}
+    
       <div className="btnWrapWrapper">
         <div className="btnWrapper">
           <p>

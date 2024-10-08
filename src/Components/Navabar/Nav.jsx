@@ -2,11 +2,9 @@ import { Link } from "react-router-dom";
 import "./nav.scss";
 import { GoTriangleDown } from "react-icons/go";
 import OurWorkMegamenu from "./OurWorkMEGAMENU/OurWorkMegamenu";
-import AboutMegamenu from "./AboutMEGAMENU/AboutMegamenu"
+import AboutMegamenu from "./AboutMEGAMENU/AboutMegamenu";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-
-
 
 function Nav() {
   const [navbarBackground, setNavbarBackground] = useState(false);
@@ -48,20 +46,22 @@ function Nav() {
       </div>
       <div className="navMiddlePart">
         <Link className="navlinkk" to="/">
-         <FormattedMessage id="Home" defaultMessage="Home" />
-          
+          <FormattedMessage id="Home" defaultMessage="Home" />
         </Link>
         <Link className="navlinkk" to="/">
           <div className="insideNavlink">
-
-            <p>  <FormattedMessage id="Our Work" defaultMessage="Our Work" /></p>
+            <p>
+              <FormattedMessage id="Our Work" defaultMessage="Our Work" />
+            </p>
             <GoTriangleDown />
           </div>
         </Link>
         <div className="navlinkk aboutLink">
           <Link to="/" className="navlinkk">
             <div className="insideNavlink">
-              <p>   <FormattedMessage id="About" defaultMessage="About" /></p>
+              <p>
+                <FormattedMessage id="About" defaultMessage="About" />
+              </p>
               <GoTriangleDown />
             </div>
           </Link>
@@ -71,28 +71,36 @@ function Nav() {
         <div className="navlinkk ourWorkLink">
           <Link to="/" className="navlinkk">
             <div className="insideNavlink">
-              <p> <FormattedMessage id="Models" defaultMessage="Models" /> </p>
+              <p>
+                {" "}
+                <FormattedMessage id="Models" defaultMessage="Models" />{" "}
+              </p>
               <GoTriangleDown />
             </div>
           </Link>
           <div className="block"></div>
           <OurWorkMegamenu />
         </div>
-        
+
         <Link className="navlinkk" to="/">
           <div className="insideNavlink">
-            <p><FormattedMessage id="Academy" defaultMessage="Academy" /> </p>
+            <p>
+              <FormattedMessage id="Academy" defaultMessage="Academy" />{" "}
+            </p>
             <GoTriangleDown />
           </div>
         </Link>
-        <Link className="navlinkk" to="/">
-        <FormattedMessage id="Blog" defaultMessage="Blog" />
-         
+        <Link className="navlinkk" to="/blog">
+          <FormattedMessage id="Blog" defaultMessage="Blog" />
         </Link>
       </div>
       <div className="navRightPart">
-        <p className="applyNowText">  <FormattedMessage id="Apply now" defaultMessage="Apply now" /></p>
-        <button className="contanctUsButton"> <FormattedMessage id="Contact Us" defaultMessage="Contact Us" /></button>
+        <p className="applyNowText">
+          <FormattedMessage id="Apply now" defaultMessage="Apply now" />
+        </p>
+        <button className="contanctUsButton">
+          <FormattedMessage id="Contact Us" defaultMessage="Contact Us" />
+        </button>
       </div>
     </nav>
   );

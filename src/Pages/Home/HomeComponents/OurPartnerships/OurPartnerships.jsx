@@ -1,6 +1,5 @@
 import "./our-partnerships.scss";
 import MediaKosIcon from "./our-partnerships-assets/Group 13100.svg?react";
-import leftImg from "./our-partnerships-assets/284904855_6683564610.webp";
 import { FormattedMessage } from "react-intl";
 function OurPartnerships() {
   return (
@@ -36,7 +35,7 @@ function OurPartnerships() {
           </div>
         </div>
         <div className="rightPart">
-          <img src={leftImg} className="rightImg" />
+          <div className="rightImg"></div>
         </div>
       </div>
     </div>

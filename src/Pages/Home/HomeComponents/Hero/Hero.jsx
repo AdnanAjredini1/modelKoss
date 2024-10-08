@@ -1,8 +1,8 @@
 import "./hero.scss";
 import Icon from "./Icon";
-import icon from "./hero-assets/Path 20.svg";
-import arrow from "./hero-assets/Path 4.svg";
-import mapIcon from "./hero-assets/2216335_location_map_map pin_marker_pin_icon.svg";
+import MIcon from "./hero-assets/Path 20.svg?react";
+import Arrow from "./hero-assets/Path 4.svg?react";
+import MapIcon from "./hero-assets/2216335_location_map_map pin_marker_pin_icon.svg?react";
 import { FormattedMessage } from "react-intl";
 
 function Hero() {
@@ -14,7 +14,7 @@ function Hero() {
             <FormattedMessage
               id="Hire a model or "
               defaultMessage="Hire a model or "
-            />{" "}
+            />
           </p>
           <p className="text2">
             <FormattedMessage id="become one" defaultMessage="become one" />
@@ -23,7 +23,7 @@ function Hero() {
         <div className="findModelWrapper">
           <div className="modelGender">
             <div className="textP">
-              <img src={icon} />
+              <MIcon width={14} height={14} />
               <p>
                 <FormattedMessage
                   id="Female Models"
@@ -31,11 +31,12 @@ function Hero() {
                 />
               </p>
             </div>
-            <img src={arrow} />
+            <Arrow width={9} height={5} />
           </div>
           <div className="findLocation">
             <div className="textP">
-              <img src={mapIcon} />
+              <MapIcon width={13} height={16} />
+
               <p>
                 <FormattedMessage
                   id="Find location"
@@ -43,7 +44,7 @@ function Hero() {
                 />
               </p>
             </div>
-            <img src={arrow} />
+            <Arrow width={9} height={5} />
           </div>
           <div className="findModelBtn">
             <FormattedMessage id="Find model" defaultMessage="Find model" />
@@ -64,10 +65,6 @@ function Hero() {
         <div className="img1" />
         <div className="img2" />
         <div className="img22" />
-
-        {/* <img className="img1" src={img1} /> */}
-        {/* <img className="img2" src={img2} /> */}
-        {/* <img className="img22" src={img22} /> */}
       </div>
     </div>
   );

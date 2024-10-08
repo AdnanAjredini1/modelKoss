@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 import Home from "./Pages/Home/Home.jsx";
 import Model from "./Pages/Models/Model.jsx";
+import Blog from "./Pages/Blog/Blog.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         path: "/models/:model",
         element:<Model />
       },
+      {
+        path:"/blog",
+        element:<Blog />
+      }
     ],
   },
 ]);
