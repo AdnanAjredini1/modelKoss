@@ -135,6 +135,15 @@ function Model() {
     }
   }, [location]);
 
+  useEffect(() => {
+    if (nextButtonRef.current && prevButtonRef.current) {
+      swiper.params.navigation.nextEl = nextButtonRef.current;
+      swiper.params.navigation.prevEl = prevButtonRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [nextButtonRef, prevButtonRef]);
+
   return (
     <div className="modelProfileWrapper">
       {createPortal(
