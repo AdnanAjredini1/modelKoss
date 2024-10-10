@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./model.scss";
-import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import {  Pagination, Navigation } from "swiper/modules";
 import Fb from "./models-assets/facebook(3).svg?react";
 import Insta from "./models-assets/instagram(5).svg?react";
 import Tiktok from "./models-assets/tiktok(2).svg?react";
@@ -26,7 +26,7 @@ import DownArrow from "./models-assets/arrow-left(9).svg?react";
 import Masonry from "@mui/lab/Masonry";
 import OurPartners from "../Home/OurPartners/OurPartners";
 import { createPortal } from "react-dom";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import arrowSlider from "./models-assets/_.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { FormattedMessage } from "react-intl";
@@ -137,6 +137,21 @@ function Model() {
     }
   }, [activeImage, imageClicked]);
 
+  useEffect(() => {
+    if (
+      swiperRef.current &&
+      nextButtonRef.current &&
+      prevButtonRef.current &&
+      swiperRef.current.navigation
+    ) {
+      swiperRef.current.params.navigation.nextEl = nextButtonRef.current;
+      swiperRef.current.params.navigation.prevEl = prevButtonRef.current;
+      swiperRef.current.navigation.init();
+      swiperRef.current.navigation.update();
+    }
+  }, [ ]);
+  
+
   return (
     <div className="modelProfileWrapper">
 
@@ -180,7 +195,7 @@ function Model() {
               swiper.navigation.init();
               swiper.navigation.update();
             }}
-            modules={[Pagination, FreeMode, Navigation]}
+            modules={[Pagination, Navigation]}
             className="mySwiper"
           >
             {modelInfo.images.map((image) => (
