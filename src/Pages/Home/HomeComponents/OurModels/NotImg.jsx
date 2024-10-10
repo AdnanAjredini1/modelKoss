@@ -1,5 +1,5 @@
 import { FormattedMessage } from "react-intl";
-import icon from "./our-models-assetss/Group 8.svg";
+import Icon from "./our-models-assetss/Group 8.svg?react";
 
 function NotImg({ wrapperClass, titleClass, descriptionClass, iconClass }) {
   return (
@@ -16,7 +16,7 @@ function NotImg({ wrapperClass, titleClass, descriptionClass, iconClass }) {
           defaultMessage="ModelKos is seeking for new talent, so join the largest modeling agency in Kosovo and show off your skills. Be a model!"
         />
       </p>
-      <img className={iconClass} src={icon} />
+      <Icon className={iconClass} />
     </div>
   );
 }
