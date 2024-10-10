@@ -1,12 +1,6 @@
-import {
-  
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Pagination, Navigation } from "swiper/modules"
+import { Pagination, Navigation } from "swiper/modules";
 
 import { useLocation, useParams } from "react-router-dom";
 import "swiper/css";
@@ -116,6 +110,7 @@ function Model() {
 
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
+  const swiperRef = useRef(null);
   useLayoutEffect(() => {
     if (imageClicked) {
       document.body.style.overflow = "hidden";
@@ -139,10 +134,10 @@ function Model() {
 
   useEffect(() => {
     if (nextButtonRef.current && prevButtonRef.current) {
-      Swiper.params.navigation.nextEl = nextButtonRef.current;
-      Swiper.params.navigation.prevEl = prevButtonRef.current;
-      Swiper.navigation.init();
-      Swiper.navigation.update();
+      swiper.params.navigation.nextEl = nextButtonRef.current;
+      swiper.params.navigation.prevEl = prevButtonRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
     }
   }, [nextButtonRef, prevButtonRef]);
 
@@ -173,6 +168,7 @@ function Model() {
                   X
                 </button>
                 <Swiper
+                ref={swiperRef}
                   slidesPerView={1}
                   initialSlide={activeImage}
                   spaceBetween={0}
@@ -187,7 +183,7 @@ function Model() {
                     swiper.navigation.init();
                     swiper.navigation.update();
                   }}
-                  modules={[Pagination,  Navigation]}
+                  modules={[Pagination, Navigation]}
                   className="mySwiper"
                 >
                   {modelInfo.images.map((image) => (
