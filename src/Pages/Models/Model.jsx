@@ -144,18 +144,14 @@ function Model() {
   }, [activeImage, imageClicked]);
 
   useEffect(() => {
-    if (
-      swiperRef.current &&
-      nextButtonRef.current &&
-      prevButtonRef.current &&
-      swiperRef.current.navigation
-    ) {
+    if (swiperRef.current && nextButtonRef.current && prevButtonRef.current) {
       swiperRef.current.params.navigation.nextEl = nextButtonRef.current;
       swiperRef.current.params.navigation.prevEl = prevButtonRef.current;
       swiperRef.current.navigation.init();
       swiperRef.current.navigation.update();
     }
-  }, [swiperRef.current, nextButtonRef.current, prevButtonRef.current]);
+  }, [nextButtonRef.current, prevButtonRef.current]);
+  
 
   return (
     <div className="modelProfileWrapper">
