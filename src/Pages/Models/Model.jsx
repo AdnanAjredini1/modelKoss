@@ -136,16 +136,19 @@ function Model() {
       swiperRef.current.slideTo(activeImage);
     }
   }, [activeImage, imageClicked]);
-
   useEffect(() => {
-    if (swiperRef.current && swiperRef.current.navigation) {
+    if (
+      swiperRef.current &&
+      nextButtonRef.current &&
+      prevButtonRef.current &&
+      swiperRef.current.navigation
+    ) {
       swiperRef.current.params.navigation.nextEl = nextButtonRef.current;
       swiperRef.current.params.navigation.prevEl = prevButtonRef.current;
       swiperRef.current.navigation.init();
       swiperRef.current.navigation.update();
     }
-  }, [swiperRef, nextButtonRef, prevButtonRef]);
-  
+  }, [swiperRef, nextButtonRef, prevButtonRef, imageClicked]);
 
   return (
     <div className="modelProfileWrapper">
