@@ -5,10 +5,21 @@ import ArrowDown from "./blog-assets/Path 338.svg?react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { useState } from "react";
-import { blogData } from "./blogData";
+import { blogData, tabsData } from "./blogData";
 import OurBlogCard from "../Home/HomeComponents/OurBlog/OurBlogCard";
+import { GoTriangleDown } from "react-icons/go";
+import Pagination from "./Pagination/Pagination";
+
 function Blog() {
-  // const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
+  const [isDropDown, setIsDropdown] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(12);
+
+  const lastPostIndex = currentPage * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+  const currentBlogData = blogData.slice(firstPostIndex, lastPostIndex);
+
   return (
     <div className="blogPageWrapper">
       <div className="firstRow">
@@ -43,22 +54,57 @@ function Blog() {
           </div>
         </div>
 
-        <Tabs style={{ width: "100%" }} className="tabsWrapper">
+        <Tabs
+          style={{ width: "100%" }}
+          className="tabsWrapper"
+          selectedIndex={activeTab}
+          onSelect={(index) => setActiveTab(index)}
+        >
+          <div className="dropDownTabs">
+            <div
+              className="dropDownActiveTab"
+              onClick={() => setIsDropdown(!isDropDown)}
+            >
+              <p>{tabsData[activeTab]}</p>
+              <GoTriangleDown />
+            </div>
+
+            <div className={`columnTabs ${isDropDown && "isDrop"}`}>
+              {tabsData.map((tab, index) => (
+                <p
+                  key={index}
+                  className={`columnTab ${activeTab === index && "active"} `}
+                  onClick={() => {
+                    setActiveTab(index);
+                    setIsDropdown(!isDropDown);
+                  }}
+                >
+                  {tab}
+                </p>
+              ))}
+            </div>
+          </div>
           <TabList className="tabs">
-            <Tab to="all" className="tab">
-              All
-            </Tab>
-            <Tab className="tab">Modeling</Tab>
-            <Tab className="tab">Fashion</Tab>
-            <Tab className="tab">Celebrities</Tab>
-            <Tab className="tab">Popular</Tab>
-            <Tab className="tab">Trendy</Tab>
+            {tabsData.map((tab, index) => (
+              <Tab
+                key={index}
+                className={`tab ${activeTab === index && "active"} `}
+                onClick={() => setActiveTab(index)}
+              >
+                {tab}
+              </Tab>
+            ))}
           </TabList>
           <TabPanel
-            style={{ width: "100%", display: "flex", justifyContent: "center" }}
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              height: "fit-content",
+            }}
           >
             <div className="gridWrapper">
-              {blogData.map((item, index) => (
+              {currentBlogData.map((item, index) => (
                 <div size="auto" key={index} className="gridElement">
                   <OurBlogCard
                     title={item.title}
@@ -71,11 +117,14 @@ function Blog() {
               ))}
             </div>
           </TabPanel>
-          <TabPanel>
-          
-          </TabPanel>
         </Tabs>
       </div>
+      <Pagination
+        totalPosts={blogData.length}
+        postsPerPage={postPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
       <OurPartners />
     </div>
   );

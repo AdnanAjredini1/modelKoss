@@ -2,6 +2,11 @@
     ul {
         list-style: none;
     }
+    .react-tabs__tab--selected {
+        border: none;
+        outline: none;
+    }
+
 
    
 
@@ -12,6 +17,62 @@
 
         .tabsWrapper {
             margin-top: 61px;
+
+            .dropDownTabs{
+                display: none;
+                width: 130px;
+                align-items: center;
+              
+                @media (max-width:528px) {
+                    display:block;
+                }
+
+                .columnTabs{
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.4s ease-in-out;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 20;
+                    background-color: #ffffff;
+                    border: 1px solid #c1c1c1;
+                    border-top: none;
+                    border-radius: 10px;
+                    border-top-right-radius: 0;
+                    border-top-left-radius: 0;
+                    margin-bottom: 0;
+
+                    .columnTab {
+                        padding: 6px 37px;
+                        padding-left: 10px;
+                        margin-bottom: 0;
+        
+                        &:hover {
+                            background-color: #1b1919;
+                            color: #ffffff;
+                            cursor: pointer;
+                        }
+                    }
+
+           
+
+                }
+                .isDrop {
+                    max-height: 600px;
+                }
+
+                .dropDownActiveTab{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-inline: 10px;
+                    cursor: pointer;
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+            }
          
 
             .gridWrapper {
@@ -54,6 +115,8 @@
                 @media (max-width:528px) {
                     display: none;
                 }
+
+
 
                 .tab {
                     font-family: "Montserrat";

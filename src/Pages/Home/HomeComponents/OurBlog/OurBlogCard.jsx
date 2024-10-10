@@ -1,7 +1,7 @@
 import "./ourblog-card.scss";
 import Arrow from "./ourblog-assets/arrow-left(8).svg?react";
 import { FormattedMessage } from "react-intl";
-function OurBlogCard({ img, date, title, description, wrapperClass, imgClasses, titleClass, descriptionClass}) {
+function OurBlogCard({ img, date, title, description, wrapperClass, imgClasses}) {
   return (
     <div className={`ourBlogCardWrapper  ${wrapperClass}`}>
       <img src={img} className={`imgClass  ${imgClasses}`} />

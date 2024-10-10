@@ -1,0 +1,44 @@
+.paginationWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 70px;
+
+    @media (max-width:488px) {
+        gap: 12vw;
+    }
+    @media (max-width:336px) {
+        gap: 7vw;
+    }
+
+    .paginationButton{
+        border: none;
+        background-color: #ffffff;
+
+    }
+
+    .activePaginationButton{
+        font-weight: 700;
+        font-size: 19px;
+
+    }
+
+    .prevWrapper , .nextWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 54px;
+        height: 54px;
+        border-color: #808080;
+        border-width: 0.5px;
+        border-style: solid;
+        background: #ffffff;
+        cursor: pointer;
+    }
+
+    .nextWrapper{
+        .nextButton{
+            transform: rotate(-180deg);
+        }
+    }
+}
