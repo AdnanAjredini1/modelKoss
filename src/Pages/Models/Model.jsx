@@ -1,10 +1,18 @@
+import {
+  
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import {  Pagination, Navigation } from "swiper/modules"
+
 import { useLocation, useParams } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./model.scss";
-import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import Fb from "./models-assets/facebook(3).svg?react";
 import Insta from "./models-assets/instagram(5).svg?react";
 import Tiktok from "./models-assets/tiktok(2).svg?react";
@@ -26,13 +34,7 @@ import DownArrow from "./models-assets/arrow-left(9).svg?react";
 import Masonry from "@mui/lab/Masonry";
 import OurPartners from "../Home/OurPartners/OurPartners";
 import { createPortal } from "react-dom";
-import {
-  useDeferredValue,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+
 import arrowSlider from "./models-assets/_.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { FormattedMessage } from "react-intl";
@@ -137,10 +139,10 @@ function Model() {
 
   useEffect(() => {
     if (nextButtonRef.current && prevButtonRef.current) {
-      swiper.params.navigation.nextEl = nextButtonRef.current;
-      swiper.params.navigation.prevEl = prevButtonRef.current;
-      swiper.navigation.init();
-      swiper.navigation.update();
+      Swiper.params.navigation.nextEl = nextButtonRef.current;
+      Swiper.params.navigation.prevEl = prevButtonRef.current;
+      Swiper.navigation.init();
+      Swiper.navigation.update();
     }
   }, [nextButtonRef, prevButtonRef]);
 
@@ -185,7 +187,7 @@ function Model() {
                     swiper.navigation.init();
                     swiper.navigation.update();
                   }}
-                  modules={[Pagination, FreeMode, Navigation]}
+                  modules={[Pagination,  Navigation]}
                   className="mySwiper"
                 >
                   {modelInfo.images.map((image) => (
