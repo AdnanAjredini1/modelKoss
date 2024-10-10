@@ -114,8 +114,6 @@ function Model() {
 
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
-  const swiperRef = useRef(null);
-
   useLayoutEffect(() => {
     if (imageClicked) {
       document.body.style.overflow = "hidden";
@@ -136,22 +134,6 @@ function Model() {
       window.scrollTo(0, 0);
     }
   }, [location]);
-
-  useLayoutEffect(() => {
-    if (swiperRef.current && imageClicked) {
-      swiperRef.current.slideTo(activeImage);
-    }
-  }, [activeImage, imageClicked]);
-
-  useLayoutEffect(() => {
-    if (swiperRef.current && nextButtonRef.current && prevButtonRef.current) {
-      swiperRef.current.params.navigation.nextEl = nextButtonRef.current;
-      swiperRef.current.params.navigation.prevEl = prevButtonRef.current;
-      swiperRef.current.navigation.init();
-      swiperRef.current.navigation.update();
-    }
-  }, [nextButtonRef.current, prevButtonRef.current]);
-  
 
   return (
     <div className="modelProfileWrapper">
@@ -180,7 +162,6 @@ function Model() {
                   X
                 </button>
                 <Swiper
-                  ref={swiperRef}
                   slidesPerView={1}
                   initialSlide={activeImage}
                   spaceBetween={0}
@@ -190,7 +171,6 @@ function Model() {
                     prevEl: prevButtonRef.current,
                   }}
                   onInit={(swiper) => {
-                    swiperRef.current = swiper;
                     swiper.params.navigation.nextEl = nextButtonRef.current;
                     swiper.params.navigation.prevEl = prevButtonRef.current;
                     swiper.navigation.init();
