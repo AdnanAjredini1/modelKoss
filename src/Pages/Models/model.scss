@@ -58,6 +58,55 @@
             }
         }
 
+        .custom-next,
+        .custom-prev {
+            position: absolute;
+            top: 50%;
+            width: 54px;
+            height: 54px;
+            border-color: #c5c5c5;
+            border-width: 0.5px;
+            border-style: solid;
+           
+            background: #ffffff;
+            z-index: 1000000012;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #000;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+    
+            // @media (max-width:548px) {
+            //     display: none;
+            // }
+    
+        }
+    
+        .custom-next {
+            right: -90px;
+            @media (max-width:970px) {
+                right:0;
+                width: 35px;
+                height: 35px;
+            }
+          
+        }
+    
+        .custom-prev {
+            left: -90px;
+            transform: rotate(-180deg);
+            @media (max-width:970px) {
+                left:0;
+                width: 35px;
+                height: 35px;
+            }
+        }
+
         .imageCArousel{
             position: relative;
             width: 100%;
@@ -120,54 +169,6 @@
             display: none;
         }
     
-        .custom-next,
-        .custom-prev {
-            position: absolute;
-            top: 50%;
-            width: 54px;
-            height: 54px;
-            border-color: #c5c5c5;
-            border-width: 0.5px;
-            border-style: solid;
-           
-            background: #ffffff;
-            z-index: 1000000012;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            color: #000;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-    
-            // @media (max-width:548px) {
-            //     display: none;
-            // }
-    
-        }
-    
-        .custom-next {
-            right: -90px;
-            @media (max-width:970px) {
-                right:0;
-                width: 35px;
-                height: 35px;
-            }
-          
-        }
-    
-        .custom-prev {
-            left: -90px;
-            transform: rotate(-180deg);
-            @media (max-width:970px) {
-                left:0;
-                width: 35px;
-                height: 35px;
-            }
-        }
     
 
         .btnClose {

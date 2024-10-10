@@ -143,7 +143,7 @@ function Model() {
     }
   }, [activeImage, imageClicked]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (swiperRef.current && nextButtonRef.current && prevButtonRef.current) {
       swiperRef.current.params.navigation.nextEl = nextButtonRef.current;
       swiperRef.current.params.navigation.prevEl = prevButtonRef.current;
