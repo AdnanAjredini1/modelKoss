@@ -1,12 +1,10 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-
 import { useLocation, useParams } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./model.scss";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import Fb from "./models-assets/facebook(3).svg?react";
 import Insta from "./models-assets/instagram(5).svg?react";
 import Tiktok from "./models-assets/tiktok(2).svg?react";
@@ -28,7 +26,7 @@ import DownArrow from "./models-assets/arrow-left(9).svg?react";
 import Masonry from "@mui/lab/Masonry";
 import OurPartners from "../Home/OurPartners/OurPartners";
 import { createPortal } from "react-dom";
-
+import { useLayoutEffect, useRef, useState } from "react";
 import arrowSlider from "./models-assets/_.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { FormattedMessage } from "react-intl";
@@ -111,6 +109,7 @@ function Model() {
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
   const swiperRef = useRef(null);
+
   useLayoutEffect(() => {
     if (imageClicked) {
       document.body.style.overflow = "hidden";
@@ -132,80 +131,78 @@ function Model() {
     }
   }, [location]);
 
-  useEffect(() => {
-    if (nextButtonRef.current && prevButtonRef.current) {
-      swiper.params.navigation.nextEl = nextButtonRef.current;
-      swiper.params.navigation.prevEl = prevButtonRef.current;
-      swiper.navigation.init();
-      swiper.navigation.update();
+  useLayoutEffect(() => {
+    if (swiperRef.current && imageClicked) {
+      swiperRef.current.slideTo(activeImage);
     }
-  }, [nextButtonRef, prevButtonRef]);
+  }, [activeImage, imageClicked]);
 
   return (
     <div className="modelProfileWrapper">
+
       {createPortal(
+       
         <AnimatePresence>
-          {imageClicked && (
-            <div
-              className={` ${
-                imageClicked ? "backdroSliderWrapper" : "dispalyBackdrop"
-              }`}
-            >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.7 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 30,
-                }}
-                className="carouselWrapper"
-              >
-                <button
-                  onClick={() => setImageClicked(!imageClicked)}
-                  className="btnClose"
-                >
-                  X
-                </button>
-                <Swiper
-                ref={swiperRef}
-                  slidesPerView={1}
-                  initialSlide={activeImage}
-                  spaceBetween={0}
-                  pagination={{ clickable: true }}
-                  navigation={{
-                    nextEl: nextButtonRef.current,
-                    prevEl: prevButtonRef.current,
-                  }}
-                  onInit={(swiper) => {
-                    swiper.params.navigation.nextEl = nextButtonRef.current;
-                    swiper.params.navigation.prevEl = prevButtonRef.current;
-                    swiper.navigation.init();
-                    swiper.navigation.update();
-                  }}
-                  modules={[Pagination, Navigation]}
-                  className="mySwiper"
-                >
-                  {modelInfo.images.map((image) => (
-                    <SwiperSlide key={image}>
-                      <div
-                        className="imageCArousel"
-                        style={{ content: `url(${image})` }}
-                      ></div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-                <div ref={nextButtonRef} className="custom-next">
-                  <img src={arrowSlider} alt="next" />
-                </div>
-                <div ref={prevButtonRef} className="custom-prev">
-                  <img src={arrowSlider} alt="prev" />
-                </div>
-              </motion.div>
-              <div className="backdropp"></div>
-            </div>
-          )}
-        </AnimatePresence>,
+    {imageClicked && (
+      <div className={` ${imageClicked ? "backdroSliderWrapper" : "dispalyBackdrop"}`}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1, }}
+          // exit={{ opacity: 0, scale: 0.1 , dration:0.001}}
+          transition={{
+        type: "spring",
+        stiffness: 300, 
+        damping: 30,  
+        
+    }}
+          className="carouselWrapper"
+        >
+          <button
+            onClick={() => setImageClicked(!imageClicked)}
+            className="btnClose"
+          >
+            X
+          </button>
+          <Swiper
+            ref={swiperRef}
+            slidesPerView={1}
+            initialSlide={activeImage}
+            spaceBetween={0}
+            pagination={{ clickable: true }}
+            navigation={{
+              nextEl: nextButtonRef.current,
+              prevEl: prevButtonRef.current,
+            }}
+            onInit={(swiper) => {
+              swiperRef.current = swiper;
+              swiper.params.navigation.nextEl = nextButtonRef.current;
+              swiper.params.navigation.prevEl = prevButtonRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+            modules={[Pagination, FreeMode, Navigation]}
+            className="mySwiper"
+          >
+            {modelInfo.images.map((image) => (
+              <SwiperSlide key={image}>
+                <div
+                  className="imageCArousel"
+                  style={{ content: `url(${image})` }}
+                ></div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div ref={nextButtonRef} className="custom-next">
+            <img src={arrowSlider} alt="next" />
+          </div>
+          <div ref={prevButtonRef} className="custom-prev">
+            <img src={arrowSlider} alt="prev" />
+          </div>
+        </motion.div>
+        <div className="backdropp"></div>
+      </div>
+    )}
+  </AnimatePresence>,
         document.getElementById("backdropSlider")
       )}
       <p className="name">{modelInfo.name}</p>
