@@ -7,23 +7,24 @@
     @media (max-width:488px) {
         gap: 12vw;
     }
+
     @media (max-width:336px) {
         gap: 7vw;
     }
 
-    .paginationButton{
+    .paginationButton {
         border: none;
         background-color: #ffffff;
-
     }
 
-    .activePaginationButton{
+    .activePaginationButton {
         font-weight: 700;
         font-size: 19px;
 
     }
 
-    .prevWrapper , .nextWrapper {
+    .prevWrapper,
+    .nextWrapper {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -36,8 +37,8 @@
         cursor: pointer;
     }
 
-    .nextWrapper{
-        .nextButton{
+    .nextWrapper {
+        .nextButton {
             transform: rotate(-180deg);
         }
     }

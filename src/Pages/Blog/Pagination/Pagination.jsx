@@ -3,9 +3,30 @@ import Arrow from "../blog-assets/_(1).svg?react";
 
 function Pagination({ totalPosts, postsPerPage, setCurrentPage, currentPage }) {
   let pages = [];
+  const totalPages = Math.ceil(totalPosts / postsPerPage);
 
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    pages.push(i);
+  if (totalPages <= 5) {
+    pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+  } else {
+    pages.push(1);
+
+    if (currentPage > 2) {
+      pages.push("...");
+    }
+
+    for (
+      let i = Math.max(2, currentPage);
+      i <= Math.min(currentPage + 2, totalPages - 1);
+      i++
+    ) {
+      pages.push(i);
+    }
+
+    if (currentPage + 2 < totalPages - 1) {
+      pages.push("...");
+    }
+
+    pages.push(totalPages);
   }
 
   const handlePrevious = () => {
@@ -19,6 +40,7 @@ function Pagination({ totalPosts, postsPerPage, setCurrentPage, currentPage }) {
       setCurrentPage(currentPage + 1);
     }
   };
+
   return (
     <div className="paginationWrapper">
       <div className="prevWrapper" onClick={handlePrevious}>

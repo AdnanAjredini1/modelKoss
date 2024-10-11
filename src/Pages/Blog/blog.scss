@@ -94,7 +94,7 @@
         
                 .gridElement {
                     width: fit-content;
-                    margin-bottom: 40px;
+                    margin-bottom: 100px;
                     @media (max-width:526px) {
                         .wrapperClass{
                            
@@ -145,7 +145,7 @@
         .secondRowFirstRow {
             display: flex;
             justify-content: space-between;
-            @media (max-width:628px) {
+            @media (max-width:704px) {
                 flex-direction: column;
             }
 
@@ -160,9 +160,51 @@
                 }
 
                 .perPage {
+                    position: relative;
                     display: flex;
                     align-items: center;
                     gap: 25px;
+                    cursor: pointer;
+                    
+                    .dropDownPostPerPage{
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.4s ease-in-out;
+                        position: absolute;
+                        width: 106px;
+                        top: 40px;
+                        right: 0;
+                        display: flex;
+                        flex-direction: column;
+                        z-index: 22;
+                        background-color: #ffffff;
+                        border: 1px solid #c1c1c1;
+                        border-top: none;
+                        border-radius: 10px;
+                        border-top-right-radius: 0;
+                        border-top-left-radius: 0;
+                        margin-bottom: 0;
+                        margin-top: 12px;
+                        @media (max-width:542px) {
+                            left: 97px;
+                        }
+                    
+                        p{
+                            padding: 6px 35px;
+                            margin-bottom: 0;
+                            
+                            &:hover {
+                                background-color: #1b1919;
+                                color: #ffffff;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .isDrop {
+                        max-height: 500px;
+                      
+                     
+                    }
 
                     .perPageText {
                         margin-bottom: 0;
@@ -186,6 +228,7 @@
                         border-style: solid;
                         background: #ffffff;
                         padding-inline: 18px;
+                        border-bottom: none;
 
                         .perPageText1 {
                             font-family: "Montserrat";

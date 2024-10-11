@@ -4,21 +4,45 @@ import OurPartners from "../Home/OurPartners/OurPartners";
 import ArrowDown from "./blog-assets/Path 338.svg?react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { blogData, tabsData } from "./blogData";
 import OurBlogCard from "../Home/HomeComponents/OurBlog/OurBlogCard";
 import { GoTriangleDown } from "react-icons/go";
 import Pagination from "./Pagination/Pagination";
+import { useIntl } from "react-intl";
 
 function Blog() {
+  const intl = useIntl();
   const [activeTab, setActiveTab] = useState(0);
   const [isDropDown, setIsDropdown] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(12);
+  const [isDropDownPostPerPage, setIsDropdownPostPerPage] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const lastPostIndex = currentPage * postPerPage;
   const firstPostIndex = lastPostIndex - postPerPage;
-  const currentBlogData = blogData.slice(firstPostIndex, lastPostIndex);
+  const filteredBlogData = blogData.filter((blog) => {
+    const title = intl.formatMessage({ id: blog.title.props.id });
+    const description = intl.formatMessage({ id: blog.description.props.id });
+
+    return (
+      title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+  const currentBlogData = filteredBlogData.slice(firstPostIndex, lastPostIndex);
+  const postPerPageData = [9, 12, 15, 18, 21];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [currentPage]);
+
+  console.log(searchTerm);
 
   return (
     <div className="blogPageWrapper">
@@ -30,12 +54,14 @@ function Blog() {
             type="search"
             className="inputSearch"
             placeholder="Search blog here"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
       </div>
       <div className="secondRow">
         <div className="secondRowFirstRow">
-          <p className="resultsFound">150 results found</p>
+          <p className="resultsFound">{blogData.length} &nbsp; results found</p>
           <div className="rightPart">
             <div className="date">
               <p className="dateText">Date</p>
@@ -46,9 +72,29 @@ function Blog() {
             </div>
             <div className="perPage">
               <p className="perPageText">Per page</p>
-              <div className="perPageWrapper">
-                <p className="perPageText1">12</p>
+              <div
+                className="perPageWrapper"
+                onClick={() => setIsDropdownPostPerPage(!isDropDownPostPerPage)}
+              >
+                <p className="perPageText1">{postPerPage}</p>
                 <ArrowDown className="arrowdown" />
+              </div>
+              <div
+                className={`dropDownPostPerPage ${
+                  isDropDownPostPerPage ? "isDrop" : ""
+                }`}
+              >
+                {postPerPageData.map((post, index) => (
+                  <p
+                    key={index}
+                    onClick={() => {
+                      setPostPerPage(post);
+                      setIsDropdownPostPerPage(!isDropDownPostPerPage);
+                    }}
+                  >
+                    {post}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
@@ -120,7 +166,7 @@ function Blog() {
         </Tabs>
       </div>
       <Pagination
-        totalPosts={blogData.length}
+        totalPosts={filteredBlogData.length}
         postsPerPage={postPerPage}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
