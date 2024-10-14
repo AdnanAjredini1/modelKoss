@@ -2,13 +2,14 @@
     ul {
         list-style: none;
     }
+
     .react-tabs__tab--selected {
         border: none;
         outline: none;
     }
 
 
-   
+
 
 
     .secondRow {
@@ -18,16 +19,16 @@
         .tabsWrapper {
             margin-top: 61px;
 
-            .dropDownTabs{
+            .dropDownTabs {
                 display: none;
                 width: 130px;
                 align-items: center;
-              
+
                 @media (max-width:528px) {
-                    display:block;
+                    display: block;
                 }
 
-                .columnTabs{
+                .columnTabs {
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height 0.4s ease-in-out;
@@ -47,7 +48,7 @@
                         padding: 6px 37px;
                         padding-left: 10px;
                         margin-bottom: 0;
-        
+
                         &:hover {
                             background-color: #1b1919;
                             color: #ffffff;
@@ -55,25 +56,27 @@
                         }
                     }
 
-           
+
 
                 }
+
                 .isDrop {
                     max-height: 600px;
                 }
 
-                .dropDownActiveTab{
+                .dropDownActiveTab {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     padding-inline: 10px;
                     cursor: pointer;
-                    p{
+
+                    p {
                         margin-bottom: 0;
                     }
                 }
             }
-         
+
 
             .gridWrapper {
                 display: flex;
@@ -81,28 +84,30 @@
                 justify-content: space-between;
                 width: 100%;
                 margin-top: 54px;
-        
+
                 @media (max-width:1602px) {
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
                     justify-items: center;
                     row-gap: 20px;
                 }
+
                 @media (max-width:526px) {
                     grid-template-columns: repeat(auto-fit, minmax(89vw, 1fr));
                 }
-        
+
                 .gridElement {
                     width: fit-content;
                     margin-bottom: 100px;
+
                     @media (max-width:526px) {
-                        .wrapperClass{
-                           
+                        .wrapperClass {
+
                             width: 89vw;
                         }
                     }
                 }
-        
+
             }
 
             .tabs {
@@ -112,6 +117,7 @@
                 width: fit-content;
                 padding-left: 0;
                 margin: 0;
+
                 @media (max-width:528px) {
                     display: none;
                 }
@@ -145,6 +151,7 @@
         .secondRowFirstRow {
             display: flex;
             justify-content: space-between;
+
             @media (max-width:704px) {
                 flex-direction: column;
             }
@@ -154,6 +161,7 @@
             .rightPart {
                 display: flex;
                 gap: 40px;
+
                 @media (max-width:542px) {
                     margin-top: 20px;
                     flex-direction: column;
@@ -165,8 +173,12 @@
                     align-items: center;
                     gap: 25px;
                     cursor: pointer;
-                    
-                    .dropDownPostPerPage{
+
+                    @media (max-width:542px) {
+                        gap: 28px;
+                    }
+
+                    .dropDownPostPerPage {
                         max-height: 0;
                         overflow: hidden;
                         transition: max-height 0.4s ease-in-out;
@@ -185,14 +197,16 @@
                         border-top-left-radius: 0;
                         margin-bottom: 0;
                         margin-top: 12px;
+
                         @media (max-width:542px) {
                             left: 97px;
                         }
-                    
-                        p{
+
+
+                        p {
                             padding: 6px 35px;
                             margin-bottom: 0;
-                            
+
                             &:hover {
                                 background-color: #1b1919;
                                 color: #ffffff;
@@ -200,10 +214,11 @@
                             }
                         }
                     }
+
                     .isDrop {
                         max-height: 500px;
-                      
-                     
+
+
                     }
 
                     .perPageText {
@@ -230,6 +245,12 @@
                         padding-inline: 18px;
                         border-bottom: none;
 
+                        @media (max-width:542px) {
+                            position: absolute;
+                            left: 97px;
+                            top: 1px;
+                        }
+
                         .perPageText1 {
                             font-family: "Montserrat";
                             font-size: 14px;
@@ -249,6 +270,7 @@
                     display: flex;
                     align-items: center;
                     gap: 25px;
+                    position: relative;
 
                     .dateText {
                         margin-bottom: 0;
@@ -261,6 +283,45 @@
                         color: #1d1d1d;
                     }
 
+                    .calendar {
+                        position: absolute;
+                        top: 0;
+                        z-index: 1000;
+                        width: 450px;
+                        left: 0;
+                        background-color: #ffffff;
+                        border-radius: 10px;
+                        @media (max-width:276px) {
+                            width: 90%;
+                        }
+
+                        .react-calendar__tile--active {
+                            background-color: #000 !important;
+                            color: white !important;
+                            border-radius: 10px;
+
+                        }
+
+                        .react-calendar__tile:hover {
+                            background-color: #f0f0f0;
+                            color: #333; 
+                            cursor: pointer;
+                            border-radius: 10px;
+                          }
+
+                          .react-calendar__navigation__arrow {
+                            border-radius: 9px;
+                          }
+
+                          .react-calendar__navigation__arrow:hover {
+                           
+                            border-radius: 9px !important; 
+                           
+                          }
+                         
+
+                    }
+
                     .dateWrapper {
                         display: flex;
                         align-items: center;
@@ -270,6 +331,7 @@
                         border-width: 0.5px;
                         border-style: solid;
                         background: #ffffff;
+                        cursor: pointer;
 
                         .dateText1 {
                             margin-bottom: 0;
@@ -300,8 +362,8 @@
                 font-style: normal;
                 text-align: left;
                 color: #1d1d1d;
-              
-                
+
+
             }
         }
     }

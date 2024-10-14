@@ -1,3 +1,7 @@
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
+import "react-tabs/style/react-tabs.css";
 import "./blog.scss";
 import SearchIcon from "./blog-assets/XMLID_223_(1).svg?react";
 import OurPartners from "../Home/OurPartners/OurPartners";
@@ -10,6 +14,7 @@ import OurBlogCard from "../Home/HomeComponents/OurBlog/OurBlogCard";
 import { GoTriangleDown } from "react-icons/go";
 import Pagination from "./Pagination/Pagination";
 import { useIntl } from "react-intl";
+import { motion } from "framer-motion";
 
 function Blog() {
   const intl = useIntl();
@@ -19,16 +24,28 @@ function Blog() {
   const [postPerPage, setPostPerPage] = useState(12);
   const [isDropDownPostPerPage, setIsDropdownPostPerPage] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [date, setDate] = useState(null);
+  const [isCalendarVisible, setIsCalendarVisible] = useState(false);
 
   const lastPostIndex = currentPage * postPerPage;
   const firstPostIndex = lastPostIndex - postPerPage;
+ 
+  const formatDate = (date) => {
+    const options = { month: '2-digit', day: '2-digit', year: '2-digit' };
+    return date.toLocaleDateString('en-US', options); 
+  };
+
+
   const filteredBlogData = blogData.filter((blog) => {
     const title = intl.formatMessage({ id: blog.title.props.id });
     const description = intl.formatMessage({ id: blog.description.props.id });
+   
 
+ 
     return (
       title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      description.toLowerCase().includes(searchTerm.toLowerCase())
+      description.toLowerCase().includes(searchTerm.toLowerCase()) 
+      
     );
   });
   const currentBlogData = filteredBlogData.slice(firstPostIndex, lastPostIndex);
@@ -42,7 +59,8 @@ function Blog() {
     return () => clearTimeout(timer);
   }, [currentPage]);
 
-  console.log(searchTerm);
+  
+ 
 
   return (
     <div className="blogPageWrapper">
@@ -65,10 +83,36 @@ function Blog() {
           <div className="rightPart">
             <div className="date">
               <p className="dateText">Date</p>
-              <div className="dateWrapper">
-                <p className="dateText1">MM/DD/YY</p>
+              <div
+                className="dateWrapper"
+                onClick={() => setIsCalendarVisible(!isCalendarVisible)}
+              >
+                <p className="dateText1">{date ? formatDate(date) : "MM/DD/YY"}</p>
                 <ArrowDown className="arrowdown" />
               </div>
+              <motion.div
+                initial={{ opacity: 0, y: "20px",display:'none' }}
+                animate={
+                  isCalendarVisible
+                    ? { opacity: 1, y: 0,display:'block'  }
+                    : { opacity: 0, display:'none' }
+                }
+                transition={{ duration: 0.3 }}
+                style={{
+                  position: "absolute",
+                  zIndex: 100,
+                  width: "250px",
+                  height: "260px",
+                  top: 60,
+                  left: 0,
+                }}
+              >
+                <Calendar
+                  onChange={setDate}
+                  value={date}
+                  className="calendar"
+                />
+              </motion.div>
             </div>
             <div className="perPage">
               <p className="perPageText">Per page</p>

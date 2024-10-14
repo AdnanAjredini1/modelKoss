@@ -174,9 +174,8 @@ export const blogData = [
       />
     ),
     img: img9,
-    date: (
-      <FormattedMessage id="18th July, 2024" defaultMessage="18th July, 2024" />
-    ),
+    date:'10/22/24'
+    ,
     description: (
       <FormattedMessage
         id="It's not a secret that social media is one of the most powerful tools in marketing these days. It has been proven time and again that people who use it are more likely to buy your products or services. Now, it's also being used as a car"

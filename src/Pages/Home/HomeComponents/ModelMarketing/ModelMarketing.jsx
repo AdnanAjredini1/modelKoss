@@ -1,9 +1,6 @@
 import "./model-marketing.scss";
 import { iconsData, items } from "./modelMarketingData";
-import img1 from "./model-marketing-assets/chyntia-juls-HlVjI5W.webp";
-import icon from "./model-marketing-assets/text(1).svg";
-import img2 from "./model-marketing-assets/adele-shafiee-vagr_X.webp";
-import img22 from "./model-marketing-assets/94b65be415f36972d060be099e53902c.webp";
+import Icon from "./model-marketing-assets/text(1).svg?react";
 import { FormattedMessage } from "react-intl";
 
 function ModelMarketing() {
@@ -32,10 +29,13 @@ function ModelMarketing() {
         </div>
       </div>
       <div className="rightPart">
-        <img src={img1} className="img1" />
-        <img src={img2} className="img2" />
-        <img src={img22} className="img22" />
-        <img src={icon} className="icon" />
+        <div className="img1"></div>
+        <div className="img2"></div>
+        <div className="img22"></div>
+        {/* <img src={img1} className="img1" /> */}
+        {/* <img src={img2} className="img2" /> */}
+        {/* <img src={img22} className="img22" /> */}
+        <Icon  className="icon" />
         <div className="iconsWrapper">
           {iconsData.map((icon, index) => (
             <div key={index} className="iconWrapper">

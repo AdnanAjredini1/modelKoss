@@ -57,11 +57,11 @@ function OurPartners() {
             </p>
           </div>
         </div>
-        <div className="inputBtnOut">
+        {/* <div className="inputBtnOut">
           <p>
             <FormattedMessage id="Subscribe" defaultMessage="Subscribe" />
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

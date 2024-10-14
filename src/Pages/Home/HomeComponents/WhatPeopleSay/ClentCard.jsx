@@ -1,7 +1,6 @@
 import "./client-card.scss";
 import BgPoints from "./whatpeoplesay-assets/Group 34(2).svg?react";
 import RatingPiont from "./whatpeoplesay-assets/Ellipse 12.svg?react";
-import clientImg from "./whatpeoplesay-assets/ivan-dodig-R21SyyJDF.webp";
 import { FormattedMessage } from "react-intl";
 
 function ClentCard() {
@@ -42,7 +41,8 @@ function ClentCard() {
           </div>
           <p className="ratingNum">({4.1})</p>
         </div>
-        <img src={clientImg} className="clientphoto" />
+        <div className="clientphoto"></div>
+        {/* <img src={clientImg} className="clientphoto" /> */}
       </div>
     </div>
   );

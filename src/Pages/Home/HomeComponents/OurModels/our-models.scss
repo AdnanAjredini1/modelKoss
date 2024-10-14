@@ -103,6 +103,16 @@
                             font-style: normal;
                             text-align: center;
                             color: #ffffff;
+                            @media (max-width:1810px) {
+                                display: none;
+                            }
+
+                            @media (max-width:588px) {
+                                display: block;
+                            }
+                            @media (max-width:412px) {
+                                display: none;
+                            }
                         }
 
                     }

@@ -86,6 +86,7 @@
 
         .img1 {
             position: relative;
+            content: url('./model-marketing-assets/chyntia-juls-HlVjI5W.webp');
             width: clamp(200px, 19vw, 356px);
             height: clamp(250px, 26vw, 420px);
             margin-left: 101px;
@@ -108,6 +109,7 @@
 
         .img2 {
             position: absolute;
+            content: url('./model-marketing-assets/adele-shafiee-vagr_X.webp');
             width: clamp(250px, 26vw, 500.1px);
             height: clamp(300px, 29vw, 531.1px);
             top: 90px;
@@ -120,6 +122,7 @@
         }
         .img22 {
             position: absolute;
+            content: url('./model-marketing-assets/94b65be415f36972d060be099e53902c.webp');
             display: none;
             width: 300px;
             height: 500px;
